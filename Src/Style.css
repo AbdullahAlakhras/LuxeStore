@@ -10,14 +10,14 @@ body{
     display: grid;
     grid-template-areas: 
                             "head head"
-                            "lef-side main"
+                            "main main"
                             "footer footer"
                             ;
     grid-template-rows: 1fr 2fr 1fr;
     grid-template-columns: 1fr 2fr;
     margin: 0%;
 }
-
+/* header */
 .head{
     grid-area: head;
     display: grid;
@@ -66,4 +66,34 @@ body{
     color: rgb(118, 50, 182);
     
 }
+.link:hover{
+    color: #ff9100;
+}
+/* left side */
+.main{
+    grid-area: main;
+    display: grid;
+    grid-template-areas: "left-side-main right-side-main";
+    grid-template-rows: auto;
+    grid-template-columns: 0.5fr 3fr;
+    
+}
+.left-side-main{
+    grid-area: left-side-main;
+    border-right: #ff9100 1pt solid;
+    border-bottom: #ff9100 1pt solid;
+    border-left: #ff9100 1pt solid;
 
+}
+.lable-left-side{
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.title-left-side{
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* main */
+
+/* footer */
