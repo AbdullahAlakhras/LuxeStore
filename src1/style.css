@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+
+
+}
+
+
+:root {
+    --color-50:  #fbf6fd;
+    --color-100: #f6edfa;
+    --color-200: #eddaf4;
+    --color-300: #e0bdea;
+    --color-400: #cf95dd;
+    --color-500: #b76bca;
+    --color-600: #9a4baa;
+    --color-700: #823c8f;
+    --color-800: #6c3375;
+    --color-900: #5b2e61;
+    --color-950: #39143e;
+}
+
+#page{
+    display: grid;
+    grid-template-areas: "head head"
+                        "left-main right-main"
+                        "footer footer";
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    margin: 0%;
+    padding: 0%;
+}
+
+#header{
+    grid-area: head;
+    display: grid;
+    grid-template-areas: "top-head"
+                            "bottom-head" ;
+    
+}
+#top-head{
+    grid-area: top-head;
+    background-color: var(--color-900);
+    
+    
+}
+#top-navigation{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: start;
+    
+}
+#top-navigation ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: start;
+    /* justify-content: space-between; */
+    list-style-type: none;
+    margin-left: 0%;
+    margin-top: 1%;
+    padding: 0%;
+    
+}
+#logo-li img{
+    width: 200px;
+    
+}
+#top-navigation ul li{
+    margin-right: 10px;
+    
+}
+.button-top{
+    margin-top: 30px;
+}
+#search-box{
+    margin-top: 40px;
+    width: 400px;
+    height: 30px;
+    border-radius: 20px;
+    font-size: 15pt;
+    font-family:  "Protest Revolution", sans-serif;
+
+}
+#search-icon{
+    margin-top: 41px;
+    width: 26px;
+}
+#cart-icon{
+    margin-top: 41px;
+    width: 26px;
+}
+#login-button{
+    margin-left: 100px;
+}
+
+  /* CSS */
+  .button-top {
+      background-color: var(--color-300);
+      border: 0 solid var(--color-300);
+      border-radius: 1.5rem;
+      box-sizing: border-box;
+      color: #0d172a;
+      cursor: pointer;
+      display: inline-block;
+      font-family: "Protest Revolution", sans-serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      line-height: 1;
+      padding: 21px 16px;
+      text-align: center;
+      text-decoration: none #0d172a solid;
+      text-decoration-thickness: auto;
+      transition: all .1s cubic-bezier(.4, 0, .2, 1);
+      box-shadow: 0px 1px 2px rgba(166, 175, 195, 0.25);
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+      
+  }
+
+  .button-top:hover {
+      background-color: #1e293b;
+      color: #fff;
+  }
+
+  @media (min-width: 768px) {
+      .button-top {
+          font-size: 1.125rem;
+          padding: 1rem 2rem;
+      }
+  }
