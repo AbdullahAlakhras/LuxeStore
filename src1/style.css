@@ -25,11 +25,11 @@
                         "main main"
                         "footer footer";
     grid-template-columns: 1fr 3fr;
-    grid-template-rows: 0.5fr 2fr 1fr;
+    grid-template-rows: 0.3fr 2fr 1fr;
     margin: 0%;
     padding: 0%;
 }
-
+/* ----------------------------------------------------------------------------------- */
 /* header */
 #header{
     grid-area: head;
@@ -134,7 +134,9 @@
       }
   }
 
-  /* left-main */
+
+/* ----------------------------------------------------------------------------------- */
+/* left-main */
 
 
 #main{
@@ -155,9 +157,9 @@ h3 {
 
 .products-labels {
     font-size: 15pt;
-    display: inline-block;
+    
 }
-
+ /* products division */
 #products-div{
     border-bottom: 2pt solid  #39143e;
     padding-bottom: 23px;
@@ -166,9 +168,11 @@ h3 {
     flex-wrap: wrap;
     
 }
+
 .products-checkboxes{
-    display: inline-block   ;
+    height: 19px;  /*@ meida queries make the width auto*/
 }
+/* } prices division */
 #prices-div{
     border-bottom: 2pt solid #39143e;
     padding-bottom: 23px;
@@ -176,4 +180,31 @@ h3 {
     flex-direction: column;
     flex-wrap: wrap;
 }
+
+.prices-labels{
+    font-size: 15pt;
+}
+.prices-rd{
+    height: 19px;
+}
+
+/* brands division */
+#brands-div{
+    border-bottom: 2pt solid #39143e;
+    padding-bottom: 23px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.brands-labels{
+    font-size: 15pt;
+}
+.brands-checkboxes{
+    height: 19px;
+}
+
+/* ----------------------------------------------------------------------------------- */
+
+
   
