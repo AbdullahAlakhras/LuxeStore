@@ -32,13 +32,13 @@
 
 #header{
     grid-area: head;
-    display: grid;
-    grid-template-areas: "top-head"
-                            "bottom-head" ;
+    /* display: grid; */
+    /* grid-template-areas: "top-head"
+                        "bottom-head" ; */
     
 }
 #top-head{
-    grid-area: top-head;
+    /* grid-area: head; */
     background-color: var(--color-900);
     
     
