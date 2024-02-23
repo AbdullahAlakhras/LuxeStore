@@ -145,7 +145,7 @@
 }
 #left-main{
     grid-area: left-main;
-    /* background-color: #1e293b; */
+    background-color: var(--color-300);
 
 }
 h3 {
