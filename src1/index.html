@@ -34,7 +34,7 @@
                 <ul>
                 
                 <li><a href=""><button id="login-button" class="button-top" role="button">Login</button></a></li>
-                <li><a href=""><button class="button-top" role="button">Sign Up</button></li>
+                <li><a href=""><button class="button-top" role="button">Sign Up</button></a></li>
                 <li id="cart-li"><img id="cart-icon" src="../Images/icons8-cart-24.png" alt="cart-icon"></li>
                 </ul>
             </nav>
@@ -42,9 +42,37 @@
     </header>
     <main id="main">
         <div id="left-main">
-            <form action="">
-                <h3></h3>
-            </form>
+            <div id="products-div">
+                <form id="products-form" action="">
+                    <h3>Products</h3>
+                    <input class="products-checkboxes" id="phone-ch" type="checkbox" name="products-checkboxes">
+                    <label for="phone-ch" class="products-labels">Phones</label><br>
+                    <input class="products-checkboxes" id="headphone-ch" type="checkbox" name="products-checkboxes">
+                    <label  for="headphone-ch" class="products-labels">Headphones</label><br>
+                    <input class="products-checkboxes" id="phone-covers-ch" type="checkbox" name="products-checkboxes">
+                    <label for="phone-covers-ch" class="products-labels">Phone Covers</label><br>
+                    <input class="products-checkboxes" id="other-ch" type="checkbox" name="products-checkboxes">
+                    <label for="other-ch" class="products-labels">Others</label><br>
+                </form>
+            </div>
+            <div id="prices-div">
+                <form action="">
+                    <h3>Prices</h3>
+                    <input type="radio" id="all-radio" name="prices-radio-buttons" checked>
+                    <Label for="all-radio">All-Prices</Label><br>
+                    <input type="radio" id="0-500-radio" name="prices-radio-buttons">
+                    <Label for="0-500-radio">0-500 &dollar;</Label><br>
+                    <input type="radio" id="500-2000-radio" name="prices-radio-buttons">
+                    <Label for="500-2000-radio">500-2000 &dollar;</Label><br>
+                    <input type="radio" id="2000-5000-radio" name="prices-radio-buttons">
+                    <Label for="2000-5000-radio">2000-5000 &dollar;</Label><br>
+                    <input type="radio" id="5000-8000-radio" name="prices-radio-buttons">
+                    <Label for="5000-8000-radio">5000-8000 &dollar;</Label><br>
+                    <input type="radio" id="8000-10000-radio" name="prices-radio-buttons">
+                    <Label for="8000-10000-radio">8000-10000 &dollar;</Label><br>
+                </form>
+                
+            </div>
         </div>
     </main>
     <footer id="footer">
