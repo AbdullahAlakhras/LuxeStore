@@ -136,7 +136,7 @@
 
 
 /* ----------------------------------------------------------------------------------- */
-/* left-main */
+/* main */
 
 
 #main{
@@ -145,6 +145,7 @@
     grid-template-areas: "left-main right-main";
     grid-template-columns: 0.4fr 3fr;
 }
+/* left main */
 #left-main{
     grid-area: left-main;
     background-color: var(--color-300);
@@ -205,6 +206,29 @@ h3 {
 }
 
 /* ----------------------------------------------------------------------------------- */
+/* footer */
 
+#footer{
+    grid-area: footer;
+    display: grid;
+    grid-template-areas: "left-footer right-footer" ;
+    grid-template-columns: 0.4fr 3fr;
+}
+/* left-footer */
+
+#left-footer{
+    grid-area: left-footer;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: var(--color-300);
+}
+
+.social-media-labels{
+    font-size: 15pt;
+}
+.social-media-icons{
+    height: 20px;
+}
 
   
