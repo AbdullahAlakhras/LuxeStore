@@ -44,6 +44,8 @@ body{
     outline: none;
     border: 2px solid rgba(255, 255,255, .2);
     border-radius: 40px;
+    font-size: 15px;
+    padding-left: 10px;
     color: white;
 }
 
@@ -76,4 +78,10 @@ body{
     color: #333;
     font-weight: 600px;
 
+}
+
+.wrapper .Register-link{
+    font-size: 14.5px;
+    text-align: center;
+    margin-top: 20px;
 }
