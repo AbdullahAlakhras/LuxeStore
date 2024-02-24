@@ -87,6 +87,11 @@
 #search-icon{
     margin-top: 41px;
     width: 26px;
+    
+}
+#search-icon:hover{
+    width: 32px;
+    
 }
 #cart-icon{
     margin-top: 41px;
