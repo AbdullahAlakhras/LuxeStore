@@ -53,16 +53,16 @@ body{
     color: #fff;
 }
 
-.wrapper .remeber-password{
+.wrapper .checkbox{
     display: flex;
     justify-content: space-between;
     font-size: 14.5px;
     margin: -15px 0 15px;
 }
 
-.remeber-password label input{
+.checkbox label input{
     accent-color: #fff;
-    margin-right: 3px;
+    margin-right: 10px;
 }
 
 .wrapper .btn{
