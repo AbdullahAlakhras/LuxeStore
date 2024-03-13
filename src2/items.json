@@ -1,0 +1,22 @@
+[
+  {
+    "link": "../Images/1.jpg",
+    "seller": 1
+  },
+  {
+    "link": "../Images/2.jpg",
+    "seller": 2
+  },
+  {
+    "link": "../Images/3.jpg",
+    "seller": 3
+  },
+  {
+    "link": "../Images/4.jpg",
+    "seller": 4
+  },
+  {
+    "link": "../Images/5.jpg",
+    "seller": 5
+  }
+]
