@@ -42,10 +42,16 @@ document.addEventListener("DOMContentLoaded", () => {
                 addCartButton.classList.add("item-buttons");
                 addCartButton.id="add-cart-button";
                 itemsButtonDiv.appendChild(addCartButton);
+
+                const removeCartButton =document.createElement("button");
+                removeCartButton.innerText="Remove from Cart";
+                removeCartButton.classList.add("item-buttons");
+                removeCartButton.id="remove-cart-button";
+                removeCartButton.disabled=true;
+                itemsButtonDiv.appendChild(removeCartButton);
                 
-
-
                 itemDescDiv.appendChild(itemsButtonDiv);
+
                 
 
 
