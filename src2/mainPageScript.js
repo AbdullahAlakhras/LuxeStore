@@ -18,10 +18,37 @@ document.addEventListener("DOMContentLoaded", () => {
             itemDiv.appendChild(itemImgDiv);
 
             const itemDescDiv=document.createElement("div");
-                const para =document.createElement("p");
-                para.textContent=item.description;
-                para.classList.add("disc");
-                itemDescDiv.appendChild(para);
+                const paraDesc =document.createElement("p");
+                paraDesc.textContent=item.description;
+                paraDesc.classList.add("disc");
+                itemDescDiv.appendChild(paraDesc);
+
+                const paraName =document.createElement("p");
+                paraName.textContent=item.nameProduct;
+                paraName.classList.add("name-product");
+                itemDescDiv.appendChild(paraName);
+
+
+                const paraPrice =document.createElement("p");
+                paraPrice.textContent=`Price: ${item.price}$`;
+                paraPrice.classList.add("item-price");
+                itemDescDiv.appendChild(paraPrice);
+
+                const itemsButtonDiv =document.createElement("div");
+                itemsButtonDiv.classList.add("item-button-div");
+
+                const addCartButton =document.createElement("button");
+                addCartButton.innerText="Add to Cart";
+                addCartButton.classList.add("item-buttons");
+                addCartButton.id="add-cart-button";
+                itemsButtonDiv.appendChild(addCartButton);
+                
+
+
+                itemDescDiv.appendChild(itemsButtonDiv);
+                
+
+
             itemDiv.appendChild(itemDescDiv);
             console.log(photo);
             main.appendChild(itemDiv);

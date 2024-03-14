@@ -1,27 +1,37 @@
 [
   {
     "link": "../Images/1.jpg",
-    "description": "Iphone x",
+    "description": "Iphone x Red Color",
+    "nameProduct": "Iphone x",
+    "price": 19.5,
     "seller": 1
   },
   {
     "link": "../Images/2.jpg",
-    "description": "Iphone 4",
+    "description": "Iphone 4 Blue Color",
+    "nameProduct": "Iphone 4",
+    "price": 20,
     "seller": 2
   },
   {
     "link": "../Images/3.jpg",
-    "description": "Iphone 11",
+    "description": "Iphone 11 With type  c charger",
+    "nameProduct": "Iphone 11",
+    "price": 10,
     "seller": 3
   },
   {
     "link": "../Images/4.jpg",
-    "description": "Iphone 14",
+    "description": "Iphone 14 hello",
+    "nameProduct": "Iphone 14",
+    "price": 500,
     "seller": 4
   },
   {
     "link": "../Images/5.jpg",
-    "description": "Iphone 15",
+    "description": "Iphone 15 new",
+    "nameProduct": "Iphone 15",
+    "price": 2000,
     "seller": 5
   }
 ]
