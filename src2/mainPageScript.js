@@ -56,12 +56,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
             itemDiv.appendChild(itemDescDiv);
-            console.log(photo);
             main.appendChild(itemDiv);
         });
 
-        });
+    });
 });
+const loginButton=document.querySelector("#login-button");
+loginButton.addEventListener("click", redirectLoginPage);
+console.log(loginButton);
+
 
 
 
@@ -77,5 +80,5 @@ function toggleMenu() {
 }
 
 function redirectLoginPage(){
-    document.location.href = "./";
+    window.location.href = "./login.html";
 }
