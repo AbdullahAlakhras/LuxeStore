@@ -4,6 +4,7 @@
 :root{
     --white-color: #ffffff;
     --logo-color: RGB(255, 215, 0);
+    --black-color:#000000;
 }
 #page{
     display: grid;
@@ -223,7 +224,9 @@
     transition: box-shadow 0.3s ease;
     font-family: Arial, sans-serif;
     font-size: 1em;
-   
+}
+#search-box:focus{
+    border-color:var(--black-color);
 }
 #search-icon{
     cursor: pointer;
