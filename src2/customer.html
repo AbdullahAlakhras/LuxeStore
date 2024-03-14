@@ -8,6 +8,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- Allerta Stencil Font -->
     <link href="https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./customerStyle.css">
     <title>Luxe Store Customer</title>
 </head>
@@ -23,6 +29,30 @@
                         <text x="19" y="30" font-family="Allerta Stencil" font-size="30" fill="RGB(255, 215, 0)">Luxe
                             Store</text>
                     </svg></a>
+                <button id="account-button" onclick="toggleAccount()"><img id="account-image"
+                        src="../Images/icons8-account-30.png" alt="account-icon">
+                </button>
+            </div>
+            <div id="account-div">
+                <div id="back-account-div">
+                    <button id="back-button" onclick="toggleAccount()"><img id="back-icon"
+                            src="../Images/icons8-account-30.png" alt="back-icon">Hide</button>
+                </div>
+                <div id="account-title-div">
+                    <p id="account-title">Account</p>
+                </div>
+                <div id="account-info-div">
+                    <Label>Name: </Label>
+                    <Label>Company Name: </Label>
+                    <Label>Bank Account: </Label>
+                    <label>Username: </label>
+                    <Label>Email: </Label>
+                </div>
+                <div id="account-info-buttons-div">
+                    <button class="account-info-buttons">Modify Account</button>
+                    <button class="account-info-buttons">Check Items</button>
+                    <button class="account-info-buttons">Sale History</button>
+                </div>
             </div>
             <div id="menu">
                 <div id="products-div" class="menu-divs">
@@ -81,6 +111,11 @@
                 <img id="search-icon" src="../Images/icons8-search-30.png" alt="search-icon">
             </div>
             <div id="login-cart-div">
+                <div id="user-info">
+                    <label>USER: </label>
+                    <label>EMAIL:</label>
+                </div>
+
                 <button id="sign-out-button" role="button">Sign Out</button>
 
                 <button id="cart-button"><img id="cart-icon" src="../Images/icons8-cart-30.png"
@@ -92,21 +127,25 @@
 
 
     </header>
-    <main id="main"></main>
+    <main id="main">
+
+    </main>
     <footer id="footer">
-        <img class="social-media-icons" src="../Images/icons8-instagram-30.png" alt="">
-        <img class="social-media-icons" src="../Images/icons8-facebook-30.png" alt="">
-        <img class="social-media-icons" src="../Images/icons8-snapchat-30.png" alt="">
+        <div id="social-media-div">
+            <img class="social-media-icons" src="../Images/icons8-instagram-30.png" alt="">
+            <img class="social-media-icons" src="../Images/icons8-facebook-30.png" alt="">
+            <img class="social-media-icons" src="../Images/icons8-snapchat-30.png" alt="">
+        </div>
+        <div id="about">
+            <h3 id="about-head">About</h3>
+            <p id="about-para">Empowering Connections, Inspiring Innovations</p>
+        </div>
+
     </footer>
+    <script src="./customerScript.js"></script>
     <script>
-        function toggleMenu() {
-            var menu = document.getElementById('menu');
-            if (menu.style.left === '0px') {
-                menu.style.left = '-100%'; // Slide out
-            } else {
-                menu.style.left = '0px'; // Slide in
-            }
-        }
+
+
     </script>
 </body>
 

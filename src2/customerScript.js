@@ -30,8 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 paraName.classList.add("name-product");
                 itemDescDiv.appendChild(paraName);
 
-
-               // const spanDiv=document.createElement("span");
+                // const spanDiv=document.createElement("span");
                 // spanDiv.id="span-div";
                 const paraPrice =document.createElement("p");
                 paraPrice.textContent=`Price: ${item.price}$`;
@@ -71,8 +70,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     });
 });
-const loginButton=document.querySelector("#login-button");
-loginButton.addEventListener("click", redirectLoginPage);
+const loginButton=document.querySelector("#sign-out-button");
+loginButton.addEventListener("click", redirectMainPage);
 console.log(loginButton);
 
 
@@ -83,12 +82,35 @@ console.log(loginButton);
 function toggleMenu() {
     let menu = document.getElementById('menu');
     if (menu.style.left === '0px') {
-        menu.style.left = '-100%'; // Slide out
+        menu.style.left = '-100%'; 
     } else {
-        menu.style.left = '0px'; // Slide in
+        menu.style.left = '0px'; 
     }
 }
 
+function toggleAccount(){
+    let account = document.getElementById('account-div');
+    if (account.style.top === '0px') {
+        account.style.top = '-100%'; 
+        
+    } else {
+        account.style.top = '0px'; 
+        
+    }
+}
+// function clickOutsideAccount(event) {
+//     let accountButton=document.getElementById('account-button');
+//     let account = document.getElementById('account-div');
+//     if (!account.contains(event.target) && event.target !== accountButton) {
+//         account.style.top = '0px';
+//         document.removeEventListener('click', clickOutsideAccount);
+//     }
+// }
+
+
 function redirectLoginPage(){
     window.location.href = "./login.html";
+}
+function redirectMainPage(){
+    window.location.href = "./mainPage.html";
 }
