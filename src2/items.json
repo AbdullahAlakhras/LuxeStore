@@ -1,22 +1,27 @@
 [
   {
     "link": "../Images/1.jpg",
+    "description": "Iphone x",
     "seller": 1
   },
   {
     "link": "../Images/2.jpg",
+    "description": "Iphone 4",
     "seller": 2
   },
   {
     "link": "../Images/3.jpg",
+    "description": "Iphone 11",
     "seller": 3
   },
   {
     "link": "../Images/4.jpg",
+    "description": "Iphone 14",
     "seller": 4
   },
   {
     "link": "../Images/5.jpg",
+    "description": "Iphone 15",
     "seller": 5
   }
 ]

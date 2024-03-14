@@ -10,7 +10,7 @@
     grid-template-areas: "head"
                         "main"
                         "footer";
-    grid-template-rows: 1fr 3fr 1em;
+    grid-template-rows: 0.3fr 3fr 1em;
     margin: 0;
 }
 #header{
@@ -261,11 +261,32 @@
 
 #main{
     grid-area: main;
+    margin-top: 1em;
+    display: grid;
+    grid-template-columns: repeat(1, minmax(10em, 30em));
+    gap: 1em;
+    
 }
 .item{
-    display: grid;
-    grid-template-columns: repeat(1, minmax(10em, 20em));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     gap: 2rem;
+    border-style: solid;
+    border-radius: 20px;
+    
+}
+.photo-div{
+    display: flex;
+    justify-content: center;
+    
+}
+.photo{
+    width: 100%;
+    border-radius: 20px;
+}
+.disc{
+   
 }
 /* FOOTER */
 #footer{
