@@ -434,6 +434,42 @@
     z-index: 1;
 }
 
+#cart-div {
+    position: fixed;
+    top: 0px;
+    right: -300px;
+    width: 300px;
+    height: 100%;
+    background-color: var(--white-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: right 0.3s;
+    z-index: 2;
+    display: grid;
+    grid-template-areas: "first-cart"
+                            "second-cart"
+                            "third-cart";
+    grid-template-rows: 3em auto auto;
+    
+}
+
+#cart-title-div{
+    grid-area: first-cart;
+    text-align: center;
+}
+#cart-items{
+    grid-area: second-cart;
+}
+#list-of-items-in-cart{
+    display: flex;
+    flex-direction: column;
+
+}
+#cart-calculations{
+    grid-area: third-cart;
+    display: flex;
+    flex-direction: column;
+}
+
 /* MAIN */
 
 #main {
@@ -556,6 +592,58 @@
 .item-buttons:disabled {
     opacity: 0.5;
     cursor: not-allowed;
+}
+
+.quantity-buttons {
+    align-items: center;
+    background-color: var(--white-color);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: .25rem;
+    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+    box-sizing: border-box;
+    color: rgba(0, 0, 0, 0.85);
+    cursor: pointer;
+    display: inline-flex;
+    font-family: system-ui, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
+    line-height: 0.2;
+    margin: 0;
+    min-height: 2.5rem;
+    padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+    /* position: relative; */
+    text-decoration: none;
+    transition: all 250ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    width: 50px;
+    border-radius: 20px;
+}
+
+.quantity-buttons:hover,
+.quantity-buttons:focus {
+    border-color: rgba(0, 0, 0, 0.15);
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+    color: rgba(0, 0, 0, 0.65);
+}
+
+.quantity-buttons:hover {
+    transform: translateY(-1px);
+}
+
+.quantity-buttons:active {
+    background-color: #F0F0F1;
+    border-color: rgba(0, 0, 0, 0.15);
+    box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+    color: rgba(0, 0, 0, 0.65);
+    transform: translateY(0);
+}
+.quantity{
+    margin-left: 0.5em;
+    margin-right: 0.5em;
 }
 
 /* FOOTER */

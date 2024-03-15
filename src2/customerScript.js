@@ -18,28 +18,60 @@ document.addEventListener("DOMContentLoaded", () => {
                 itemImgDiv.appendChild(photo);
             itemDiv.appendChild(itemImgDiv);
 
-            const itemDescDiv=document.createElement("div");
+            const itemDescDiv=document.createElement("div");    
+              
+
                 itemDescDiv.id="item-desc-div";
                 const paraDesc =document.createElement("p");
                 paraDesc.textContent=item.description;
                 paraDesc.classList.add("disc");
                 itemDescDiv.appendChild(paraDesc);
+                itemDescDiv.appendChild(paraDesc);
+                const quantitySelector = document.createElement('div');
+                quantitySelector.classList.add('quantity-selector');
+
+                const decrementButton = document.createElement('button');
+                decrementButton.classList.add('decrement');
+                decrementButton.textContent = '-';
+                decrementButton.addEventListener("click",decrementQuantity);
+                decrementButton.classList.add("quantity-buttons");
+                quantitySelector.appendChild(decrementButton);
+
+                const quantityInput = document.createElement('input');
+                quantityInput.id="quantityInput";
+                quantityInput.classList.add('quantity');
+                quantityInput.setAttribute('type', 'number');
+                quantityInput.setAttribute('value', '1');
+                quantityInput.setAttribute('min', '1');
+                quantityInput.style.width = '50px';
+                quantitySelector.appendChild(quantityInput);
+
+                const incrementButton = document.createElement('button');
+                incrementButton.classList.add('increment');
+                incrementButton.textContent = '+';
+                incrementButton.addEventListener("click",incrementQuantity);
+                incrementButton.classList.add("quantity-buttons");
+                quantitySelector.appendChild(incrementButton);
+
+               
+                itemDescDiv.appendChild(quantitySelector);
+
+                
+                                
+
 
                 const paraName =document.createElement("p");
                 paraName.textContent=item.nameProduct;
                 paraName.classList.add("name-product");
                 itemDescDiv.appendChild(paraName);
 
-                // const spanDiv=document.createElement("span");
-                // spanDiv.id="span-div";
+               
                 const paraPrice =document.createElement("p");
                 paraPrice.textContent=`Price: ${item.price}$`;
                 paraPrice.classList.add("item-price");
                 const paraSeller =document.createElement("p");
                 paraSeller.textContent=`Seller: ${item.seller}`;
                 paraSeller.classList.add("item-price");
-                // spanDiv.appendChild(paraPrice);
-                // spanDiv.appendChild(paraSeller);
                 itemDescDiv.appendChild(paraPrice);
                 itemDescDiv.appendChild(paraSeller);
 
@@ -76,8 +108,20 @@ console.log(loginButton);
 
 
 
+function decrementQuantity(){
+    const quantityInput=document.getElementById("quantityInput");
+    let currentValue = parseInt(quantityInput.value);
+        if (currentValue > 1) {
+            quantityInput.value = currentValue - 1;
+        }
+}
+function incrementQuantity(){
+    const quantityInput=document.getElementById("quantityInput");
+    let currentValue = parseInt(quantityInput.value);
+    quantityInput.value = currentValue + 1;
+}
 
-    
+   
 
 function toggleMenu() {
     let menu = document.getElementById('menu');
@@ -107,6 +151,14 @@ function toggleAccount(){
 //     }
 // }
 
+function toggleCart(){
+    let cartDiv = document.getElementById('cart-div');
+    if (cartDiv.style.right === '0px') {
+        cartDiv.style.right = '-100%'; 
+    } else {
+        cartDiv.style.right = '0px'; 
+    }
+}
 
 function redirectLoginPage(){
     window.location.href = "./login.html";

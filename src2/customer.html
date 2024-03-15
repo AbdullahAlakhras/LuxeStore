@@ -42,16 +42,42 @@
                     <p id="account-title">Account</p>
                 </div>
                 <div id="account-info-div">
-                    <Label>Name: </Label>
-                    <Label>Company Name: </Label>
-                    <Label>Bank Account: </Label>
+                    <Label>Balance: </Label>
+                    <Label>First Name: </Label>
+                    <Label>Last Name: </Label>
+                    <Label>Shipping Addres: </Label>
                     <label>Username: </label>
                     <Label>Email: </Label>
                 </div>
                 <div id="account-info-buttons-div">
                     <button class="account-info-buttons">Modify Account</button>
-                    <button class="account-info-buttons">Check Items</button>
+                    <button class="account-info-buttons">Check Cart</button>
                     <button class="account-info-buttons">Sale History</button>
+                </div>
+            </div>
+            <div id="cart-div">
+                <div id="cart-title-div">
+                    <svg width="200" height="40" xmlns="http://www.w3.org/2000/svg">
+                        <text x="19" y="30" font-family="Allerta Stencil" font-size="30" fill="RGB(255, 215, 0)">Luxe
+                        Store
+                        </text>
+                    </svg>
+                    <button id="cart-button" onclick="toggleCart()"><img id="cart-icon" src="../Images/icons8-cart-30.png"
+                            alt="cart-icon"></button>
+                    
+                </div>
+                <div id="cart-items">
+                    <h3>Items in cart:</h3>
+                    <div id="list-of-items-in-cart" style="text-align: center;">
+                        <label for="">dsds</label>
+                        <label for="">fsdfs</label>
+                        <Label>No. Items: </Label>
+                    </div>
+                </div>
+                <div id="cart-calculations">
+                    <Label>Total: </Label>
+                    <Label>Balance: </Label>
+                    
                 </div>
             </div>
             <div id="menu">
@@ -118,7 +144,7 @@
 
                 <button id="sign-out-button" role="button">Sign Out</button>
 
-                <button id="cart-button"><img id="cart-icon" src="../Images/icons8-cart-30.png"
+                <button id="cart-button" onclick="toggleCart()"><img id="cart-icon" src="../Images/icons8-cart-30.png"
                         alt="cart-icon"></button>
                 <label id="counter">0</label>
             </div>
