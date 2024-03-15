@@ -1,0 +1,315 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --white-color: #ffffff;
+    --logo-color: RGB(255, 215, 0);
+}
+
+#page {
+    display: grid;
+    grid-template-areas: "head"
+        "main"
+        "footer";
+    grid-template-rows: 1fr 3fr 1em;
+    margin: 0;
+}
+
+#header {
+    grid-area: head;
+    border-bottom: 1pt solid transparent;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
+
+}
+
+#top-header {
+    /* display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; */
+    display: grid;
+    grid-template-areas: "menuLogo"
+        "search"
+        "loginCart";
+}
+
+#menu-logo-div {
+    grid-area: menuLogo;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 4em;
+
+}
+
+#menu-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+#menu {
+    position: fixed;
+    top: 60px;
+    left: -150px;
+    width: 150px;
+    height: 100%;
+    background-color: var(--white-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: left 0.3s;
+}
+
+.menu-divs {
+    border-bottom: 1pt solid;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+/* FILTER BUTTON */
+#filter-button {
+    align-items: center;
+    background-color: var(--white-color);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: .25rem;
+    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+    box-sizing: border-box;
+    color: rgba(0, 0, 0, 0.85);
+    cursor: pointer;
+    display: inline-flex;
+    font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
+    line-height: 1.25;
+    margin: 0;
+    margin-top: 4em;
+    min-height: 2.5rem;
+    padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+    position: relative;
+    text-decoration: none;
+    transition: all 250ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    width: auto;
+}
+
+#filter-button:hover,
+#filter-button:focus {
+    border-color: rgba(0, 0, 0, 0.15);
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+    color: rgba(0, 0, 0, 0.65);
+}
+
+#filter-button:hover {
+    transform: translateY(-1px);
+}
+
+#filter-button:active {
+    background-color: #F0F0F1;
+    border-color: rgba(0, 0, 0, 0.15);
+    box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+    color: rgba(0, 0, 0, 0.65);
+    transform: translateY(0);
+}
+
+/* RESET BUTTON */
+#reset-button {
+    align-items: center;
+    background-color: var(--white-color);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: .25rem;
+    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+    box-sizing: border-box;
+    color: rgba(0, 0, 0, 0.85);
+    cursor: pointer;
+    display: inline-flex;
+    font-family: system-ui, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
+    line-height: 1.25;
+    margin: 0;
+    min-height: 2.5rem;
+    padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+    position: relative;
+    text-decoration: none;
+    transition: all 250ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    width: auto;
+}
+
+#reset-button:hover,
+#reset-button:focus {
+    border-color: rgba(0, 0, 0, 0.15);
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+    color: rgba(0, 0, 0, 0.65);
+}
+
+#reset-button:hover {
+    transform: translateY(-1px);
+}
+
+#reset-button:active {
+    background-color: #F0F0F1;
+    border-color: rgba(0, 0, 0, 0.15);
+    box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+    color: rgba(0, 0, 0, 0.65);
+    transform: translateY(0);
+}
+
+/* SIGNOUT BUTTON */
+#sign-out-button {
+    align-items: center;
+    background-color: var(--white-color);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: .25rem;
+    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+    box-sizing: border-box;
+    color: rgba(0, 0, 0, 0.85);
+    cursor: pointer;
+    display: inline-flex;
+    font-family: system-ui, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
+    line-height: 1.25;
+    margin: 0;
+    min-height: 2.5rem;
+    padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+    /* position: relative; */
+    text-decoration: none;
+    transition: all 250ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    width: auto;
+}
+
+#sign-out-button:hover,
+#sign-out-button:focus {
+    border-color: rgba(0, 0, 0, 0.15);
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+    color: rgba(0, 0, 0, 0.65);
+}
+
+#sign-out-button:hover {
+    transform: translateY(-1px);
+}
+
+#sign-out-button:active {
+    background-color: #F0F0F1;
+    border-color: rgba(0, 0, 0, 0.15);
+    box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+    color: rgba(0, 0, 0, 0.65);
+    transform: translateY(0);
+}
+
+#main-link {
+    text-align: center;
+    /* padding-left: 3em; */
+    color: var(--logo-color);
+}
+
+#search-div {
+    grid-area: search;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+}
+
+#search-box {
+    margin-left: 2em;
+    width: 300px;
+    height: 30px;
+    border-radius: 20px;
+}
+
+/* LOGIN CART DIVISION */
+#login-cart-div {
+    margin-top: 1em;
+    grid-area: loginCart;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+}
+
+#cart-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+#cart-icon {
+    width: 2em;
+    height: fit-content;
+}
+
+#counter {
+    position: relative;
+    bottom: 4px;
+    right: 19px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* MAIN */
+
+#main {
+    grid-area: main;
+}
+
+/* FOOTER */
+#footer {
+    grid-area: footer;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+}
+
+.social-media-icons {
+    width: 20px;
+}
+
+@media screen and (min-width: 700px) {
+    #top-header {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+
+}
+
+@media screen and (min-width: 900px) {
+    #top-header {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+}
