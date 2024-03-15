@@ -35,10 +35,18 @@ document.addEventListener("DOMContentLoaded", () => {
                 decrementButton.textContent = '-';
                 decrementButton.addEventListener("click",decrementQuantity);
                 decrementButton.classList.add("quantity-buttons");
+                function decrementQuantity(){
+                    const quantityInput=document.getElementById(`quantityInput-${item.id}`);
+                    let currentValue = parseInt(quantityInput.value);
+                        if (currentValue > 1) {
+                            quantityInput.value = currentValue - 1;
+                  }
+                }
+
                 quantitySelector.appendChild(decrementButton);
 
                 const quantityInput = document.createElement('input');
-                quantityInput.id="quantityInput";
+                quantityInput.id=`quantityInput-${item.id}`;
                 quantityInput.classList.add('quantity');
                 quantityInput.setAttribute('type', 'number');
                 quantityInput.setAttribute('value', '1');
@@ -51,8 +59,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 incrementButton.textContent = '+';
                 incrementButton.addEventListener("click",incrementQuantity);
                 incrementButton.classList.add("quantity-buttons");
+                function incrementQuantity(){
+                        const quantityInput=document.getElementById(`quantityInput-${item.id}`);
+                        let currentValue = parseInt(quantityInput.value);
+                        quantityInput.value = currentValue + 1;
+                    }
                 quantitySelector.appendChild(incrementButton);
-
+                
                
                 itemDescDiv.appendChild(quantitySelector);
 
@@ -108,18 +121,7 @@ console.log(loginButton);
 
 
 
-function decrementQuantity(){
-    const quantityInput=document.getElementById("quantityInput");
-    let currentValue = parseInt(quantityInput.value);
-        if (currentValue > 1) {
-            quantityInput.value = currentValue - 1;
-        }
-}
-function incrementQuantity(){
-    const quantityInput=document.getElementById("quantityInput");
-    let currentValue = parseInt(quantityInput.value);
-    quantityInput.value = currentValue + 1;
-}
+
 
    
 

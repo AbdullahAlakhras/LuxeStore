@@ -445,16 +445,21 @@
     transition: right 0.3s;
     z-index: 2;
     display: grid;
-    grid-template-areas: "first-cart"
+    grid-template-areas:    "first-cart"
                             "second-cart"
-                            "third-cart";
-    grid-template-rows: 3em auto auto;
+                            "third-cart"
+                            "fourth-cart";
+    grid-template-rows: 3em 20em 3em 10em;
     
 }
 
 #cart-title-div{
     grid-area: first-cart;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+
 }
 #cart-items{
     grid-area: second-cart;
@@ -468,6 +473,13 @@
     grid-area: third-cart;
     display: flex;
     flex-direction: column;
+}
+#cart-buttons{
+    grid-area: fourth-cart;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    
 }
 
 /* MAIN */
