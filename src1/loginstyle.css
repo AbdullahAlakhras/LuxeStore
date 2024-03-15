@@ -25,6 +25,14 @@ body{
 
 }
 
+#Register{
+    display:  none;
+}
+
+.wrapper-not-active{
+    display: none;
+}
+
 .wrapper h1{
     font-size: 36px;
     text-align: center;
