@@ -3,7 +3,13 @@ const signUpbutton = document.getElementById('reg');
 const container= document.getElementById('Register');
 const containerLog= document.getElementById('Login');
 
-let password = document.getElementById("pass")
+
+let userObjects = [
+    { userName:"Barhamgi" , passWord:"B121212" }, 
+    { userName:"Abdullah" , passWord:"Void2004"}, 
+    { userName:"Faisal" , passWord:"faisal@@"}, 
+    { userName:"Abdulmagid ", passWord:"dev@admin01"},
+]
 
 
 signUpbutton.addEventListener("click",() => {
@@ -16,6 +22,17 @@ signinbutton.addEventListener("click",() => {
     container.style.display = "none";
 });
 
-if (password.value !== "hello"){
-    console.log("Fak u")
+function authO(){
+    var userName = document.getElementById('user').value;
+    var passWord = document.getElementById('pass').value;
+
+    for (i = 1; i<userObjects.length; i++){
+        if(userName==userObjects[i].userName && passWord== userObjects[i].passWord){
+            console.log("Welcome back Mr. "+userName)
+            break;
+        }else{
+            console.log("Invalid userName")
+        }
+    }
+    
 }
