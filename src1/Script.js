@@ -29,6 +29,7 @@ function authO(){
     for (i = 1; i<userObjects.length; i++){
         if(userName==userObjects[i].userName && passWord== userObjects[i].passWord){
             console.log("Welcome back Mr. "+userName)
+            window.location.href = "index.html";
             break;
         }else{
             console.log("Invalid userName")
