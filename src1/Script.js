@@ -9,7 +9,8 @@ let userObjects = [
     { userName:"Abdullah" , passWord:"Void2004"}, 
     { userName:"Faisal" , passWord:"faisal@@"}, 
     { userName:"Abdulmagid ", passWord:"dev@admin01"},
-]
+    { userName:"admin" , passWord:"admin"}, 
+];
 
 
 signUpbutton.addEventListener("click",() => {
@@ -23,16 +24,13 @@ signinbutton.addEventListener("click",() => {
 });
 
 function authO(){
-    var userName = document.getElementById('user').value;
-    var passWord = document.getElementById('pass').value;
-
+    const userName = document.getElementById('user').value;
+    const passWord = document.getElementById('pass').value;
     for (i = 1; i<userObjects.length; i++){
         if(userName==userObjects[i].userName && passWord== userObjects[i].passWord){
-            console.log("Welcome back Mr. "+userName)
+            console.log("Welcome back Mr. "+userName);
             window.location.href = "index.html";
             break;
-        }else{
-            console.log("Invalid userName")
         }
     }
     
