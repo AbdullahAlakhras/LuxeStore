@@ -1,14 +1,16 @@
 [
   {
-    "userName": "",
-    "password": "",
-    "email": "",
     "id": 1,
     "link": "../Images/1.jpg",
     "description": "Iphone x Red Color",
     "nameProduct": "Iphone x",
     "price": 19.5,
-    "seller": "Ahmed"
+    "seller": {
+      "companyName": "Apple",
+      "userName": "",
+      "password": "",
+      "bankAccount": "20001122121"
+    }
   },
   {
     "id": 2,

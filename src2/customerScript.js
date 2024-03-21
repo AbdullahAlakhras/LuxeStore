@@ -1,4 +1,4 @@
-
+import fs from 'fs';
 document.addEventListener("DOMContentLoaded", () => {
     fetch('./items.json')
         .then(response => response.json())
@@ -122,8 +122,22 @@ console.log(loginButton);
 
 
 
+function addToCart(){
+    fs.readFile('./cartItems.json', 'utf8', (err, data) => {
+    if (err) {
+        console.error('Error reading file:', err);
+        return;
+    }
 
-   
+    try {
+        let cartItems=data;
+        console.log(cartItems);
+    } catch (error) {
+        console.error('Error parsing JSON:', error);
+    }
+});
+}
+ addToCart();  
 
 function toggleMenu() {
     let menu = document.getElementById('menu');
