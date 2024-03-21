@@ -12,20 +12,22 @@
             <form action="">
                 <h1>Login</h1>
                 <div class="input-box">
-                    <input type="text" placeholder="Username" required autofocus>
-
+                    <input type="text" placeholder="Username" required autofocus id="user">
                 </div>
+                
                 <div class="input-box">
-                    <input type="password" placeholder="Password" required>
+                    <input type="password" placeholder="Password" required id="pass"> 
+                    <img src="/Images/mdi--show.svg" alt="f" id="show">
+                    
                 </div>
 
                 <div class="checkbox">
-                    <label><input type="checkbox"> Remember Me</label>
+                    <label><input type="checkbox">Remember Me</label>
                     <a href="#">Forgot Password?</a>
                 </div>
-                <button type="submit" class="btn">Login</button>
+                <button type="button" onclick="authO()" class="btn">Login</button>
 
-                <div class="Register-link">
+                <div class="Register-link" id="reg">
                     <p>Dont have an account?<a href="#">Register</a></p>
                 </div>
             </form>
@@ -70,15 +72,19 @@
                     <label><input type="checkbox">Get constant updates via email about our new products</label>
                 </div>
 
-                <button type="submit" class="btn">Create Account</button>
+                
 
+                <button type="submit" class="btn">Create Account</button>
+                <div class="Register-link" id="log">
+                    <p>Already have an account?<a href="#">LogIn</a></p>
+                </div>
             </form>
         </div>
             
-    </main>
+    </main> 
+    
+    <script src="Script.js"></script>
 
-    <footer>
-
-    </footer>
 </body>
+
 </html>
