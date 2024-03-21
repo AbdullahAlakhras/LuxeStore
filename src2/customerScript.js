@@ -1,4 +1,4 @@
-import fs from 'fs';
+
 document.addEventListener("DOMContentLoaded", () => {
     fetch('./items.json')
         .then(response => response.json())
@@ -114,11 +114,12 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
     });
+    
+
 });
 const loginButton=document.querySelector("#sign-out-button");
 loginButton.addEventListener("click", redirectMainPage);
 console.log(loginButton);
-
 
 
 
@@ -137,7 +138,7 @@ function addToCart(){
     }
 });
 }
- addToCart();  
+ 
 
 function toggleMenu() {
     let menu = document.getElementById('menu');
