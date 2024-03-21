@@ -464,6 +464,9 @@
 #cart-items{
     grid-area: second-cart;
 }
+#no-items-decleration{
+    color: red;
+}
 #list-of-items-in-cart{
     display: flex;
     flex-direction: column;
