@@ -4,6 +4,13 @@
     "password": "pass1",
     "email": "aa123@gmial.com",
     "typeOfAccount": "customer",
-    "bankAccount": "122421"
+    "bankAccount": "123"
+  },
+  {
+    "userName": "user2",
+    "password": "pass3",
+    "email": "aa123@gmial.com",
+    "typeOfAccount": "seller",
+    "bankAccount": "1234"
   }
 ]

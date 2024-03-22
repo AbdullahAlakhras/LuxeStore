@@ -19,8 +19,8 @@ if(items.length==0){
     });
     
 };
-initialze(items);
 
+    initialze(items);
     
     function initialze(data){
         const main =document.querySelector("#main");

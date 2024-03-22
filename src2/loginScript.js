@@ -58,7 +58,12 @@ function authO(){
 
     for (u of users){
         if(userName.value===u.userName && passWord.value===u.password){
-          redirectToCustomer();
+            if(u.typeOfAccount==="customer"){
+                redirectToCustomer();
+            }  
+            else{
+                
+            }
         };
     };
 }
