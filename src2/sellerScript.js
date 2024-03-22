@@ -1,75 +1,124 @@
 
-document.addEventListener("DOMContentLoaded", () => {
-    fetch('./items.json')
-        .then(response => response.json())
-        .then(data => {
-        console.log(data); 
-        const main =document.querySelector("#main");
-        data.forEach(item => {
-            const itemDiv=document.createElement("div");
-                itemDiv.classList.add("item");
-            
-            const itemImgDiv=document.createElement("div");
-                itemImgDiv.classList.add('photo-div');
-                const photo=document.createElement("img");
-                photo.src=item.link;
-                photo.alt="Item";
-                photo.classList.add("photo");
-                itemImgDiv.appendChild(photo);
-            itemDiv.appendChild(itemImgDiv);
+let items=localStorage.getItem("items") ?
+    JSON.parse(localStorage.getItem("items")): [];
 
-            const itemDescDiv=document.createElement("div");
-                itemDescDiv.id="item-desc-div";
-                const paraDesc =document.createElement("p");
-                paraDesc.textContent=item.description;
-                paraDesc.classList.add("disc");
-                itemDescDiv.appendChild(paraDesc);
+let saleHistory =localStorage.getItem("saleHistory") ?
+    JSON.parse(localStorage.getItem("saleHistory")): [];
 
-                const paraName =document.createElement("p");
-                paraName.textContent=item.nameProduct;
-                paraName.classList.add("name-product");
-                itemDescDiv.appendChild(paraName);
+let user =localStorage.getItem("user") ?
+    JSON.parse(localStorage.getItem("user")): [];
 
-                // const spanDiv=document.createElement("span");
-                // spanDiv.id="span-div";
-                const paraPrice =document.createElement("p");
-                paraPrice.textContent=`Price: ${item.price}$`;
-                paraPrice.classList.add("item-price");
-                const paraSeller =document.createElement("p");
-                paraSeller.textContent=`Seller: ${item.seller.companyName}`;
-                paraSeller.classList.add("item-price");
-                // spanDiv.appendChild(paraPrice);
-                // spanDiv.appendChild(paraSeller);
-                itemDescDiv.appendChild(paraPrice);
-                itemDescDiv.appendChild(paraSeller);
+let cartItems =[];
+localStorage.setItem("cartItems",JSON.stringify(cartItems));
 
-                const itemsButtonDiv =document.createElement("div");
-                itemsButtonDiv.classList.add("item-button-div");
-
-                const addCartButton =document.createElement("button");
-                addCartButton.innerText="Add to Cart";
-                addCartButton.classList.add("item-buttons");
-                addCartButton.id="add-cart-button";
-                itemsButtonDiv.appendChild(addCartButton);
-
-                const removeCartButton =document.createElement("button");
-                removeCartButton.innerText="Remove from Cart";
-                removeCartButton.classList.add("item-buttons");
-                removeCartButton.id="remove-cart-button";
-                removeCartButton.disabled=true;
-                itemsButtonDiv.appendChild(removeCartButton);
-                
-                itemDescDiv.appendChild(itemsButtonDiv);
-
-                
-
-
-            itemDiv.appendChild(itemDescDiv);
-            main.appendChild(itemDiv);
-        });
-
+    
+    
+if(items.length==0){
+    fetch('./items.json').then(res =>res.json()).then(data => {
+        items=data;
+        localStorage.setItem("items",JSON.stringify(items));
     });
-});
+    
+};
+initialze(items);
+
+    
+function initialze(data){
+    const main =document.querySelector("#main");
+    data.forEach(item => {
+        const itemDiv=document.createElement("div");
+            itemDiv.classList.add("item");
+        
+        const itemImgDiv=document.createElement("div");
+            itemImgDiv.classList.add('photo-div');
+            const photo=document.createElement("img");
+            photo.src=item.link;
+            photo.alt="Item";
+            photo.classList.add("photo");
+            itemImgDiv.appendChild(photo);
+        itemDiv.appendChild(itemImgDiv);
+
+        const itemDescDiv=document.createElement("div");    
+            
+
+            itemDescDiv.id="item-desc-div";
+            const paraDesc =document.createElement("p");
+            paraDesc.textContent=item.description;
+            paraDesc.classList.add("disc");
+            itemDescDiv.appendChild(paraDesc);
+            itemDescDiv.appendChild(paraDesc);
+            
+
+            
+                            
+
+
+            const paraName =document.createElement("p");
+            paraName.textContent=item.nameProduct;
+            paraName.classList.add("name-product");
+            itemDescDiv.appendChild(paraName);
+
+            
+            const paraPrice =document.createElement("p");
+            paraPrice.textContent=`Price: ${item.price}$`;
+            paraPrice.classList.add("item-price");
+            const paraSeller =document.createElement("p");
+            paraSeller.textContent=`Seller: ${item.seller}`;
+            paraSeller.classList.add("item-price");
+            itemDescDiv.appendChild(paraPrice);
+            itemDescDiv.appendChild(paraSeller);
+
+            const itemsButtonDiv =document.createElement("div");
+            itemsButtonDiv.classList.add("item-button-div");
+
+            const addCartButton =document.createElement("button");
+            addCartButton.innerText="Add to Cart";
+            addCartButton.classList.add("item-buttons");
+            addCartButton.classList.add("disable-add");
+            addCartButton.id="add-cart-button";
+            itemsButtonDiv.appendChild(addCartButton);
+            addCartButton.addEventListener("click", function (){
+                addToCart(item.nameProduct,item.price,document.getElementById(`quantityInput-${item.id}`).value);
+                removeCartButton.disabled=false;
+                addCartButton.disabled=true;
+                quantityInput.disabled=true;
+                incrementButton.disabled=true;
+                decrementButton.disabled=true;
+                changeTotalLabel();
+            });
+
+            const removeCartButton =document.createElement("button");
+            removeCartButton.innerText="Remove from Cart";
+            removeCartButton.classList.add("item-buttons");
+            removeCartButton.classList.add("disable-remove");
+            removeCartButton.id="remove-cart-button";
+            removeCartButton.disabled=true;
+            removeCartButton.addEventListener("click",function(){
+                removeFromCart(item.nameProduct,item.price,document.getElementById(`quantityInput-${item.id}`).value);
+                removeCartButton.disabled=true;
+                addCartButton.disabled=false;
+                quantityInput.disabled=false;
+                incrementButton.disabled=false;
+                decrementButton.disabled=false;
+                changeTotalLabel();
+            });
+            itemsButtonDiv.appendChild(removeCartButton);
+            
+            itemDescDiv.appendChild(itemsButtonDiv);
+
+            
+
+
+        itemDiv.appendChild(itemDescDiv);
+        main.appendChild(itemDiv);
+    });
+    if (cartItems.length!=0){
+        document.querySelector("#no-items-decleration").classList.add("hidden");
+    };
+    changeTotalLabel();
+    document.querySelector("#clear-button").addEventListener("click",clearCartAction);
+};
+
 const loginButton=document.querySelector("#sign-out-button");
 loginButton.addEventListener("click", redirectMainPage);
 console.log(loginButton);

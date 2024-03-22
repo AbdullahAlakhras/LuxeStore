@@ -400,6 +400,10 @@
     cursor: pointer;
     padding: 0;
 }
+#add-items-button{
+    margin-left: 50px;
+    margin-top: 20px;
+}
 
 #cart-icon {
     width: 2em;

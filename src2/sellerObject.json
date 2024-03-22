@@ -3,6 +3,7 @@
     "companyName": "",
     "userName": "",
     "password": "",
-    "bankAccount": ""
+    "bankAccount": "",
+    "items": {}
   }
 ]
