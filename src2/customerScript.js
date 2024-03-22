@@ -177,6 +177,7 @@ function clearCartAction(){
    Array.from(removeButtons).map((i) =>{
     i.disabled=true;
    });
+   changeNoOfCartItems();
 };
 
 
