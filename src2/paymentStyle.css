@@ -1,10 +1,10 @@
 body {
   font-family: sans-serif;
-  margin: 0; /* Remove default body margin */
-  display: flex; /* Make body use flexbox */
-  justify-content: center; /* Center content horizontally */
-  align-items: center; /* Center content vertically */
-  min-height: 100vh; /* Set minimum viewport height */
+  margin: 0; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  min-height: 100vh; 
 }
 
 .container {
@@ -112,4 +112,10 @@ button:active {
 #bankError{
     font-size: 10pt;
     color: red;
+}
+
+
+#amount-para {
+    margin-bottom: 0;
+    margin-top: 0;
 }

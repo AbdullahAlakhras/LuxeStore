@@ -10,7 +10,8 @@
       "userName": "",
       "password": "",
       "bankAccount": "20001122121"
-    }
+    },
+    "type": "phone"
   },
   {
     "id": 2,

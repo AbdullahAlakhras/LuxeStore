@@ -9,7 +9,7 @@ let user =localStorage.getItem("user") ?
 
 let cartItems =[];
 localStorage.setItem("cartItems",JSON.stringify(cartItems));
-document.addEventListener("DOMContentLoaded", () => {
+
     
     
     if(items.length==0){
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
         
     };
     initialze(items);
-});
+
     
     function initialze(data){
         const main =document.querySelector("#main");
@@ -113,6 +113,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const addCartButton =document.createElement("button");
                 addCartButton.innerText="Add to Cart";
                 addCartButton.classList.add("item-buttons");
+                addCartButton.classList.add("disable-add");
                 addCartButton.id="add-cart-button";
                 itemsButtonDiv.appendChild(addCartButton);
                 addCartButton.addEventListener("click", function (){
@@ -120,12 +121,15 @@ document.addEventListener("DOMContentLoaded", () => {
                     removeCartButton.disabled=false;
                     addCartButton.disabled=true;
                     quantityInput.disabled=true;
-
+                    incrementButton.disabled=true;
+                    decrementButton.disabled=true;
+                    changeTotalLabel();
                 });
 
                 const removeCartButton =document.createElement("button");
                 removeCartButton.innerText="Remove from Cart";
                 removeCartButton.classList.add("item-buttons");
+                removeCartButton.classList.add("disable-remove");
                 removeCartButton.id="remove-cart-button";
                 removeCartButton.disabled=true;
                 removeCartButton.addEventListener("click",function(){
@@ -133,6 +137,9 @@ document.addEventListener("DOMContentLoaded", () => {
                     removeCartButton.disabled=true;
                     addCartButton.disabled=false;
                     quantityInput.disabled=false;
+                    incrementButton.disabled=false;
+                    decrementButton.disabled=false;
+                    changeTotalLabel();
                 });
                 itemsButtonDiv.appendChild(removeCartButton);
                 
@@ -147,13 +154,48 @@ document.addEventListener("DOMContentLoaded", () => {
         if (cartItems.length!=0){
             document.querySelector("#no-items-decleration").classList.add("hidden");
         };
+        changeTotalLabel();
+        document.querySelector("#clear-button").addEventListener("click",clearCartAction);
     };
 
 
 const signOutButton=document.querySelector("#sign-out-button");
 signOutButton.addEventListener("click", redirectMainPage);
 
+function clearCartAction(){
+    document.querySelector("#cart-table-body").replaceChildren();
+    cartItems.splice(0);
+    localStorage.setItem("cartItems",JSON.stringify(cartItems));
+    changeTotalLabel();
 
+   const addButtons= document.querySelectorAll(".disable-add");
+   const removeButtons= document.querySelectorAll(".disable-remove");
+
+   Array.from(addButtons).map((i) =>{
+    i.disabled=false;
+   });
+   Array.from(removeButtons).map((i) =>{
+    i.disabled=true;
+   });
+};
+
+
+function changeTotalLabel(){
+    const totalLabel=document.querySelector("#total-price");
+    if(cartItems.length==0){
+        totalLabel.textContent=0;
+        return;
+    }
+    else{
+        const sum =cartItems.reduce((sum,i)=>{
+        return sum= sum + (i.price * i.quantity);
+        
+    }, 0);
+    console.log(sum);
+    totalLabel.textContent=sum; 
+    }
+   
+};
 
 
 function toggleCartEmptyLabel(){
@@ -176,6 +218,7 @@ function removeFromCart(item,price,quantity){
     if(cartItems.length==0){
         toggleCartEmptyLabel();
     };
+    changeNoOfCartItems();
 }
 
 function addToCart(item,price,quantity){
@@ -204,6 +247,7 @@ function addToCart(item,price,quantity){
 
     cartItems.push({item,price,quantity});
     localStorage.setItem("cartItems",JSON.stringify(cartItems));
+    changeNoOfCartItems();
 };
  
 
@@ -244,6 +288,21 @@ function toggleCart(){
     }
 }
 
+function changeNoOfCartItems(){
+    const noOfCartItems=document.querySelector("#counter");
+    if(cartItems.length!=0){
+        const counter=cartItems.reduce((sum,i) =>{
+        return sum=sum +Number(i.quantity);
+       
+    } , 0);
+    noOfCartItems.textContent=counter;
+    }
+    else{
+        noOfCartItems.textContent=0;
+    }
+    
+}
+
 function redirectLoginPage(){
     window.location.href = "./login.html";
 }
@@ -251,6 +310,12 @@ function redirectMainPage(){
     window.location.href = "./mainPage.html";
 }
 
-function redirectToPaymentPage(){
+function redirectToPaymentPage(){ 
+    sendAmount();
     window.location.href = "./payment.html";
+
+}
+
+function sendAmount(){
+    localStorage.setItem("amountFromCustomer",document.querySelector("#total-price").textContent);
 }

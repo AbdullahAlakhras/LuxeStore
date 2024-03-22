@@ -1,9 +1,10 @@
 
 const cartItems=localStorage.getItem("cartItems")? JSON.parse(localStorage.getItem("cartItems")): [];
 const user=localStorage.getItem("user")? JSON.parse(localStorage.getItem("user")): [];
-
+const amount=localStorage.getItem("amountFromCustomer");
 document.querySelector("#username").textContent=user[0] ? user[0].userName: "-";
 document.querySelector("#pay-button").addEventListener("click",payAction);
+document.querySelector("#amount").textContent=amount;
 console.log(cartItems)
 initialzeItems();
 
