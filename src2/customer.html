@@ -73,6 +73,22 @@
                         <label for="">fsdfs</label>
                         <Label>No. Items: </Label> -->
                         <Label id="no-items-decleration">CART IS EMPTY</Label>
+                        <table >
+                            <thead>
+                                <tr>
+                                    <th>Item</th>
+                                    <th>Price</th>
+                                    <th>Quantity</th>
+                                </tr>
+                            </thead>
+                            <tbody id="cart-table-body">
+                                <!-- <tr>
+                                    <td>222</td>
+                                    <td>333</td>
+                                    <td>4</td>
+                                </tr> -->
+                            </tbody>
+                        </table>
                     </div>
                 </div>
                 <div id="cart-calculations">
@@ -80,7 +96,7 @@
                     <Label>Balance: </Label>
                 </div>
                 <div id="cart-buttons">
-                    <button id="checkout-button" class="account-info-buttons">Checkout</button>
+                    <button id="checkout-button" class="account-info-buttons" onclick="redirectToPaymentPage()">Checkout</button>
                     <button id="clear-button" class="account-info-buttons">Clear Cart</button>
 
                 </div>

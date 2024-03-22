@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="./paymentStyle.css">
+    
+</head>
+<body>
+    <main>
+        <div class="container">
+            <h1><svg width="300" height="50" xmlns="http://www.w3.org/2000/svg">
+                    <text x="19" y="40" font-family="Allerta Stencil" font-size="50" fill="RGB(255, 215, 0)">Luxe
+                        Store</text>
+                </svg></h1>
+            <h2>Payment Info</h2>
+            <h2>Your Cart</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-items">
+                </tbody>
+            </table>
+            <h2>Billing Information</h2>
+            <p>Username: <span id="username"></span></p>
+            <form action="#">
+                <label for="bankAccount">Bank Account Number:</label>
+                <input type="text" id="bankAccount" name="bankAccount" required>
+                <span id="bankError" class="hidden">Invalid bank account number. Please try again.</span>
+                <button type="submit">Pay Now</button>
+                <button type="submit">Cancel</button>
+            </form>
+        </div>
+    </main>
+    <script src="./paymentScript.js"></script>
+</body>
+
+</html>
