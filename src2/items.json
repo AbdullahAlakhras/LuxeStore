@@ -3,6 +3,7 @@
     "id": 1,
     "link": "../Images/1.jpg",
     "description": "Iphone x Red Color",
+    "quantity": 1,
     "nameProduct": "Iphone x",
     "price": 19.5,
     "seller": {

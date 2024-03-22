@@ -48,11 +48,6 @@ function initialze(data){
             itemDescDiv.appendChild(paraDesc);
             itemDescDiv.appendChild(paraDesc);
             
-
-            
-                            
-
-
             const paraName =document.createElement("p");
             paraName.textContent=item.nameProduct;
             paraName.classList.add("name-product");
@@ -63,7 +58,7 @@ function initialze(data){
             paraPrice.textContent=`Price: ${item.price}$`;
             paraPrice.classList.add("item-price");
             const paraSeller =document.createElement("p");
-            paraSeller.textContent=`Seller: ${item.seller}`;
+            paraSeller.textContent=`Quantity: ${item.quantity}`;
             paraSeller.classList.add("item-price");
             itemDescDiv.appendChild(paraPrice);
             itemDescDiv.appendChild(paraSeller);

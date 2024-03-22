@@ -3,7 +3,7 @@
     "userName": "user1",
     "password": "pass1",
     "email": "aa123@gmial.com",
-    "typeOfAccount": "seller",
+    "typeOfAccount": "customer",
     "bankAccount": "122421"
   }
 ]
