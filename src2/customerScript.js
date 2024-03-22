@@ -12,14 +12,14 @@ localStorage.setItem("cartItems",JSON.stringify(cartItems));
 
     
     
-    if(items.length==0){
-        fetch('./items.json').then(res =>res.json()).then(data => {
-            items=data;
-            localStorage.setItem("items",JSON.stringify(items));
-        });
-        
-    };
-    initialze(items);
+if(items.length==0){
+    fetch('./items.json').then(res =>res.json()).then(data => {
+        items=data;
+        localStorage.setItem("items",JSON.stringify(items));
+    });
+    
+};
+initialze(items);
 
     
     function initialze(data){

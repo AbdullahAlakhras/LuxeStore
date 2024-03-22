@@ -21,8 +21,8 @@ function initialzeItems(){
     priceC.textContent=i.price;
     quantityC.textContent=i.quantity;
     bodyRow.appendChild(itemC);
-    bodyRow.appendChild(priceC);
     bodyRow.appendChild(quantityC);
+    bodyRow.appendChild(priceC);
     tBody.appendChild(bodyRow);
     });
 }
