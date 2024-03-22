@@ -37,9 +37,10 @@ table {
 th, td {
   padding: 10px;
   border: 1px solid #ddd;
+  text-align: center;
 }
 
-form {
+#info {
   display: flex;
   flex-direction: column;
   
@@ -105,3 +106,10 @@ button:active {
     transform: translateY(0);
 }
 
+.hidden{
+    display: none;
+}
+#bankError{
+    font-size: 10pt;
+    color: red;
+}

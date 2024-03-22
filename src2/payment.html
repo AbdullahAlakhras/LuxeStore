@@ -29,13 +29,12 @@
             </table>
             <h2>Billing Information</h2>
             <p>Username: <span id="username"></span></p>
-            <form action="#">
+            <div id="info">
                 <label for="bankAccount">Bank Account Number:</label>
                 <input type="text" id="bankAccount" name="bankAccount" required>
                 <span id="bankError" class="hidden">Invalid bank account number. Please try again.</span>
-                <button type="submit">Pay Now</button>
-                <button type="submit">Cancel</button>
-            </form>
+                <button id="pay-button">Pay Now</button>
+            </div>
         </div>
     </main>
     <script src="./paymentScript.js"></script>
