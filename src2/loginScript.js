@@ -48,6 +48,10 @@ showPasswordBtn.addEventListener('click',()=>{
 function redirectToCustomer(){
     window.location.href= "./customer.html";
 };
+
+function redirectToSeller(){
+    window.location.href= "./seller.html";
+};
 function authO(){
     // for (i = 0; i<users.length; i++){
     //     console.log(userName.value);console.log(passWord.value);
@@ -62,7 +66,7 @@ function authO(){
                 redirectToCustomer();
             }  
             else{
-                
+                redirectToSeller();
             }
         };
     };
