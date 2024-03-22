@@ -4,8 +4,27 @@ let items=localStorage.getItem("items") ?
 let saleHistory =localStorage.getItem("saleHistory") ?
     JSON.parse(localStorage.getItem("saleHistory")): [];
 
-let user =localStorage.getItem("user") ?
-    JSON.parse(localStorage.getItem("user")): [];
+let user =localStorage.getItem("activeUser") ?
+    JSON.parse(localStorage.getItem("activeUser")): {};
+
+let allUsers=localStorage.getItem("users") ?
+    JSON.parse(localStorage.getItem("users")): [];
+
+
+document.querySelector("#balance").textContent+=user.balance+ " $";
+document.querySelector("#first-name").textContent+=user.firstName;
+document.querySelector("#last-name").textContent+=user.lastName;
+document.querySelector("#shipping").textContent+=user.shipping;
+document.querySelector("#user-name").textContent+=user.userName;
+document.querySelector("#email").textContent+=user.email;
+
+if(!Object.keys(user).length==0){
+    document.querySelector("#user-label").textContent+=user.userName;
+    document.querySelector("#email-label").textContent+=user.email;
+};
+
+document.querySelector("#sale-history-button").addEventListener("click" ,redirecSaleHistoryPage);
+document.querySelector("#add-balance-button").addEventListener("click" ,redirectToAddBalancePage);
 
 let cartItems =[];
 localStorage.setItem("cartItems",JSON.stringify(cartItems));
@@ -15,7 +34,7 @@ localStorage.setItem("cartItems",JSON.stringify(cartItems));
 if(items.length==0){
     fetch('./items.json').then(res =>res.json()).then(data => {
         items=data;
-        localStorage.setItem("items",JSON.stringify(items));
+        localStorage.setItem("items",JSON.stringify(items));    
     });
     
 };
@@ -320,3 +339,11 @@ function redirectToPaymentPage(){
 function sendAmount(){
     localStorage.setItem("amountFromCustomer",document.querySelector("#total-price").textContent);
 }
+
+function redirecSaleHistoryPage(){
+    window.location.href = "./saleHistory.html";
+}
+
+function redirectToAddBalancePage(){
+    window.location.href = "./addBalance.html";
+};

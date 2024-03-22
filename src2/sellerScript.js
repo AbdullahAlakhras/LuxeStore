@@ -5,11 +5,17 @@ let items=localStorage.getItem("items") ?
 let saleHistory =localStorage.getItem("saleHistory") ?
     JSON.parse(localStorage.getItem("saleHistory")): [];
 
-let user =localStorage.getItem("user") ?
-    JSON.parse(localStorage.getItem("user")): [];
+let user =localStorage.getItem("activeUser") ?
+    JSON.parse(localStorage.getItem("activeUser")): {};
+
+if(!Object.keys(user).length==0){
+    document.querySelector("#user-label").textContent+=user.userName;
+    document.querySelector("#email-label").textContent+=user.email;
+};
 
 let cartItems =[];
 localStorage.setItem("cartItems",JSON.stringify(cartItems));
+
 
     
     
@@ -110,8 +116,8 @@ function initialze(data){
     if (cartItems.length!=0){
         document.querySelector("#no-items-decleration").classList.add("hidden");
     };
-    changeTotalLabel();
-    document.querySelector("#clear-button").addEventListener("click",clearCartAction);
+    
+    
 };
 
 const loginButton=document.querySelector("#sign-out-button");

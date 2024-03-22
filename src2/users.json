@@ -1,16 +1,35 @@
 [
   {
     "userName": "user1",
+    "firstName": "Ahmed",
+    "lastName": "Ali",
     "password": "pass1",
     "email": "aa123@gmial.com",
     "typeOfAccount": "customer",
-    "bankAccount": "123"
+    "bankAccount": "123",
+    "shipping": "Qatar-Doha-street203",
+    "balance": 1000
   },
   {
     "userName": "user2",
+    "firstName": "Ahmed",
+    "lastName": "Ali",
     "password": "pass2",
     "email": "aa123@gmial.com",
     "typeOfAccount": "seller",
-    "bankAccount": "1234"
+    "bankAccount": "1234",
+    "shipping": "Qatar-Doha-street203",
+    "balance": 1000
+  },
+  {
+    "userName": "user3",
+    "password": "pass3",
+    "firstName": "Mohammed",
+    "lastName": "Ali",
+    "email": "aa123@gmial.com",
+    "typeOfAccount": "customer",
+    "bankAccount": "123",
+    "shipping": "Qatar-Doha-street203",
+    "balance": 1000
   }
 ]

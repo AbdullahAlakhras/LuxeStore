@@ -45,6 +45,10 @@ showPasswordBtn.addEventListener('click',()=>{
     }
 })
 
+function storeUser(user){
+    localStorage.setItem("activeUser",JSON.stringify(user));
+}
+
 function redirectToCustomer(){
     window.location.href= "./customer.html";
 };
@@ -63,9 +67,12 @@ function authO(){
     for (u of users){
         if(userName.value===u.userName && passWord.value===u.password){
             if(u.typeOfAccount==="customer"){
+                storeUser(u);
                 redirectToCustomer();
+                console.log(u);
             }  
             else{
+                storeUser(u);
                 redirectToSeller();
             }
         };
