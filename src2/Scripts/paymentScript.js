@@ -64,7 +64,7 @@ function payAction(){
 }; 
 
 function redirectToThankyouPage(){
-    window.location.href = "./thankyou.html";
+    window.location.href = "/src2/Html/thankyou.html";
 }
 
 function storeSaleHistory(){

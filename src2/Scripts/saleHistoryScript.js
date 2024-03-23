@@ -34,7 +34,7 @@ document.querySelector("#main-page-button").addEventListener("click",function ()
 });
 
 function redirectToMainPage(){
-     window.location.href = "./customer.html";
+     window.location.href = "/src2/Html/customer.html";
 }
 
 

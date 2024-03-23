@@ -1,6 +1,6 @@
 
 document.addEventListener("DOMContentLoaded", () => {
-    fetch('./items.json')
+    fetch('/src2/Jsons/items.json')
         .then(response => response.json())
         .then(data => {
         console.log(data); 
@@ -90,5 +90,5 @@ function toggleMenu() {
 }
 
 function redirectLoginPage(){
-    window.location.href = "./login.html";
+    window.location.href = "/src2/Html/login.html";
 }

@@ -1,7 +1,7 @@
 let users=localStorage.getItem("users") ?JSON.parse(localStorage.getItem("users")): [];
 
 if(users.length==0){
-    fetch('./users.json').then(res =>res.json()).then(data => {
+fetch('/src2/Jsons/users.json').then(res =>res.json()).then(data => {
         users=data;
         localStorage.setItem("users",JSON.stringify(users));
     });
@@ -17,15 +17,6 @@ const showPasswordBtn= document.getElementById('show');
 const userName = document.getElementById('user');
 const passWord = document.getElementById('pass');
 
-
-
-// let userObjects = [
-//     { userName:"Barhamgi" , passWord:"B121212" }, 
-//     { userName:"Abdullah" , passWord:"Void2004"}, 
-//     { userName:"Faisal" , passWord:"faisal@@"}, 
-//     { userName:"Abdulmagid ", passWord:"dev@admin01"},
-//     { userName:"admin" , passWord:"admin"}, 
-// ];
 
 signUpbutton.addEventListener("click",() => {
     containerLog.style.display = "none";
@@ -50,19 +41,13 @@ function storeUser(user){
 }
 
 function redirectToCustomer(){
-    window.location.href= "./customer.html";
+    window.location.href= "/src2/Html/customer.html";
 };
 
 function redirectToSeller(){
-    window.location.href= "./seller.html";
+    window.location.href= "/src2/Html/seller.html";
 };
 function authO(){
-    // for (i = 0; i<users.length; i++){
-    //     console.log(userName.value);console.log(passWord.value);
-    //     if(userName.value===users[i].userName && passWord.value===users[i].passWord){
-    //         console.log("hello");
-    //     }
-    // }
 
     for (u of users){
         if(userName.value===u.userName && passWord.value===u.password){

@@ -21,7 +21,7 @@ localStorage.setItem("cartItems",JSON.stringify(cartItems));
     
     
 if(items.length==0){
-    fetch('./items.json').then(res =>res.json()).then(data => {
+    fetch('/src2/Jsons/items.json').then(res =>res.json()).then(data => {
         items=data;
         localStorage.setItem("items",JSON.stringify(items));
     });
@@ -160,8 +160,8 @@ function toggleAccount(){
 
 
 function redirectLoginPage(){
-    window.location.href = "./login.html";
+    window.location.href = "/src2/Html/login.html";
 }
 function redirectMainPage(){
-    window.location.href = "./mainPage.html";
+    window.location.href = "/src2/Html/mainPage.html";
 }

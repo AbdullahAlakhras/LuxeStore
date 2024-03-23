@@ -3,5 +3,5 @@ const user=localStorage.getItem("activeUser")? JSON.parse(localStorage.getItem("
 document.querySelector("#return-button").addEventListener("click",redirectToCustomerPage);
 document.querySelector("#balance").textContent=user.balance+" $";
 function redirectToCustomerPage(){
-    window.location.href = "./customer.html";
+    window.location.href = "/src2/Html/customer.html";
 }

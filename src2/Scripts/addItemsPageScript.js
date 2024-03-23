@@ -2,7 +2,7 @@ let items=localStorage.getItem("items") ?
     JSON.parse(localStorage.getItem("items")): [];
     
 if(items.length==0){
-    fetch('./items.json').then(res =>res.json()).then(data => {
+    fetch('/src2/Jsons/items.json').then(res =>res.json()).then(data => {
         items=data;
         localStorage.setItem("items",JSON.stringify(items));
     });
