@@ -6,6 +6,34 @@
     --logo-color: RGB(255, 215, 0);
     --black-color:#000000;
 }
+
+.hero{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15rem
+}
+
+.hero #pic1{
+    
+    box-shadow: 3px 3px #000000;
+   
+
+}
+
+.hero #pic2{
+    
+
+    box-shadow: 3px 3px #000000;
+
+}
+
+.hero #pic3{
+  
+    box-shadow: 3px 3px #000000;
+}
+
+
+
 #page{
     display: grid;
     grid-template-areas: "head"
@@ -18,7 +46,6 @@
     grid-area: head;
     border-bottom: 1pt solid transparent;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
-
 }
 #top-header{
     /* display: flex;
@@ -279,8 +306,9 @@
     margin: 1em;
     display: grid;
     grid-template-columns: repeat(1, minmax(10em, 30em));
-    gap: 1em;
-    
+    gap: 13em;
+
+
 }
 .item{
     display: flex;
@@ -289,7 +317,6 @@
     gap: 2rem;
     border-style: solid;
     border-radius: 20px;
-    
 }
 .photo-div{
     display: flex;
@@ -444,3 +471,9 @@
     }
     
 }
+
+/* @media screen and (min-width: 1500px) {
+    .hero img{
+        width: 60vh;
+    }
+} */
