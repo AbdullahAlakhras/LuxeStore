@@ -23,8 +23,11 @@ showPasswordBtn.addEventListener('click',()=>{
 });
 
 document.querySelector("#modify-button").addEventListener("click",modifyAccountAction);
+document.querySelector("#delete-button").addEventListener("click",deleteAccount);
+document.querySelector("#main-button").addEventListener("click",redirectToCustomerPage);
 
-function modifyAccountAction(){
+
+ function modifyAccountAction(){
     const userName= document.querySelector("#userName").value;
     const pass= document.querySelector("#password").value;
     const email= document.querySelector("#email").value;
@@ -33,18 +36,26 @@ function modifyAccountAction(){
     const shippingAddress= document.querySelector("#shippingAddress").value;
     const bankAccount = document.querySelector("#bankAccount").value;
 
-    allUsers.forEach((u) => {
-        if(u.userName==userName){
-            u.userName=userName;
-            u.password=pass;
-            u.email=email;
-            u.firstName=firstName;
-            u.lastName=lastName;
-            u.shipping=shippingAddress;
-            u.bankAccount=bankAccount;  
-        }
-    });
-    
+    // allUsers.forEach((u) => {
+    //     if(u.userName==userName){
+    //         u.userName=userName;
+    //         u.password=pass;
+    //         u.email=email;
+    //         u.firstName=firstName;
+    //         u.lastName=lastName;
+    //         u.shipping=shippingAddress;
+    //         u.bankAccount=bankAccount;  
+    //     }
+    // });
+    const index = allUsers.findIndex((us) => us.userName == user.userName);
+    allUsers[index].userName=userName;
+    allUsers[index].password=pass;
+    allUsers[index].email=email;
+    allUsers[index].firstName=firstName;
+    allUsers[index].lastName=lastName;
+    allUsers[index].shipping=shippingAddress;
+    allUsers[index].bankAccount=bankAccount;
+   
 
     user.userName=userName;
     user.password=pass;
@@ -59,3 +70,24 @@ function modifyAccountAction(){
     localStorage.setItem("users",JSON.stringify(allUsers));
 };
 
+function deleteAccount(){
+    const index = allUsers.findIndex((us) => us.userName == user.userName);
+    allUsers.splice(index,1);
+
+     for (let key in user) {
+        if (user.hasOwnProperty(key)) {
+            delete user[key];
+        }
+    }
+    localStorage.setItem("activeUser",JSON.stringify(user));
+    localStorage.setItem("users",JSON.stringify(allUsers));
+    redirectToMainPage();
+};
+
+function redirectToMainPage(){
+    window.location.href="./mainPage.html";
+}
+
+function redirectToCustomerPage(){
+    window.location.href="./customer.html";
+}
