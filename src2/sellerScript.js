@@ -2,6 +2,7 @@
 let items=localStorage.getItem("items") ?
     JSON.parse(localStorage.getItem("items")): [];
 
+
 let saleHistory =localStorage.getItem("saleHistory") ?
     JSON.parse(localStorage.getItem("saleHistory")): [];
 

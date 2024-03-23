@@ -25,7 +25,8 @@
       "userName": "",
       "password": "",
       "bankAccount": "20001122121"
-    }
+    },
+    "type": "phone"
   },
   {
     "id": 3,
@@ -38,7 +39,8 @@
       "userName": "",
       "password": "",
       "bankAccount": "20001122121"
-    }
+    },
+    "type": "phone"
   },
   {
     "id": 4,
@@ -51,7 +53,8 @@
       "userName": "",
       "password": "",
       "bankAccount": "20001122121"
-    }
+    },
+    "type": "phone"
   },
   {
     "id": 5,
@@ -64,6 +67,7 @@
       "userName": "",
       "password": "",
       "bankAccount": "20001122121"
-    }
+    },
+    "type": "phone"
   }
 ]

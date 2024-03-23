@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add item Page</title>
+    <link rel="stylesheet" href="./addItemsPageStyle.css">
+
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <div id="title">
+                <h1><svg width="300" height="50" xmlns="http://www.w3.org/2000/svg">
+                    <text x="19" y="40" font-family="Allerta Stencil" font-size="50" fill="RGB(255, 215, 0)">Luxe
+                        Store</text>
+                </svg></h1>
+            <h2>Add New Item</h2> 
+            </div>
+              <div id="info">
+                <div class="wrapper">
+                    <Label for="product-name">Product Name: </Label>
+                    <input id="product-name" type="text" placeholder="Product Name">
+                </div>
+                <div class="wrapper">
+                    <Label for="description">Description </Label>
+                    <textarea id="description" placeholder="Description" rows="4" cols="50"></textarea>
+                </div>
+                <div class="wrapper">
+                    <Label for="quantity">Quantity: </Label>
+                    <input id="quantity" type="number" min="1"  placeholder="Qauantity">    
+                </div>
+                <div class="wrapper">
+                    <Label for="price">Price: </Label>
+                    <input id="price" type="text" placeholder="Price $">
+                </div>
+                <div class="wrapper">
+                    <Label for="type-of-product">Type of the Product: </Label>
+                    <input id="type-of-product" type="text" placeholder="Phoene or headphone or etc...">
+                </div>
+                <div class="wrapper">
+                    <Label for="link">Photo: </Label>
+                    <div id="photo-div">
+                        <input type="file" id="fileInput" accept="image/png, image/jpeg, image/svg+xml" style="display: none;">
+                        <input id="link" type="text" placeholder="Link">
+                        <button class="link-buttons" id="browse-button">Browse</button>
+                        <button class="link-buttons" id="clear-button">Clear</button>
+                    </div>
+                </div>
+                <div class="wrapper">
+                    <img id="image"  src="../Images/computer.jpg" alt="Product Photo">
+                </div>
+                <div class="wrapper">
+                    <div id="action-buttons-div">
+                        <button id="add-item-button" class="action-buttons-class">Add Item</button>
+                        <button id="reset-button" class="action-buttons-class">Reset</button>
+                    </div>
+                </div>
+        </div>
+    </main>
+    <script src="./addItemsPageScript.js"></script>
+</body>
+
+</html>
