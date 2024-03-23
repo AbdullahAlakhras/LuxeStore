@@ -25,6 +25,7 @@ if(!Object.keys(user).length==0){
 
 document.querySelector("#sale-history-button").addEventListener("click" ,redirecSaleHistoryPage);
 document.querySelector("#add-balance-button").addEventListener("click" ,redirectToAddBalancePage);
+document.querySelector("#modify-button").addEventListener("click" ,redirecttoModifyAccountPage);
 
 let cartItems =[];
 localStorage.setItem("cartItems",JSON.stringify(cartItems));
@@ -121,7 +122,7 @@ if(items.length==0){
                 paraPrice.textContent=`Price: ${item.price}$`;
                 paraPrice.classList.add("item-price");
                 const paraSeller =document.createElement("p");
-                paraSeller.textContent=`Seller: ${item.seller}`;
+                paraSeller.textContent=`Seller: ${item.seller.companyName}`;
                 paraSeller.classList.add("item-price");
                 itemDescDiv.appendChild(paraPrice);
                 itemDescDiv.appendChild(paraSeller);
@@ -328,6 +329,10 @@ function redirectLoginPage(){
 }
 function redirectMainPage(){
     window.location.href = "./mainPage.html";
+}
+
+function redirecttoModifyAccountPage(){
+    window.location.href = "./modify.html";
 }
 
 function redirectToPaymentPage(){ 

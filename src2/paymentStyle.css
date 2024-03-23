@@ -119,3 +119,8 @@ button:active {
     margin-bottom: 0;
     margin-top: 0;
 }
+
+#amount , #balance{
+  color: red;
+  font-weight: bold;
+}

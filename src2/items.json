@@ -20,7 +20,12 @@
     "description": "Iphone 4 Blue Color",
     "nameProduct": "Iphone 4",
     "price": 20,
-    "seller": "Ahmed"
+    "seller": {
+      "companyName": "Apple",
+      "userName": "",
+      "password": "",
+      "bankAccount": "20001122121"
+    }
   },
   {
     "id": 3,
@@ -28,7 +33,12 @@
     "description": "Iphone 11 With type  c charger",
     "nameProduct": "Iphone 11",
     "price": 10,
-    "seller": "Ahmed"
+    "seller": {
+      "companyName": "Apple",
+      "userName": "",
+      "password": "",
+      "bankAccount": "20001122121"
+    }
   },
   {
     "id": 4,
@@ -36,7 +46,12 @@
     "description": "Iphone 14 hello",
     "nameProduct": "Iphone 14",
     "price": 500,
-    "seller": "Ahmed"
+    "seller": {
+      "companyName": "Apple",
+      "userName": "",
+      "password": "",
+      "bankAccount": "20001122121"
+    }
   },
   {
     "id": 5,
@@ -44,6 +59,11 @@
     "description": "Iphone 15 new",
     "nameProduct": "Iphone 15",
     "price": 2000,
-    "seller": "Ahmed"
+    "seller": {
+      "companyName": "Apple",
+      "userName": "",
+      "password": "",
+      "bankAccount": "20001122121"
+    }
   }
 ]

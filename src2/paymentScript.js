@@ -1,12 +1,15 @@
 
 const cartItems=localStorage.getItem("cartItems")? JSON.parse(localStorage.getItem("cartItems")): [];
+const allUsers=localStorage.getItem("users")? JSON.parse(localStorage.getItem("users")): [];
+
 const user=localStorage.getItem("activeUser")? JSON.parse(localStorage.getItem("activeUser")): {};
 const amount=localStorage.getItem("amountFromCustomer");
 let userExistInSaleHistory=false;
 const saleHistory=localStorage.getItem("saleHistory")? JSON.parse(localStorage.getItem("saleHistory")): [];
 document.querySelector("#username").textContent=user ? user.userName: "-";
 document.querySelector("#pay-button").addEventListener("click",payAction);
-document.querySelector("#amount").textContent=amount;
+document.querySelector("#amount").textContent=amount +" $";
+document.querySelector("#balance").textContent=user.balance +" $";
 console.log(cartItems)
 if (!saleHistory.length == 0) {
     for (let i = 0; i < saleHistory.length; i++) {
@@ -38,13 +41,22 @@ function initialzeItems(){
 }
 
 function payAction(){
-    const userBankAccount=user ? user.bankAccount : -1;
-    const inputBankAccount=document.querySelector("#bankAccount").value;
+    // const userBankAccount=user ? user.bankAccount : -1;
+    // const inputBankAccount=document.querySelector("#bankAccount").value;
 
-    if(inputBankAccount.length==0 ||userBankAccount==-1 || userBankAccount !==inputBankAccount){
+    if(user.balance < Number(amount)){
         document.querySelector("#bankError").classList.remove("hidden");
         return;
     };
+    user.balance= user.balance -Number(amount);
+    console.log(amount+"sds");
+    console.log(user.balance);
+    localStorage.setItem("activeUser",JSON.stringify(user));
+
+    const index=allUsers.findIndex((u) => u.userName == user.userName);
+    
+    allUsers[index].balance=user.balance;
+    localStorage.setItem("users",JSON.stringify(allUsers));
     storeSaleHistory();
     redirectToThankyouPage();
 
