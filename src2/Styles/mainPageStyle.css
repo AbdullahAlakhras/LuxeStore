@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Truculenta:opsz,wght@12..72,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Truculenta:opsz,wght@12..72,100..900&display=swap');
+
 * {
     box-sizing: border-box;
 }
@@ -6,31 +10,64 @@
     --logo-color: RGB(255, 215, 0);
     --black-color:#000000;
 }
-
+header{
+    height: 10vh;
+}
 .hero{
     display: flex;
     justify-content: space-between;
-    margin-bottom: 15rem
+    align-items: center;
+    flex-direction: row-reverse;
+    height: 100vh ;
+    gap: 40px;
+    background-color: #000000;
 }
 
-.hero #pic1{
+.hero img{
+    height: 80vh ;
+    padding-right: 3rem;
+
+}
+
+.hero .text-hero {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero #hero-btn{
+    font-size: 2rem;
+    padding: 1rem;
+    border-radius: 2rem;
+    margin-top: 4rem;
+    font-family: "Montserrat", sans-serif;
+    color: whitesmoke;
+    background-color:transparent;     
+    text-shadow: 0.4px 0.4px gray;
+    cursor: pointer;
+    transition: 0.6s;
+}
+
+
+
+.hero .text-hero h1{
+    padding-left: 1.5rem;
+    color: white;
+    font-size: 60px;
+    margin-bottom: 11px;
+    font-family: "Truculenta", sans-serif;
+    text-shadow: 1.5px 1.5px goldenrod;
     
-    box-shadow: 3px 3px #000000;
-   
-
 }
 
-.hero #pic2{
-    
-
-    box-shadow: 3px 3px #000000;
-
+.hero .text-hero p{
+    padding-left: 1.5rem;
+    color: white;
+    font-size: 20px;
+    font-family: "Truculenta", sans-serif;
+    text-shadow: 0.1px 0.1px gray;
 }
 
-.hero #pic3{
-  
-    box-shadow: 3px 3px #000000;
-}
 
 
 
@@ -39,12 +76,11 @@
     grid-template-areas: "head"
                         "main"
                         "footer";
-    grid-template-rows: 0.3fr 3fr 0.2fr;
+    grid-template-rows: 0.3fr 2fr 0.2fr;
     margin: 0;
 }
 #header{
     grid-area: head;
-    border-bottom: 1pt solid transparent;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
 }
 #top-header{
@@ -318,15 +354,11 @@
     border-style: solid;
     border-radius: 20px;
 }
-.photo-div{
-    display: flex;
-    justify-content: center;
-    
-}
+
 .photo{
     width: 100%;
-    border-radius: 20px;
-    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    box-shadow: 1px 7px 7px rgba(0, 0, 0, 0.4);
     
 }
 #item-desc-div{
@@ -436,11 +468,145 @@
     text-align: center;
 }
 
+/*HERO ANIMATIONS*/
+#animatedProduct {
+    position:relative;
+    height:80vh;
+    width:80vh;
+    padding-right: 55rem;
+    padding-bottom: 55rem;
+    }
+    #animatedProduct img {
+    position:absolute;
+    left:0;
+    height:90vh;
+    width:90vh;
+    }
+
+    @-webkit-keyframes imgFade {
+ 0% {
+   opacity:1;
+ }
+ 17% {
+   opacity:1;
+ }
+ 25% {
+   opacity:0;
+ }
+ 92% {
+   opacity:0;
+ }
+ 100% {
+   opacity:1;
+ }
+}
+
+@-moz-keyframes imgFade {
+ 0% {
+   opacity:1;
+ }
+ 17% {
+   opacity:1;
+ }
+ 25% {
+   opacity:0;
+ }
+ 92% {
+   opacity:0;
+ }
+ 100% {
+   opacity:1;
+ }
+}
+
+@-o-keyframes imgFade {
+ 0% {
+   opacity:1;
+ }
+ 17% {
+   opacity:1;
+ }
+ 25% {
+   opacity:0;
+ }
+ 92% {
+   opacity:0;
+ }
+ 100% {
+   opacity:1;
+ }
+}
+
+@keyframes imgFade {
+ 0% {
+   opacity:1;
+ }
+ 17% {
+   opacity:1;
+ }
+ 25% {
+   opacity:0;
+ }
+ 92% {
+   opacity:0;
+ }
+ 100% {
+   opacity:1;
+ }
+}
+
+#animatedProduct img {
+  -webkit-animation-name: imgFade;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 8s;
+
+  -moz-animation-name: imgFade;
+  -moz-animation-timing-function: ease-in-out;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-duration: 8s;
+
+  -o-animation-name: imgFade;
+  -o-animation-timing-function: ease-in-out;
+  -o-animation-iteration-count: infinite;
+  -o-animation-duration: 8s;
+
+  animation-name: imgFade;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 8s;
+}
+
+#animatedProductr img:nth-of-type(1) {
+  -webkit-animation-delay: 6s;
+  -moz-animation-delay: 6s;
+  -o-animation-delay: 6s;
+  animation-delay: 6s;
+}
+#animatedProduct img:nth-of-type(2) {
+  -webkit-animation-delay: 4s;
+  -moz-animation-delay: 4s;
+  -o-animation-delay: 4s;
+  animation-delay: 4s;
+}
+#animatedProduct img:nth-of-type(3) {
+  -webkit-animation-delay: 2s;
+  -moz-animation-delay: 2s;
+  -o-animation-delay: 2s;
+  animation-delay: 2s;
+}
+#animatedProduct img:nth-of-type(4) {
+  -webkit-animation-delay: 0;
+  -moz-animation-delay: 0;
+  -o-animation-delay: 0;
+  animation-delay: 0;
+}
+
 
 
 @media screen and (min-width: 700px) {
     #page {
-        grid-template-rows: 0.1fr 3fr 0.2fr;
+        grid-template-rows: 100px 3fr 0.2fr;
     }
     #top-header {
         display: flex;

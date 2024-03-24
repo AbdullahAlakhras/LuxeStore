@@ -72,22 +72,22 @@
   } 
   ,
   {
-    "id": 0,
-    "link": "",
-    "description": "",
-    "nameProduct": "",
-    "price": 0,
+    "id": 6,
+    "link": "/src2/Images/products/blackShark.jpg",
+    "description": "Gaming headphones ",
+    "nameProduct": "Razer BlackShark V2",
+    "price": 200,
     "seller": {
-      "companyName": "",
-      "userName": "",
-      "password": "",
-      "bankAccount": ""
+      "companyName": "Razer.INC",
+      "userName": "IDK",
+      "password": "IDK",
+      "bankAccount": "Business"
     },
-    "type": ""
+    "type": "Headphones"
   },
   {
     "id": 0,
-    "link": "",
+    "link": "/src2/Images/products/viperUltimate.jpg",
     "description": "",
     "nameProduct": "",
     "price": 0,
@@ -102,7 +102,7 @@
   ,
   {
     "id": 0,
-    "link": "",
+    "link": "/src2/Images/products/alloyX.jpg",
     "description": "",
     "nameProduct": "",
     "price": 0,

@@ -71,12 +71,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     });
 });
+const heroBtn = document.getElementById("hero-btn");
 const loginButton=document.querySelector("#login-button");
 loginButton.addEventListener("click", redirectLoginPage);
 console.log(loginButton);
 
 
-
+heroBtn.addEventListener("click", ()=>{
+    window.location.href = "#main";
+})
 
     
 
