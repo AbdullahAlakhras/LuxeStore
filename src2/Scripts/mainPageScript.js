@@ -65,11 +65,16 @@ document.addEventListener("DOMContentLoaded", () => {
                 
 
                 itemDiv.addEventListener("click", ()=> {
-                    console.log("Hello");
+                    window.open("  ../Html/productDetails.html", "_blank");
+                    // window.location.href = "/src2/Html/productDetails.html";
+
+                    localStorage.setItem("itemId",JSON.stringify(paraName.textContent.trim()));
+                    
                 })
             itemDiv.appendChild(itemDescDiv);
             main.appendChild(itemDiv);
         });
+      
 
     });
 });
