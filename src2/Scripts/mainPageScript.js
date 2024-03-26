@@ -64,7 +64,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 
 
-
+                itemDiv.addEventListener("click", ()=> {
+                    console.log("Hello");
+                })
             itemDiv.appendChild(itemDescDiv);
             main.appendChild(itemDiv);
         });
@@ -81,7 +83,6 @@ heroBtn.addEventListener("click", ()=>{
     window.location.href = "#main";
 })
 
-    
 
 function toggleMenu() {
     let menu = document.getElementById('menu');
