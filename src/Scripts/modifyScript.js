@@ -85,9 +85,9 @@ function deleteAccount(){
 };
 
 function redirectToMainPage(){
-    window.location.href="/src2/Html/mainPage.html";
+    window.location.href="/src/Html/mainPage.html";
 }
 
 function redirectToCustomerPage(){
-    window.location.href="/src2/Html/customer.html";
+    window.location.href="/src/Html/customer.html";
 }

@@ -1,6 +1,6 @@
 
 document.addEventListener("DOMContentLoaded", () => {
-    fetch('/src2/Jsons/items.json')
+    fetch('/src/Jsons/items.json')
         .then(response => response.json())
         .then(data => {
         console.log(data); 
@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 itemDiv.addEventListener("click", ()=> {
                     window.open("  ../Html/productDetails.html", "_blank");
-                    // window.location.href = "/src2/Html/productDetails.html";
+                    // window.location.href = "/src/Html/productDetails.html";
 
                     localStorage.setItem("itemId",JSON.stringify(paraName.textContent.trim()));
                     
@@ -99,5 +99,5 @@ function toggleMenu() {
 }
 
 function redirectLoginPage(){
-    window.location.href = "/src2/Html/login.html";
+    window.location.href = "/src/Html/login.html";
 }

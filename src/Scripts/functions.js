@@ -8,5 +8,5 @@ function toggleMenu() {
 }
 
 function redirectLoginPage(){
-    window.location.href = "/src2/Html/login.html";
+    window.location.href = "/src/Html/login.html";
 }

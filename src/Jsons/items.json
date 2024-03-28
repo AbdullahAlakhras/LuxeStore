@@ -73,7 +73,7 @@
   ,
   {
     "id": 6,
-    "link": "/src2/Images/products/blackShark.jpg",
+    "link": "/src/Images/products/blackShark.jpg",
     "description": "Gaming headphones ",
     "nameProduct": "Razer BlackShark V2",
     "price": 200,
@@ -87,7 +87,7 @@
   },
   {
     "id": 0,
-    "link": "/src2/Images/products/viperUltimate.jpg",
+    "link": "/src/Images/products/viperUltimate.jpg",
     "description": "",
     "nameProduct": "",
     "price": 0,
@@ -102,7 +102,7 @@
   ,
   {
     "id": 0,
-    "link": "/src2/Images/products/alloyX.jpg",
+    "link": "/src/Images/products/alloyX.jpg",
     "description": "",
     "nameProduct": "",
     "price": 0,

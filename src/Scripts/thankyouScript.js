@@ -2,5 +2,5 @@
 document.querySelector("#return-button").addEventListener("click",redirectToCustomerPage);
 
 function redirectToCustomerPage(){
-    window.location.href = "/src2/Html/customer.html";
+    window.location.href = "/src/Html/customer.html";
 }

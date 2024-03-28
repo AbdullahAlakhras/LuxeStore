@@ -1,7 +1,7 @@
 let users=localStorage.getItem("users") ?JSON.parse(localStorage.getItem("users")): [];
 
 if(users.length==0){
-fetch('/src2/Jsons/users.json').then(res =>res.json()).then(data => {
+fetch('/src/Jsons/users.json').then(res =>res.json()).then(data => {
         users=data;
         localStorage.setItem("users",JSON.stringify(users));
     });
@@ -41,11 +41,11 @@ function storeUser(user){
 }
 
 function redirectToCustomer(){
-    window.location.href= "/src2/Html/customer.html";
+    window.location.href= "/src/Html/customer.html";
 };
 
 function redirectToSeller(){
-    window.location.href= "/src2/Html/seller.html";
+    window.location.href= "/src/Html/seller.html";
 };
 function authO(){
 

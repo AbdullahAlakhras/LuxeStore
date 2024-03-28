@@ -33,7 +33,7 @@ localStorage.setItem("cartItems",JSON.stringify(cartItems));
     
     
 if(items.length==0){
-    fetch('/src2/Jsons/items.json').then(res =>res.json()).then(data => {
+    fetch('/src/Jsons/items.json').then(res =>res.json()).then(data => {
         items=data;
         localStorage.setItem("items",JSON.stringify(items));    
     });
@@ -325,19 +325,19 @@ function changeNoOfCartItems(){
 }
 
 function redirectLoginPage(){
-    window.location.href = "/src2/Html/login.html";
+    window.location.href = "/src/Html/login.html";
 }
 function redirectMainPage(){
-    window.location.href = "/src2/Html/mainPage.html";
+    window.location.href = "/src/Html/mainPage.html";
 }
 
 function redirecttoModifyAccountPage(){
-    window.location.href = "/src2/Html/modify.html";
+    window.location.href = "/src/Html/modify.html";
 }
 
 function redirectToPaymentPage(){ 
     sendAmount();
-    window.location.href = "/src2/Html/payment.html";
+    window.location.href = "/src/Html/payment.html";
 
 }
 
@@ -346,9 +346,9 @@ function sendAmount(){
 }
 
 function redirecSaleHistoryPage(){
-    window.location.href = "/src2/Html/saleHistory.html";
+    window.location.href = "/src/Html/saleHistory.html";
 }
 
 function redirectToAddBalancePage(){
-    window.location.href = "/src2/Html/addBalance.html";
+    window.location.href = "/src/Html/addBalance.html";
 };

@@ -18,5 +18,5 @@ function addBalanceAction(){
 };
 
 function redirectToBalanceAdded(){
-    window.location.href="/src2/Html/balanceAdded.html";
+    window.location.href="/src/Html/balanceAdded.html";
 };
