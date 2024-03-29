@@ -8,10 +8,13 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("The current item is: ");
     console.log(item);
 
+    displayProductDetails(item);
+
     
    
 });
-// i added a basic script to try and display the items, doesnt work :( - faisal
+
+
 function displayProductDetails(item) {
     document.getElementById('product-name').textContent = item.nameProduct;
     document.getElementById('product-image').src = item.link;
