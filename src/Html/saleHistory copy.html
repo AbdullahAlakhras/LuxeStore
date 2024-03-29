@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sale History Page</title>
+    <link rel="stylesheet" href="/src/Styles/saleHistoryStyle.css">
+
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <h1><svg width="300" height="50" xmlns="http://www.w3.org/2000/svg">
+                    <text x="19" y="40" font-family="Allerta Stencil" font-size="50" fill="RGB(255, 215, 0)">Luxe
+                        Store</text>
+                </svg></h1>
+            <h2>Your Sale History</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody id="sale-items">
+                </tbody>
+            </table>
+            <div id="hidden-message" class="hidden">You havn't <b>Purchased</b> anything yet</div>
+            <div id="info">
+                <button id="main-page-button">Main Page</button>
+            </div>
+        </div>
+    </main>
+    <script src="/src/Scripts/saleHistoryScript.js"></script>
+</body>
+
+</html>

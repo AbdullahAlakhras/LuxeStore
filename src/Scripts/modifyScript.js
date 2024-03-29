@@ -89,5 +89,8 @@ function redirectToMainPage(){
 }
 
 function redirectToCustomerPage(){
-    window.location.href="/src/Html/customer.html";
+    if(user.typeOfAccount.toLowerCase()=="customer")
+        window.location.href="/src/Html/customer.html";
+     if(user.typeOfAccount.toLowerCase()=="seller")
+        window.location.href="/src/Html/seller.html";
 }

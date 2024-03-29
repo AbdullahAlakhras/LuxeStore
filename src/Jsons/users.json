@@ -18,8 +18,8 @@
     "email": "aa123@gmial.com",
     "typeOfAccount": "seller",
     "bankAccount": "1234",
-    "shipping": "Qatar-Doha-street203",
-    "balance": 1000
+    "shipping": "-",
+    "balance": 0
   },
   {
     "userName": "user3",

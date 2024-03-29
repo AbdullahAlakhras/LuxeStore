@@ -123,7 +123,7 @@ console.log(loginButton);
 const addItemsButton=document.querySelector("#add-items-button");
 addItemsButton.addEventListener("click", redirectToAddItemsPage);
 
-
+document.querySelector("#modify-account-button").addEventListener("click",redirectToModifyUserPage);
     
 
 function toggleMenu() {
@@ -178,4 +178,7 @@ function getSellerItems(){
 
 function redirectToModifyPage(){
      window.location.href = "/src/Html/modifyItemPage.html";
+}
+function redirectToModifyUserPage(){
+     window.location.href = "/src/Html/modify.html";
 }
