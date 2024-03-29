@@ -3,16 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="/src/Scripts/prodcutDetails.js"></script>
+    <title>Product Details</title>
+    <link rel="stylesheet" href="/src/Styles/productDetails.css"> 
+    <script src="/src/Scripts/productDetails.js" defer></script>
 </head>
 <body>
 
     <header>
-        <h1>HELLO</h1>
+        <h1>Product Details</h1>
     </header>
-    <main>
-        
+    <main> <!-- commented elements not found in the products' json files, need to add them? or are we ditching them? - faisal-->
+        <div id="product-detail-container">
+            <img id="product-image" src="" alt="Product Image">
+            <h2 id="product-name"></h2>
+            <p id="product-price"></p>
+            <!--<p id="product-rating">Product Rating: ★★★★☆</p>-->
+            <p id="product-manufacturer"></p>
+            <p id="product-seller"></p>
+            <p id="product-description"></p>
+            <!--<label for="product-quantity">Quantity:</label>-->
+            <!--<input type="number" id="product-quantity" name="quantity" min="1" value="1">-->
+            <button type="button" id="add-to-cart-btn">Add to Cart</button>
+        </div>
     </main>
+
 </body>
 </html>
