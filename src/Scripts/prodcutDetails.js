@@ -18,7 +18,7 @@ function displayProductDetails(item) {
     document.getElementById('product-image').alt = item.description;
     document.getElementById('product-price').textContent = `$${item.price}`;
     document.getElementById('product-manufacturer').textContent = item.seller.companyName;
-    document.getElementById('product-seller').textContent = item.seller.userName; // Or another relevant field
+    document.getElementById('product-seller').textContent = item.seller.userName; 
     document.getElementById('product-description').textContent = item.description;
 }
 
