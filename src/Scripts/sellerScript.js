@@ -125,7 +125,8 @@ const loginButton=document.querySelector("#sign-out-button");
 loginButton.addEventListener("click", redirectMainPage);
 console.log(loginButton);
 
-
+const addItemsButton=document.querySelector("#add-items-button");
+addItemsButton.addEventListener("click", redirectToAddItemsPage);
 
 
     
@@ -164,4 +165,8 @@ function redirectLoginPage(){
 }
 function redirectMainPage(){
     window.location.href = "/src/Html/mainPage.html";
+}
+
+function redirectToAddItemsPage(){
+    window.location.href = "/src/Html/addItemsPage.html";
 }

@@ -8,8 +8,8 @@
     "price": 19.5,
     "seller": {
       "companyName": "Apple",
-      "userName": "",
-      "password": "",
+      "userName": "user2",
+      "password": "pass2",
       "bankAccount": "20001122121"
     },
     "type": "phone"
@@ -69,8 +69,7 @@
       "bankAccount": "20001122121"
     },
     "type": "phone"
-  } 
-  ,
+  },
   {
     "id": 6,
     "link": "/src/Images/products/blackShark.jpg",
@@ -98,8 +97,7 @@
       "bankAccount": ""
     },
     "type": ""
-  }
-  ,
+  },
   {
     "id": 0,
     "link": "/src/Images/products/alloyX.jpg",
@@ -141,8 +139,21 @@
       "bankAccount": ""
     },
     "type": ""
-  }
-  ,
+  },
+  {
+    "id": 0,
+    "link": "",
+    "description": "",
+    "nameProduct": "",
+    "price": 0,
+    "seller": {
+      "companyName": "",
+      "userName": "",
+      "password": "",
+      "bankAccount": ""
+    },
+    "type": ""
+  },
   {
     "id": 0,
     "link": "",
@@ -184,8 +195,21 @@
       "bankAccount": ""
     },
     "type": ""
-  }
-  ,
+  },
+  {
+    "id": 0,
+    "link": "",
+    "description": "",
+    "nameProduct": "",
+    "price": 0,
+    "seller": {
+      "companyName": "",
+      "userName": "",
+      "password": "",
+      "bankAccount": ""
+    },
+    "type": ""
+  },
   {
     "id": 0,
     "link": "",
@@ -227,8 +251,21 @@
       "bankAccount": ""
     },
     "type": ""
-  }
-  ,
+  },
+  {
+    "id": 0,
+    "link": "",
+    "description": "",
+    "nameProduct": "",
+    "price": 0,
+    "seller": {
+      "companyName": "",
+      "userName": "",
+      "password": "",
+      "bankAccount": ""
+    },
+    "type": ""
+  },
   {
     "id": 0,
     "link": "",
@@ -270,51 +307,7 @@
       "bankAccount": ""
     },
     "type": ""
-  }
-  ,
-  {
-    "id": 0,
-    "link": "",
-    "description": "",
-    "nameProduct": "",
-    "price": 0,
-    "seller": {
-      "companyName": "",
-      "userName": "",
-      "password": "",
-      "bankAccount": ""
-    },
-    "type": ""
   },
-  {
-    "id": 0,
-    "link": "",
-    "description": "",
-    "nameProduct": "",
-    "price": 0,
-    "seller": {
-      "companyName": "",
-      "userName": "",
-      "password": "",
-      "bankAccount": ""
-    },
-    "type": ""
-  },
-  {
-    "id": 0,
-    "link": "",
-    "description": "",
-    "nameProduct": "",
-    "price": 0,
-    "seller": {
-      "companyName": "",
-      "userName": "",
-      "password": "",
-      "bankAccount": ""
-    },
-    "type": ""
-  }
-  ,
   {
     "id": 0,
     "link": "",
