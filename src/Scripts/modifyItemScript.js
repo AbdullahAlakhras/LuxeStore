@@ -4,6 +4,14 @@ let items=localStorage.getItem("items") ?
 let activeUser=localStorage.getItem("activeUser") ?
     JSON.parse(localStorage.getItem("activeUser")): [];
 
+let modifyItemItem=localStorage.getItem("modifyItem") ?
+    JSON.parse(localStorage.getItem("modifyItem")): {};
+
+let index11=-1;
+
+initialize();
+
+
 if(items.length==0){
     fetch('/src/Jsons/items.json').then(res =>res.json()).then(data => {
         items=data;
@@ -16,7 +24,7 @@ document.querySelector("#browse-button").addEventListener("click",browseAction);
 document.querySelector("#clear-button").addEventListener("click", clearAction);
 document.querySelector("#reset-button").addEventListener("click", resetAction);
 document.querySelector("#link").addEventListener("input", linkAction);
-document.querySelector("#add-item-button").addEventListener("click", addItemAction);
+document.querySelector("#modify-item-button").addEventListener("click", modifyItemAction);
 
 
 function browseAction(){
@@ -28,7 +36,7 @@ function clearAction(){
     document.querySelector("#image").src="";
 };
 
-function addItemAction(){
+function modifyItemAction(){
     const productName= document.querySelector("#product-name").value; 
     if(productName.trim().length===0){
         document.querySelector("#warning").classList.remove("hidden");
@@ -85,9 +93,10 @@ function addItemAction(){
         seller: seller,
         type: typeOfProduct
     }
+    items.splice(index11,1);
     items.push(item);
     localStorage.setItem("items",JSON.stringify(items));
-    console.log('hahah');
+    
 };
 
 function resetAction(){
@@ -112,3 +121,29 @@ function linkAction(){
 
     image.src=link;
 }
+
+function initialize(){
+    if (Object.keys(modifyItemItem).length === 0) {
+        return;
+    }
+    const productName= document.querySelector("#product-name"); 
+    const company= document.querySelector("#company-name"); 
+    const description= document.querySelector("#description"); 
+    let quantity= document.querySelector("#quantity"); 
+    const price= document.querySelector("#price"); 
+    const typeOfProduct= document.querySelector("#type-of-product");
+    //
+    const link= document.querySelector("#link"); 
+    const image= document.querySelector("#image");
+    
+    productName.value=modifyItemItem.nameProduct;
+    company.value=modifyItemItem.seller.companyName;
+    description.value=modifyItemItem.description;
+    quantity.value=modifyItemItem.quantity;
+    price.value=modifyItemItem.price;
+    typeOfProduct.value=modifyItemItem.type;
+    link.value=modifyItemItem.link;
+    image.src=link.value;
+    index11=items.findIndex((i) => i.nameProduct ==modifyItemItem.nameProduct); 
+    
+};

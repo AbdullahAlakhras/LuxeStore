@@ -3,11 +3,15 @@ let items=localStorage.getItem("items") ?
     JSON.parse(localStorage.getItem("items")): [];
 
 
+
+
 let saleHistory =localStorage.getItem("saleHistory") ?
     JSON.parse(localStorage.getItem("saleHistory")): [];
 
 let user =localStorage.getItem("activeUser") ?
     JSON.parse(localStorage.getItem("activeUser")): {};
+
+let sellerItems=getSellerItems();
 
 if(!Object.keys(user).length==0){
     document.querySelector("#user-label").textContent+=user.userName;
@@ -27,7 +31,7 @@ if(items.length==0){
     });
     
 };
-initialze(items);
+initialze(sellerItems);
 
     
 function initialze(data){
@@ -73,38 +77,29 @@ function initialze(data){
             const itemsButtonDiv =document.createElement("div");
             itemsButtonDiv.classList.add("item-button-div");
 
-            const addCartButton =document.createElement("button");
-            addCartButton.innerText="Add to Cart";
-            addCartButton.classList.add("item-buttons");
-            addCartButton.classList.add("disable-add");
-            addCartButton.id="add-cart-button";
-            itemsButtonDiv.appendChild(addCartButton);
-            addCartButton.addEventListener("click", function (){
-                addToCart(item.nameProduct,item.price,document.getElementById(`quantityInput-${item.id}`).value);
-                removeCartButton.disabled=false;
-                addCartButton.disabled=true;
-                quantityInput.disabled=true;
-                incrementButton.disabled=true;
-                decrementButton.disabled=true;
-                changeTotalLabel();
+            const ModifyItemButton =document.createElement("button");
+            ModifyItemButton.innerText="Modify Item";
+            ModifyItemButton.classList.add("item-buttons");
+            ModifyItemButton.id="add-cart-button";
+            itemsButtonDiv.appendChild(ModifyItemButton);
+            ModifyItemButton.addEventListener("click", function (){
+                const index=items.findIndex((i)=> i.nameProduct==paraName.textContent);
+                localStorage.setItem("modifyItem",JSON.stringify(items[index]));
+                redirectToModifyPage();
             });
 
-            const removeCartButton =document.createElement("button");
-            removeCartButton.innerText="Remove from Cart";
-            removeCartButton.classList.add("item-buttons");
-            removeCartButton.classList.add("disable-remove");
-            removeCartButton.id="remove-cart-button";
-            removeCartButton.disabled=true;
-            removeCartButton.addEventListener("click",function(){
-                removeFromCart(item.nameProduct,item.price,document.getElementById(`quantityInput-${item.id}`).value);
-                removeCartButton.disabled=true;
-                addCartButton.disabled=false;
-                quantityInput.disabled=false;
-                incrementButton.disabled=false;
-                decrementButton.disabled=false;
-                changeTotalLabel();
+            const removeItemButton =document.createElement("button");
+            removeItemButton.innerText="Take off market";
+            removeItemButton.classList.add("item-buttons");
+            removeItemButton.id="remove-cart-button";
+            removeItemButton.addEventListener("click",function(){
+                const index=items.findIndex((i)=> i.nameProduct==paraName.textContent);
+                items.splice(index,1);
+                localStorage.setItem("items",JSON.stringify(items));
+                location.reload();
+
             });
-            itemsButtonDiv.appendChild(removeCartButton);
+            itemsButtonDiv.appendChild(removeItemButton);
             
             itemDescDiv.appendChild(itemsButtonDiv);
 
@@ -169,4 +164,18 @@ function redirectMainPage(){
 
 function redirectToAddItemsPage(){
     window.location.href = "/src/Html/addItemsPage.html";
+}
+
+function getSellerItems(){
+    const array=[];
+    items.forEach((item)=>{
+        if(item.seller.userName==user.userName){
+            array.push(item);
+        }
+    });
+    return array;
+};
+
+function redirectToModifyPage(){
+     window.location.href = "/src/Html/modifyItemPage.html";
 }

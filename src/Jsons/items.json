@@ -22,8 +22,8 @@
     "price": 20,
     "seller": {
       "companyName": "Apple",
-      "userName": "",
-      "password": "",
+      "userName": "user2",
+      "password": "pass2",
       "bankAccount": "20001122121"
     },
     "type": "phone"
