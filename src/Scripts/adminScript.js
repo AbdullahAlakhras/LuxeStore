@@ -43,7 +43,7 @@
                 paraPrice.textContent=`Price: ${item.price}$`;
                 paraPrice.classList.add("item-price");
                 const paraSeller =document.createElement("p");
-                paraSeller.textContent=`Seller: ${item.seller}`;
+                paraSeller.textContent=`Seller: ${item.seller.companyName}`;
                 paraSeller.classList.add("item-price");
                 // spanDiv.appendChild(paraPrice);
                 // spanDiv.appendChild(paraSeller);

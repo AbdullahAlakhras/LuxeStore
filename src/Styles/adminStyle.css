@@ -164,7 +164,7 @@
 
 /* SIGNOUT BUTTON */
 #sign-out-button {
-    align-items: center;
+align-items: center;
     background-color: var(--white-color);
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: .25rem;
@@ -181,7 +181,7 @@
     margin: 0;
     min-height: 2.5rem;
     padding: calc(.875rem - 1px) calc(1.5rem - 1px);
-    /* position: relative; */
+    position: relative;
     text-decoration: none;
     transition: all 250ms;
     user-select: none;
