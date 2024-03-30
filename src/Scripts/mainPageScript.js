@@ -74,10 +74,46 @@ document.addEventListener("DOMContentLoaded", () => {
             itemDiv.appendChild(itemDescDiv);
             main.appendChild(itemDiv);
         });
-      
 
-    });
+        let productNames = []
+        for (const item of data){
+            if(item.nameProduct != ""){
+                productNames.push(item.nameProduct);
+            }
+            
+        }
+
+        // console.log(productNames) for backend and testing purposes 
+    //     const resultBox = document.querySelector(".resultBox");
+    //     document.getElementById("search-box").addEventListener("keyup",(e)=>{
+    //         let filteredProductNames = [];
+    //         const liveSearch = e.target.value.toLowerCase();
+    //         if(productNames.length){
+    //             filteredProductNames = productNames.filter((prodName) => {
+    //                 return prodName.toLowerCase().includes(liveSearch.toLowerCase());
+                    
+    //             })
+    //             console.log(filteredProductNames); 
+    //         }
+    //         // console.log(liveSearch);
+    //         displaySearch(filteredProductNames) 
+    //     });
+
+        
+    //     function displaySearch(filteredProductNames){
+    //         const dis = filteredProductNames.map((list) => {
+    //             return `<li>` + list + `</li>`;
+    //         });
+
+    //         resultBox.innerHTML = "<ul>" + dis + "</ul>";
+    //     }
+    // });
+
+   
+    
 });
+
+
 const heroBtn = document.getElementById("hero-btn");
 const loginButton=document.querySelector("#login-button");
 loginButton.addEventListener("click", redirectLoginPage);
