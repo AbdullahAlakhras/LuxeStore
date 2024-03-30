@@ -1,28 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <!-- Allerta Stencil Font -->
     <link href="https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/src/Styles/adminStyle.css">
-    <title>Luxe Store Admin</title>
+    <link rel="stylesheet" href="/src/Styles/mainPageStyle.css">
+    <title>Luxe Store</title>
+    <link rel="icon" type="image/x-icon" href="/src/Images/online-shopping.png">
 </head>
-
 <body id="page">
     <header id="header">
         <div id="top-header">
             <div id="menu-logo-div">
-                <button id="menu-button"><img src="../Images/icons8-menu-30.png" alt="menue-icon"
-                        onclick="toggleMenu()"></button>
-                <a href="./mainPage.html" id="main-link"> <svg width="200" height="40"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <text x="19" y="30" font-family="Allerta Stencil" font-size="30" fill="RGB(255, 215, 0)">Luxe
-                            Store</text>
-                    </svg></a>
+                <button id="menu-button"><img src="../Images/icons8-menu-30.png" alt="menue-icon" onclick="toggleMenu()"></button>
+                <a href="./mainPage.html" id="main-link"> <svg width="200" height="40" xmlns="http://www.w3.org/2000/svg">
+                   <text x="19" y="30" font-family="Allerta Stencil" font-size="30" fill="RGB(255, 215, 0)">Luxe Store</text>
+                </svg></a>
             </div>
             <div id="menu">
                 <div id="products-div" class="menu-divs">
@@ -32,8 +28,7 @@
                         <label for="phone-ch" class="products-labels">Phones</label><br>
                         <input class="products-checkboxes" id="headphone-ch" type="checkbox" name="product-checkboxes">
                         <label for="headphone-ch" class="products-labels">Headphones</label><br>
-                        <input class="products-checkboxes" id="phone-covers-ch" type="checkbox"
-                            name="product-checkboxes">
+                        <input class="products-checkboxes" id="phone-covers-ch" type="checkbox" name="product-checkboxes">
                         <label for="phone-covers-ch" class="products-labels">Phone Covers</label><br>
                         <input class="products-checkboxes" id="other-ch" type="checkbox" name="product-checkboxes">
                         <label for="other-ch" class="products-labels">Others</label><br>
@@ -71,7 +66,7 @@
                         <label for="others-ch" class="brands-labels">Others</label><br>
                     </form>
                 </div>
-                <div id="menu-button-div">
+                <div id="menu-button-div" >
                     <button id="filter-button" type="submit">Filter</button>
                     <button id="reset-button" type="reset">Reset</button>
                 </div>
@@ -82,32 +77,40 @@
             </div>
             <div id="login-cart-div">
                 <button id="sign-out-button" role="button">Sign Out</button>
-
-                <button id="cart-button"><img id="cart-icon" src="../Images/icons8-cart-30.png"
-                        alt="cart-icon"></button>
+                
+                <button id="cart-button"><img id="cart-icon" src="../Images/icons8-cart-30.png" alt="cart-icon"></button>
                 <label id="counter">0</label>
             </div>
         </div>
-        <div id="bottom-header"></div>
-
+        
 
     </header>
-    <main id="main"></main>
-    <footer id="footer">
-        <img class="social-media-icons" src="../Images/icons8-instagram-30.png" alt="">
-        <img class="social-media-icons" src="../Images/icons8-facebook-30.png" alt="">
-        <img class="social-media-icons" src="../Images/icons8-snapchat-30.png" alt="">
-    </footer>
-    <script>
-        function toggleMenu() {
-            var menu = document.getElementById('menu');
-            if (menu.style.left === '0px') {
-                menu.style.left = '-100%'; // Slide out
-            } else {
-                menu.style.left = '0px'; // Slide in
-            }
-        }
-    </script>
-</body>
+    <main >
 
+        <div class="hero" style="justify-content: center;">
+           <div class="text-hero">
+            <h1>Welcome to the admin page</h1>
+            <p>Please check the report logs and the flagged items and take immediate actions</p>
+           </div>
+        </div>
+        <hr>
+        <div id="main">
+
+        </div>
+
+    </main>
+    <footer id="footer">
+        <div id="social-media-div">
+            <img class="social-media-icons" src="../Images/icons8-instagram-30.png" alt="">
+            <img class="social-media-icons" src="../Images/icons8-facebook-30.png" alt="">
+            <img class="social-media-icons" src="../Images/icons8-snapchat-30.png" alt="">
+        </div>
+        <div id="about">
+            <h3 id="about-head">About</h3>
+            <p id="about-para">Empowering Connections, Inspiring Innovations</p>
+        </div>
+       
+    </footer>
+    <script src="/src/Scripts/adminScript.js"></script>
+</body>
 </html>

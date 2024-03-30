@@ -31,5 +31,16 @@
     "bankAccount": "123",
     "shipping": "Qatar-Doha-street203",
     "balance": 1000
+  },
+  {
+    "userName": "admin2",
+    "password": "admin2",
+    "firstName": "Abdullah",
+    "lastName": "Alakhras",
+    "email": "example@gmail.com",
+    "typeOfAccount": "Admin",
+    "bankAccount": "123",
+    "shipping": "Qatar-Doha-street203",
+    "balance": 1000
   }
 ]
