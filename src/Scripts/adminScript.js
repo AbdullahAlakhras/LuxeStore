@@ -1,11 +1,17 @@
 
-document.addEventListener("DOMContentLoaded", () => {
-    fetch('/src/Jsons/items.json')
-        .then(response => response.json())
-        .then(data => {
-        console.log(data); 
+
+    let items=localStorage.getItem("items") ?
+        JSON.parse(localStorage.getItem("items")): [];
+        if(items.length==0){
+    fetch('/src/Jsons/items.json').then(res =>res.json()).then(data => {
+        items=data;
+        localStorage.setItem("items",JSON.stringify(items));
+    });
+    
+};
+        console.log(); 
         const main =document.querySelector("#main");
-        data.forEach(item => {
+        items.forEach(item => {
             const itemDiv=document.createElement("div");
                 itemDiv.classList.add("item");
             
@@ -44,8 +50,23 @@ document.addEventListener("DOMContentLoaded", () => {
                 itemDescDiv.appendChild(paraPrice);
                 itemDescDiv.appendChild(paraSeller);
 
-                const itemsButtonDiv =document.createElement("div");
+                 const itemsButtonDiv =document.createElement("div");
                 itemsButtonDiv.classList.add("item-button-div");
+
+                const removeItemButton =document.createElement("button");
+                removeItemButton.innerText="Take off market";
+                removeItemButton.classList.add("item-buttons");
+                removeItemButton.id="remove-cart-button";
+                removeItemButton.addEventListener("click",function(){
+                const index=items.findIndex((i)=> i.nameProduct==paraName.textContent);
+                items.splice(index,1);
+                localStorage.setItem("items",JSON.stringify(items));
+                location.reload();
+
+            });
+            itemsButtonDiv.appendChild(removeItemButton);
+            
+            // itemDescDiv.appendChild(itemsButtonDiv);
 
                 
 
@@ -53,7 +74,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 
 
-                itemDiv.addEventListener("click", ()=> {
+                itemImgDiv.addEventListener("click", ()=> {
+                    window.open("  ../Html/productDetails.html", "_blank");
+                    // window.location.href = "/src/Html/productDetails.html";
+
+                    localStorage.setItem("itemId",JSON.stringify(paraName.textContent.trim()));
+                    
+                })
+                itemDescDiv.addEventListener("click", ()=> {
                     window.open("  ../Html/productDetails.html", "_blank");
                     // window.location.href = "/src/Html/productDetails.html";
 
@@ -61,12 +89,13 @@ document.addEventListener("DOMContentLoaded", () => {
                     
                 })
             itemDiv.appendChild(itemDescDiv);
+            itemDiv.appendChild(itemsButtonDiv);
             main.appendChild(itemDiv);
         });
       
 
-    });
-});
+
+
 
 
 const signOutButton=document.querySelector("#sign-out-button");
