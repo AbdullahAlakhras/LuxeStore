@@ -26,6 +26,7 @@ if(!Object.keys(user).length==0){
 document.querySelector("#sale-history-button").addEventListener("click" ,redirecSaleHistoryPage);
 document.querySelector("#add-balance-button").addEventListener("click" ,redirectToAddBalancePage);
 document.querySelector("#modify-button").addEventListener("click" ,redirecttoModifyAccountPage);
+document.querySelector("#filter-button").addEventListener("click" ,filterAction);
 
 let cartItems =[];
 localStorage.setItem("cartItems",JSON.stringify(cartItems));
@@ -351,4 +352,55 @@ function redirecSaleHistoryPage(){
 
 function redirectToAddBalancePage(){
     window.location.href = "/src/Html/addBalance.html";
+};
+
+function filterAction(){
+    let selectedItems=[];
+    const productCheckBoxes = document.querySelectorAll('.products-checkboxes');
+    const brandsCheckBoxes = document.querySelectorAll('.brands-checkboxes');
+    const radioButtons = document.querySelectorAll('.prices-rd');
+    let selectedRadioButton;
+    radioButtons.forEach(radioButton => {
+        if (radioButton.checked) {
+            selectedRadioButton = radioButton;
+        }
+    });
+
+    const checkedProductCheckboxes = Array.from(productCheckBoxes).filter(checkbox => checkbox.checked);
+    const checkedBrandCheckboxes = Array.from(brandsCheckBoxes).filter(checkbox => checkbox.checked);
+    
+    if(checkedProductCheckboxes.length!=0){
+    for(let i=0;i<checkedProductCheckboxes.length ;i++){
+        for(let j=0;j<items.length ;j++){
+            if(checkedProductCheckboxes[i].value==items[j].type.toLowerCase()){
+                selectedItems.push(items[j]);
+            }
+        }
+    }
+    }
+    else{
+       selectedItems=[...items];
+        
+    }
+    
+    if(checkedBrandCheckboxes.length!=0){
+        for(let i=0;i<checkedBrandCheckboxes.length ;i++){
+        for(let j=0;j<selectedItems.length ;j++){
+           
+            if(checkedBrandCheckboxes[i].value!==selectedItems[j].seller.companyName.toLowerCase()){
+                selectedItems.splice(selectedItems[j],1);
+                
+            }
+        }
+    }
+    }
+    
+    if(!selectedRadioButton.value=="all"){
+        const selectedRadioButtonValue=Number(selectedRadioButton);
+        selectedItems.filter((i)=>i.price<=selectedRadioButtonValue);
+        
+    }
+    document.querySelector("#main").replaceChildren();
+    initialze(selectedItems);
+
 };
