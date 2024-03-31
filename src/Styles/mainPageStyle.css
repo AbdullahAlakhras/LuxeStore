@@ -728,12 +728,14 @@ footer{
    #main{
     align-items: center;
     justify-content: center;
+    margin-top: 75em;
    }
 
    header{
     flex-direction: column;
     align-items: center;
     height: 10em;
+    
    }
 
    #main-link{
@@ -748,17 +750,17 @@ footer{
    }
 
    .hero{
-    display: none;
-    flex-direction: column-reverse;
+    margin-top: 10em;
+    flex-direction: column;
+    position: absolute;
+    height: 55em;
 
    }
 
    #animatedProduct {
     position: absolute;
     height:50em;
-    width:50em;
-    padding-right: 15em;
-    padding-bottom: 15em;
+    width: 38em;
     }
 
     #animatedProduct img {
@@ -766,43 +768,14 @@ footer{
     left:0;
     height:20em;
     width:20em;
+    left: 18em;
+    top: 30em;
+    }
+
+    .search{
+        position: absolute;
+        left: 5.5em;
+        top: 10em
     }
     
-}
-@media screen and (min-width: 700px) {
-    #page {
-        grid-template-rows: 100px 3fr 0.2fr;
-    }
-    #top-header {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        align-items: center;
-    }
-    #main {
-        grid-template-columns: repeat(2, minmax(10em, 30em));
-    }
-    .photo{
-        height: 230px;
-    }
-   
-}
-
-@media screen and (min-width: 900px) {
-    #top-header{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content:  space-between   ;
-        align-items: center;
-    }
-    #main {
-        grid-template-columns: repeat(3, minmax(10em, 30em));
-    }
-    
-}
-
-@media screen and (min-width: 1500px) {
-   
 }
