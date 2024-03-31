@@ -102,37 +102,40 @@ if(items.length==0){
         }
 
         console.log(productNames) 
-        // const resultBox = document.querySelector(".resultBox");
-        // document.getElementById("search-box").addEventListener("keyup",(e)=>{
-        //     let filteredProductNames = [];
-        //     const liveSearch = e.target.value.toLowerCase();
-        //     if(productNames.length){
-        //         filteredProductNames = productNames.filter((prodName) => {
-        //             return prodName.toLowerCase().includes(liveSearch.toLowerCase());
+        const resultBox = document.querySelector(".resultBox");
+        document.getElementById("search-box").addEventListener("keyup",(e)=>{
+            let filteredProductNames = [];
+            const liveSearch = e.target.value.toLowerCase();
+            if(productNames.length){
+                filteredProductNames = productNames.filter((prodName) => {
+                    return prodName.toLowerCase().includes(liveSearch.toLowerCase());
                     
-        //         })
-        //         console.log(filteredProductNames); 
-        //     }
-        //     // console.log(liveSearch);
-        //     displaySearch(filteredProductNames) 
-        // });
+                })
+                // console.log(filteredProductNames); 
+            }
 
-        
-        // function displaySearch(filteredProductNames){
-        //     const dis = filteredProductNames.map((list) => {
-        //         return `<li>` + list + `</li>`;
-        //     });
+            // console.log(liveSearch)
+            if(!liveSearch){
+                filteredProductNames = [];
+            }
+            displaySearch(filteredProductNames) 
+        });
 
-        //     resultBox.innerHTML = "<ul>" + dis + "</ul>";
-        // }
-
-
-   
+        function fan(item){
+            window.open("  ../Html/productDetails.html", "_blank");
+            localStorage.setItem("itemId",JSON.stringify(item));                
+    }
+        function displaySearch(filteredProductNames){
+            const dis = filteredProductNames.map((list) => {
+                return `<li onClick="fan('${list}')">${list}</li>`;
+            });
+            resultBox.innerHTML = "<ul>" + dis.join("")+ "</ul>";
+        }
 
 const heroBtn = document.getElementById("hero-btn");
 const loginButton=document.querySelector("#login-button");
 loginButton.addEventListener("click", redirectLoginPage);
-console.log(loginButton);
+// console.log(loginButton);
 
 
 heroBtn.addEventListener("click", ()=>{
