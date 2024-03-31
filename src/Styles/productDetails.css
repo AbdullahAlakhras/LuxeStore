@@ -70,3 +70,23 @@ main {
     background-color: #000000;
     color: RGB(255, 215, 0);
 }
+
+@media (max-width: 768px) {
+    #product-detail-container {
+        padding: 10px;
+        margin: 10px;
+    }
+
+    header {
+        font-size: 20px;
+        padding: 8px 0;
+    }
+
+    #product-name {
+        font-size: 24px;
+    }
+
+    .button {
+        padding: 8px 16px;
+    }
+}
