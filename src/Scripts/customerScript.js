@@ -359,51 +359,61 @@ function redirectToAddBalancePage(){
 
 function filterAction(){
     let selectedItems=[];
-    const productCheckBoxes = document.querySelectorAll('.products-checkboxes');
-    const brandsCheckBoxes = document.querySelectorAll('.brands-checkboxes');
-    const radioButtons = document.querySelectorAll('.prices-rd');
-    let selectedRadioButton;
-    radioButtons.forEach(radioButton => {
-        if (radioButton.checked) {
-            selectedRadioButton = radioButton;
-        }
-    });
+    // const productCheckBoxes = document.querySelectorAll('.products-checkboxes-class');
+    // const brandsCheckBoxes = document.querySelectorAll('.brands-checkboxes-class');
+    // const radioButtons = document.querySelectorAll('.prices-rd');
+    // let selectedRadioButton;
+    // radioButtons.forEach(radioButton => {
+    //     if (radioButton.checked) {
+    //         selectedRadioButton = radioButton;
+    //     }
+    // });
 
-    const checkedProductCheckboxes = Array.from(productCheckBoxes).filter(checkbox => checkbox.checked);
-    const checkedBrandCheckboxes = Array.from(brandsCheckBoxes).filter(checkbox => checkbox.checked);
+    // const checkedProductCheckboxes = Array.from(productCheckBoxes).filter(checkbox => checkbox.checked);
+    // const checkedBrandCheckboxes = Array.from(brandsCheckBoxes).filter(checkbox => checkbox.checked);
     
-    if(checkedProductCheckboxes.length!=0){
-    for(let i=0;i<checkedProductCheckboxes.length ;i++){
-        for(let j=0;j<items.length ;j++){
-            if(checkedProductCheckboxes[i].value==items[j].type.toLowerCase()){
-                selectedItems.push(items[j]);
-            }
-        }
-    }
-    }
-    else{
-       selectedItems=[...items];
+    // if(checkedProductCheckboxes.length!=0){
+    // for(let i=0;i<checkedProductCheckboxes.length ;i++){
+    //     for(let j=0;j<items.length ;j++){
+    //         if(checkedProductCheckboxes[i].value==items[j].type.toLowerCase()){
+    //             selectedItems.push(items[j]);
+    //         }
+    //     }
+    // }
+    // }
+    // else{
+    //    selectedItems=[...items];
         
-    }
+    // }
+    // console.log(selectedItems);
     
-    if(checkedBrandCheckboxes.length!=0){
-        for(let i=0;i<checkedBrandCheckboxes.length ;i++){
-        for(let j=0;j<selectedItems.length ;j++){
+    // if(checkedBrandCheckboxes.length!=0){
+    //     for(let i=0;i<checkedBrandCheckboxes.length ;i++){
+    //     for(let j=0;j<selectedItems.length ;j++){
            
-            if(checkedBrandCheckboxes[i].value==selectedItems[j].seller.companyName.toLowerCase()){
-                selectedItems.splice(j,1);
+    //         if(checkedBrandCheckboxes[i].value!==selectedItems[j].seller.companyName.toLowerCase()){
+    //             selectedItems.splice(j,1);
                 
-            }
-        }
-    }
-    }
+    //         }
+    //     }
+    // }
+    // }
     
-    if(!selectedRadioButton.value=="all"){
-        const selectedRadioButtonValue=Number(selectedRadioButton);
-        selectedItems.filter((i)=>i.price<=selectedRadioButtonValue);
+    // if(!selectedRadioButton.value=="all"){
+    //     const selectedRadioButtonValue=Number(selectedRadioButton);
+    //     selectedItems.filter((i)=>i.price<=selectedRadioButtonValue);
         
-    }
+    // }
+    let filteredItems = items.filter(i => {
+        let productType = Array.from(document.querySelectorAll(".products-checkboxes-class")).filter((j) => j.checked==true).map(checkbox => checkbox.value);
+        let priceRange = document.querySelector(`input[name="prices-radio-buttons"]:checked`).value;
+        let brand = Array.from(document.querySelectorAll(".brands-checkboxes-class")).filter((j) => j.checked==true).map(checkbox => checkbox.value);
+        console.log(productType);
+        return (productType.length==0 || productType.includes(i.type.toLowerCase()))
+            && (priceRange === 'all' || i.price <= parseInt(priceRange))
+            && (brand.length==0 ||brand.includes(i.seller.companyName.toLowerCase()));
+    });
     document.querySelector("#main").replaceChildren();
-    initialze(selectedItems);
+    initialze(filteredItems);
 
 };
