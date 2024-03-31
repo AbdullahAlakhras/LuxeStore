@@ -117,7 +117,7 @@
     "link": "/src/Images/products/asusRog_strix _g15.jpeg",
     "description": "Gaming laptop etc etc",
     "nameProduct": "AsusROG Strix G15 Gaming Laptop",
-    "price": 0,
+    "price": 8000,
     "seller": {
       "companyName": "Asus",
       "userName": "user4",
@@ -230,7 +230,7 @@
     "link": "/src/Images/products/nintendo_Switch.jpg",
     "description": "Perfect mobile switch device",
     "nameProduct": "Nintendo Switch",
-    "price": 0,
+    "price": 1500,
     "seller": {
       "companyName": "Nintendo",
       "userName": "user4",
@@ -244,7 +244,7 @@
     "link": "/src/Images/products/ps4_Pro.jpg",
     "description": "PS4 PRO",
     "nameProduct": "PS4 Pro",
-    "price": 0,
+    "price": 2000,
     "seller": {
       "companyName": "Sony",
       "userName": "user4",
@@ -258,7 +258,7 @@
     "link": "/src/Images/products/ps5_Controller.jpg",
     "description": "Controller for PS5",
     "nameProduct": "PS5 Controller",
-    "price": 0,
+    "price": 250,
     "seller": {
       "companyName": "Sony",
       "userName": "user4",
@@ -272,7 +272,7 @@
     "link": "/src/Images/products/quest2.jpg",
     "description": "VR -Helps improving the experience of VR",
     "nameProduct": "Quest 2",
-    "price": 0,
+    "price": 3500,
     "seller": {
       "companyName": "Meta",
       "userName": "user4",
@@ -286,7 +286,7 @@
     "link": "/src/Images/products/rival 650.jpg",
     "description": "Mouse with LED lights",
     "nameProduct": "Rival 650",
-    "price": 0,
+    "price": 950,
     "seller": {
       "companyName": "Rival",
       "userName": "user4",
@@ -300,7 +300,7 @@
     "link": "/src/Images/products/xbox series s.jpg",
     "description": "xbox series s",
     "nameProduct": "Xbox Series S",
-    "price": 0,
+    "price": 2500,
     "seller": {
       "companyName": "Microsoft",
       "userName": "user4",
@@ -314,7 +314,7 @@
     "link": "/src/Images/products/XVX-WOMIER_.jpg",
     "description": "Gaming Keyboard with LED lights",
     "nameProduct": "XVX-WOMIER",
-    "price": 0,
+    "price": 100,
     "seller": {
       "companyName": "XVX-WOMIER",
       "userName": "user4",
