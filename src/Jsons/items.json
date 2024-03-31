@@ -36,8 +36,8 @@
     "price": 10,
     "seller": {
       "companyName": "Apple",
-      "userName": "",
-      "password": "",
+      "userName": "user2",
+      "password": "pass2",
       "bankAccount": "20001122121"
     },
     "type": "phone"
@@ -45,14 +45,14 @@
   {
     "id": 4,
     "link": "../Images/4.jpg",
-    "description": "Iphone 14 hello",
+    "description": "Iphone 14 256GB",
     "nameProduct": "Iphone 14",
     "price": 500,
     "seller": {
       "companyName": "Apple",
-      "userName": "",
-      "password": "",
-      "bankAccount": "20001122121"
+      "userName": "user4",
+      "password": "pass4",
+      "bankAccount": "4449990009"
     },
     "type": "phone"
   },
@@ -64,23 +64,23 @@
     "price": 2000,
     "seller": {
       "companyName": "Apple",
-      "userName": "",
-      "password": "",
-      "bankAccount": "20001122121"
+      "userName": "user4",
+      "password": "pass4",
+      "bankAccount": "4449990009"
     },
     "type": "phone"
   },
   {
     "id": 6,
     "link": "/src/Images/products/blackShark.jpg",
-    "description": "Gaming headphones ",
+    "description": "Gaming headphones",
     "nameProduct": "Razer BlackShark V2",
     "price": 200,
     "seller": {
       "companyName": "Razer.INC",
-      "userName": "IDK",
-      "password": "IDK",
-      "bankAccount": "Business"
+      "userName": "user4",
+      "password": "pass4",
+      "bankAccount": "4449990009"
     },
     "type": "Headphones"
   },
@@ -92,23 +92,23 @@
     "price": 400,
     "seller": {
       "companyName": "Razer",
-      "userName": "FILL",
-      "password": "FILL",
-      "bankAccount": "Business"
+      "userName": "user2",
+      "password": "pass2",
+      "bankAccount": "20001122121"
     },
     "type": "Mouse"
   },
   {
     "id": 8,
     "link": "/src/Images/products/alloyX.jpg",
-    "description": "",
+    "description": "keyboard with LED lights",
     "nameProduct": "HyperX AlloyX Gaming Keyboard",
     "price": 150,
     "seller": {
       "companyName": "HyperX",
-      "userName": "",
-      "password": "",
-      "bankAccount": "Business"
+      "userName": "user2",
+      "password": "pass2",
+      "bankAccount": "20001122121"
     },
     "type": "Keyboard"
   },
@@ -120,11 +120,11 @@
     "price": 0,
     "seller": {
       "companyName": "Asus",
-      "userName": "",
-      "password": "",
-      "bankAccount": ""
+      "userName": "user4",
+      "password": "pass4",
+      "bankAccount": "4449990009"
     },
-    "type": ""
+    "type": "Laptop"
   },
   {
     "id": 10,
@@ -134,11 +134,11 @@
     "price": 200,
     "seller": {
       "companyName": "Logitech",
-      "userName": "",
-      "password": "",
-      "bankAccount": ""
+      "userName": "user2",
+      "password": "pass2",
+      "bankAccount": "20001122121"
     },
-    "type": ""
+    "type": "mouse"
   },
   {
     "id": 11,
@@ -147,12 +147,12 @@
     "nameProduct": "Gaming Chair V3",
     "price": 90,
     "seller": {
-      "companyName": "",
-      "userName": "",
-      "password": "",
-      "bankAccount": ""
+      "companyName": "Azora",
+      "userName": "user4",
+      "password": "pass4",
+      "bankAccount": "4449990009"
     },
-    "type": ""
+    "type": "chair"
   },
   {
     "id": 12,
@@ -162,12 +162,12 @@
     "nameProduct": "HyperX Cloud3 Wireless Gaming Headset",
     "price": 70,
     "seller": {
-      "companyName": "",
-      "userName": "",
-      "password": "",
-      "bankAccount": ""
+      "companyName": "hyperX",
+      "userName": "user4",
+      "password": "pass4",
+      "bankAccount": "4449990009"
     },
-    "type": ""
+    "type": "headphone"
   },
   {
     "id": 13,
@@ -177,23 +177,23 @@
     "price": 250,
     "seller": {
       "companyName": "Sony",
-      "userName": "",
-      "password": "",
-      "bankAccount": ""
+      "userName": "user2",
+      "password": "pass2",
+      "bankAccount": "20001122121"
     },
-    "type": ""
+    "type": "playstation"
   },
   {
     "id": 14,
     "link": "/src/Images/products/keyboard mageGee.jpg",
-    "description": "",
+    "description": "Keyboard with LED lights",
     "nameProduct": "MageGee Gaming Keyboard, Full RGB lights",
     "price": 60,
     "seller": {
-      "companyName": "",
-      "userName": "",
-      "password": "",
-      "bankAccount": ""
+      "companyName": "MageGee",
+      "userName": "user2",
+      "password": "pass2",
+      "bankAccount": "20001122121"
     },
     "type": "Keyboard"
   },
@@ -205,136 +205,122 @@
     "price": 100,
     "seller": {
       "companyName": "Logitech",
-      "userName": "",
-      "password": "",
-      "bankAccount": ""
+      "userName": "user4",
+      "password": "pass4",
+      "bankAccount": "4449990009"
     },
     "type": "Mouse"
   },
   {
     "id": 16,
     "link": "/src/Images/products/logitechgpro-1280-1495575876625_160w.jpg",
-    "description": "",
+    "description": "Keyboard with LED lights",
     "nameProduct": "Logitech G-PRO Gaming Keyboard",
     "price": 140,
     "seller": {
       "companyName": "Logitech",
-      "userName": "",
-      "password": "",
-      "bankAccount": ""
+      "userName": "user4",
+      "password": "pass4",
+      "bankAccount": "4449990009"
     },
-    "type": ""
+    "type": "keyboard"
   },
   {
     "id": 17,
     "link": "/src/Images/products/nintendo_Switch.jpg",
-    "description": "",
+    "description": "Perfect mobile switch device",
     "nameProduct": "Nintendo Switch",
     "price": 0,
     "seller": {
       "companyName": "Nintendo",
-      "userName": "",
-      "password": "",
-      "bankAccount": ""
+      "userName": "user4",
+      "password": "pass4",
+      "bankAccount": "4449990009"
     },
-    "type": ""
+    "type": "switch"
   },
   {
     "id": 18,
     "link": "/src/Images/products/ps4_Pro.jpg",
-    "description": "",
+    "description": "PS4 PRO",
     "nameProduct": "PS4 Pro",
     "price": 0,
     "seller": {
       "companyName": "Sony",
-      "userName": "",
-      "password": "",
-      "bankAccount": ""
+      "userName": "user4",
+      "password": "pass4",
+      "bankAccount": "4449990009"
     },
-    "type": ""
+    "type": "playstation"
   },
   {
     "id": 19,
     "link": "/src/Images/products/ps5_Controller.jpg",
-    "description": "",
+    "description": "Controller for PS5",
     "nameProduct": "PS5 Controller",
     "price": 0,
     "seller": {
       "companyName": "Sony",
-      "userName": "",
-      "password": "",
-      "bankAccount": ""
+      "userName": "user4",
+      "password": "pass4",
+      "bankAccount": "4449990009"
     },
-    "type": ""
+    "type": "controller"
   },
   {
     "id": 20,
     "link": "/src/Images/products/quest2.jpg",
-    "description": "",
+    "description": "VR -Helps improving the experience of VR",
     "nameProduct": "Quest 2",
     "price": 0,
     "seller": {
       "companyName": "Meta",
-      "userName": "",
-      "password": "",
-      "bankAccount": ""
+      "userName": "user4",
+      "password": "pass4",
+      "bankAccount": "4449990009"
     },
-    "type": ""
+    "type": "quest"
   },
   {
     "id": 21,
     "link": "/src/Images/products/rival 650.jpg",
-    "description": "",
+    "description": "Mouse with LED lights",
     "nameProduct": "Rival 650",
     "price": 0,
     "seller": {
-      "companyName": "",
-      "userName": "",
-      "password": "",
-      "bankAccount": ""
+      "companyName": "Rival",
+      "userName": "user4",
+      "password": "pass4",
+      "bankAccount": "4449990009"
     },
-    "type": ""
+    "type": "mouse"
   },
   {
     "id": 22,
     "link": "/src/Images/products/xbox series s.jpg",
-    "description": "",
+    "description": "xbox series s",
     "nameProduct": "Xbox Series S",
     "price": 0,
     "seller": {
       "companyName": "Microsoft",
-      "userName": "",
-      "password": "",
-      "bankAccount": ""
+      "userName": "user4",
+      "password": "pass4",
+      "bankAccount": "4449990009"
     },
-    "type": ""
+    "type": "xbox"
   },
   {
     "id": 23,
     "link": "/src/Images/products/XVX-WOMIER_.jpg",
-    "description": "",
+    "description": "Gaming Keyboard with LED lights",
     "nameProduct": "XVX-WOMIER",
     "price": 0,
     "seller": {
-      "companyName": "",
-      "userName": "",
-      "password": "",
-      "bankAccount": ""
+      "companyName": "XVX-WOMIER",
+      "userName": "user4",
+      "password": "pass4",
+      "bankAccount": "4449990009"
     },
-    "type": ""
-  },
-  {
-    "id": 24,
-    "link": "",
-    "description": "",
-    "nameProduct": "",
-    "price": 0,
-    "seller": {
-      "companyName": "",
-      "userName": "",
-      "password": "",
-      "bankAccount": ""
-    },
-    "type": ""
+    "type": "keyboard"
   }
 ]

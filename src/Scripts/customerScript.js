@@ -390,8 +390,8 @@ function filterAction(){
         for(let i=0;i<checkedBrandCheckboxes.length ;i++){
         for(let j=0;j<selectedItems.length ;j++){
            
-            if(checkedBrandCheckboxes[i].value!==selectedItems[j].seller.companyName.toLowerCase()){
-                selectedItems.splice(selectedItems[j],1);
+            if(checkedBrandCheckboxes[i].value==selectedItems[j].seller.companyName.toLowerCase()){
+                selectedItems.splice(j,1);
                 
             }
         }
