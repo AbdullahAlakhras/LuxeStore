@@ -87,9 +87,8 @@ if(items.length==0){
 
                     localStorage.setItem("itemId",JSON.stringify(paraName.textContent.trim()));
                     
-                });
+                })
             itemDiv.appendChild(itemDescDiv);
-            itemDiv.appendChild(itemsButtonDiv);
             main.appendChild(itemDiv);
         });
 
@@ -125,11 +124,11 @@ if(items.length==0){
 
         //     resultBox.innerHTML = "<ul>" + dis + "</ul>";
         // }
-
+    });
 
    
     
-
+});
 
 
 const heroBtn = document.getElementById("hero-btn");
