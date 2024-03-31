@@ -229,10 +229,10 @@
     "id": 17,
     "link": "/src/Images/products/nintendo_Switch.jpg",
     "description": "",
-    "nameProduct": "",
+    "nameProduct": "Nintendo Switch",
     "price": 0,
     "seller": {
-      "companyName": "",
+      "companyName": "Nintendo",
       "userName": "",
       "password": "",
       "bankAccount": ""
@@ -243,10 +243,10 @@
     "id": 18,
     "link": "/src/Images/products/ps4_Pro.jpg",
     "description": "",
-    "nameProduct": "PS4",
+    "nameProduct": "PS4 Pro",
     "price": 0,
     "seller": {
-      "companyName": "",
+      "companyName": "Sony",
       "userName": "",
       "password": "",
       "bankAccount": ""
@@ -257,10 +257,10 @@
     "id": 19,
     "link": "/src/Images/products/ps5_Controller.jpg",
     "description": "",
-    "nameProduct": "",
+    "nameProduct": "PS5 Controller",
     "price": 0,
     "seller": {
-      "companyName": "",
+      "companyName": "Sony",
       "userName": "",
       "password": "",
       "bankAccount": ""
@@ -271,10 +271,10 @@
     "id": 20,
     "link": "/src/Images/products/quest2.jpg",
     "description": "",
-    "nameProduct": "",
+    "nameProduct": "Quest 2",
     "price": 0,
     "seller": {
-      "companyName": "",
+      "companyName": "Meta",
       "userName": "",
       "password": "",
       "bankAccount": ""
@@ -285,7 +285,7 @@
     "id": 21,
     "link": "/src/Images/products/rival 650.jpg",
     "description": "",
-    "nameProduct": "",
+    "nameProduct": "Rival 650",
     "price": 0,
     "seller": {
       "companyName": "",
@@ -299,10 +299,10 @@
     "id": 22,
     "link": "/src/Images/products/xbox series s.jpg",
     "description": "",
-    "nameProduct": "",
+    "nameProduct": "Xbox Series S",
     "price": 0,
     "seller": {
-      "companyName": "",
+      "companyName": "Microsoft",
       "userName": "",
       "password": "",
       "bankAccount": ""
@@ -313,7 +313,7 @@
     "id": 23,
     "link": "/src/Images/products/XVX-WOMIER_.jpg",
     "description": "",
-    "nameProduct": "",
+    "nameProduct": "XVX-WOMIER",
     "price": 0,
     "seller": {
       "companyName": "",
