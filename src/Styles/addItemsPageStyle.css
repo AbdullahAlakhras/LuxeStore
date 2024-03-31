@@ -180,4 +180,33 @@ label {
 }
 
 
+@media (max-width: 768px) {
+    .container, .wrapper {
+        padding: 10px;
+        grid-gap: 10px;
+    }
 
+    h1, h2, h3 {
+        font-size: calc(1em + 1vw); 
+    }
+
+    .link-buttons, .action-buttons-class {
+        padding: 8px 16px; 
+        font-size: calc(14px + (16 - 14) * ((100vw - 300px) / (1600 - 300)));
+}
+
+@media (max-width: 480px) {
+    #photo-div, #action-buttons-div {
+        flex-direction: column;
+    }
+
+    .link-buttons, .action-buttons-class {
+        width: 80%; 
+        margin: 10px auto; 
+    }
+
+    #image {
+        max-width: 80%; 
+    }
+}
+}

@@ -179,5 +179,28 @@ label {
     display: none;
 }
 
+@media (max-width: 768px) {
+    .container {
+        max-width: 90%; 
+        padding: 10px;
+    }
 
+    h1, h2, h3 {
+        font-size: smaller; 
+    }
+
+    .wrapper {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .link-buttons, .action-buttons-class {
+        flex-direction: column;
+    }
+
+    #photo-div, #action-buttons-div {
+        flex-direction: column;
+    }
+}
 

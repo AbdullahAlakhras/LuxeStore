@@ -124,3 +124,19 @@ button:active {
   color: red;
   font-weight: bold;
 }
+
+@media (max-width: 600px) {
+  h1, h2, h3 {
+    font-size: 18px; 
+  }
+}
+
+@media (max-width: 400px) {
+  .container {
+    padding: 10px; 
+  }
+
+  input, button {
+    font-size: 14px; 
+  }
+}

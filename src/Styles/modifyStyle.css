@@ -92,7 +92,33 @@ body {
 .buttons:hover {
     background-color: lightblue;
 }
+@media (max-width: 768px) {
+    .wrapper {
+        padding: 20px;
+    }
 
+    .wrapper h1 {
+        font-size: 28px;
+    }
+
+    .input-box input, .buttons {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .wrapper {
+        padding: 15px;
+    }
+
+    .wrapper h1 {
+        font-size: 24px;
+    }
+
+    .input-box input, .buttons {
+        font-size: 12px;
+    }
+}
 
 
 

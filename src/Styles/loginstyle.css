@@ -118,3 +118,17 @@ body{
 .wrapper a:hover{
     color: lightskyblue;
 }
+
+@media (max-width: 480px) {
+    .wrapper {
+        padding: 30px 20px;
+    }
+
+    .wrapper h1 {
+        font-size: 28px;
+    }
+
+    .input-box img {
+        right: 10px;
+    }
+}
