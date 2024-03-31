@@ -89,6 +89,7 @@ if(items.length==0){
                     
                 })
             itemDiv.appendChild(itemDescDiv);
+            itemDiv.appendChild(itemsButtonDiv);
             main.appendChild(itemDiv);
         });
 
@@ -124,11 +125,11 @@ if(items.length==0){
 
         //     resultBox.innerHTML = "<ul>" + dis + "</ul>";
         // }
-    });
+
 
    
     
-});
+
 
 
 const heroBtn = document.getElementById("hero-btn");
