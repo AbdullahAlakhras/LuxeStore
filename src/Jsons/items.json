@@ -18,6 +18,7 @@
     "id": 2,
     "link": "../Images/2.jpg",
     "description": "Iphone 4 Blue Color",
+    "quantity": 13,
     "nameProduct": "Iphone 4",
     "price": 20,
     "seller": {
@@ -32,6 +33,7 @@
     "id": 3,
     "link": "../Images/3.jpg",
     "description": "Iphone 11 With type  c charger",
+    "quantity": 20,
     "nameProduct": "Iphone 11",
     "price": 10,
     "seller": {
@@ -46,6 +48,7 @@
     "id": 4,
     "link": "../Images/4.jpg",
     "description": "Iphone 14 256GB",
+    "quantity": 10,
     "nameProduct": "Iphone 14",
     "price": 500,
     "seller": {
@@ -60,6 +63,7 @@
     "id": 5,
     "link": "../Images/5.jpg",
     "description": "Iphone 15 new",
+    "quantity": 1,
     "nameProduct": "Iphone 15",
     "price": 2000,
     "seller": {
@@ -74,6 +78,7 @@
     "id": 6,
     "link": "/src/Images/products/blackShark.jpg",
     "description": "Gaming headphones",
+    "quantity": 120,
     "nameProduct": "Razer BlackShark V2",
     "price": 200,
     "seller": {
@@ -88,6 +93,7 @@
     "id": 7,
     "link": "/src/Images/products/viperUltimate.jpg",
     "description": "Razer viperUltimate gaming mous, 16000dpi, different keys for users compatibility ",
+    "quantity": 90,
     "nameProduct": "Razer viperUltimate gaming mouse",
     "price": 400,
     "seller": {
@@ -102,6 +108,7 @@
     "id": 8,
     "link": "/src/Images/products/alloyX.jpg",
     "description": "keyboard with LED lights",
+    "quantity": 80,
     "nameProduct": "HyperX AlloyX Gaming Keyboard",
     "price": 150,
     "seller": {
@@ -116,6 +123,7 @@
     "id": 9,
     "link": "/src/Images/products/asusRog_strix _g15.jpeg",
     "description": "Gaming laptop etc etc",
+    "quantity": 400,
     "nameProduct": "AsusROG Strix G15 Gaming Laptop",
     "price": 8000,
     "seller": {
@@ -130,6 +138,7 @@
     "id": 10,
     "link": "/src/Images/products/g-pro.jpg",
     "description": "Gaming mouse",
+    "quantity": 11,
     "nameProduct": "Logitech G-PRO gaming mouse",
     "price": 200,
     "seller": {
@@ -144,6 +153,7 @@
     "id": 11,
     "link": "/src/Images/products/gamingChair.jpg",
     "description": "gaming chair",
+    "quantity": 70,
     "nameProduct": "Gaming Chair V3",
     "price": 90,
     "seller": {
@@ -159,6 +169,7 @@
 
     "link": "/src/Images/products/hyperx3-cloud3-wireless.jpg",
     "description": "HeadSet",
+    "quantity": 90,
     "nameProduct": "HyperX Cloud3 Wireless Gaming Headset",
     "price": 70,
     "seller": {
@@ -173,6 +184,7 @@
     "id": 13,
     "link": "/src/Images/products/hzdfwps5.jpg",
     "description": "ps5",
+    "quantity": 3,
     "nameProduct": "PlayStation 5 Horizon Forbidden West Bunbdle",
     "price": 250,
     "seller": {
@@ -187,6 +199,7 @@
     "id": 14,
     "link": "/src/Images/products/keyboard mageGee.jpg",
     "description": "Keyboard with LED lights",
+    "quantity": 5,
     "nameProduct": "MageGee Gaming Keyboard, Full RGB lights",
     "price": 60,
     "seller": {
@@ -201,6 +214,7 @@
     "id": 15,
     "link": "/src/Images/products/logitc.jpg",
     "description": "gaming mice",
+    "quantity": 2,
     "nameProduct": "Logitech G502-Hero Gaming mouse",
     "price": 100,
     "seller": {
@@ -215,6 +229,7 @@
     "id": 16,
     "link": "/src/Images/products/logitechgpro-1280-1495575876625_160w.jpg",
     "description": "Keyboard with LED lights",
+    "quantity": 4,
     "nameProduct": "Logitech G-PRO Gaming Keyboard",
     "price": 140,
     "seller": {
@@ -229,6 +244,7 @@
     "id": 17,
     "link": "/src/Images/products/nintendo_Switch.jpg",
     "description": "Perfect mobile switch device",
+    "quantity": 26,
     "nameProduct": "Nintendo Switch",
     "price": 1500,
     "seller": {
@@ -243,6 +259,7 @@
     "id": 18,
     "link": "/src/Images/products/ps4_Pro.jpg",
     "description": "PS4 PRO",
+    "quantity": 33,
     "nameProduct": "PS4 Pro",
     "price": 2000,
     "seller": {
@@ -257,6 +274,7 @@
     "id": 19,
     "link": "/src/Images/products/ps5_Controller.jpg",
     "description": "Controller for PS5",
+    "quantity": 3,
     "nameProduct": "PS5 Controller",
     "price": 250,
     "seller": {
@@ -271,6 +289,7 @@
     "id": 20,
     "link": "/src/Images/products/quest2.jpg",
     "description": "VR -Helps improving the experience of VR",
+    "quantity": 4,
     "nameProduct": "Quest 2",
     "price": 3500,
     "seller": {
@@ -285,6 +304,7 @@
     "id": 21,
     "link": "/src/Images/products/rival 650.jpg",
     "description": "Mouse with LED lights",
+    "quantity": 21,
     "nameProduct": "Rival 650",
     "price": 950,
     "seller": {
@@ -299,6 +319,7 @@
     "id": 22,
     "link": "/src/Images/products/xbox series s.jpg",
     "description": "xbox series s",
+    "quantity": 70,
     "nameProduct": "Xbox Series S",
     "price": 2500,
     "seller": {
@@ -313,6 +334,7 @@
     "id": 23,
     "link": "/src/Images/products/XVX-WOMIER_.jpg",
     "description": "Gaming Keyboard with LED lights",
+    "quantity": 80,
     "nameProduct": "XVX-WOMIER",
     "price": 100,
     "seller": {

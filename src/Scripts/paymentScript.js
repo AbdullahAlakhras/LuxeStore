@@ -1,6 +1,8 @@
 
 const cartItems=localStorage.getItem("cartItems")? JSON.parse(localStorage.getItem("cartItems")): [];
 const allUsers=localStorage.getItem("users")? JSON.parse(localStorage.getItem("users")): [];
+let items=localStorage.getItem("items") ?
+    JSON.parse(localStorage.getItem("items")): [];
 
 const user=localStorage.getItem("activeUser")? JSON.parse(localStorage.getItem("activeUser")): {};
 const amount=localStorage.getItem("amountFromCustomer");
@@ -57,8 +59,20 @@ function payAction(){
     
     allUsers[index].balance=user.balance;
     localStorage.setItem("users",JSON.stringify(allUsers));
+    items.forEach((i) => {
+    cartItems.forEach((c) => {
+        if (i.nameProduct === c.item) {
+            i.quantity -= c.quantity;
+        }
+    });
+    });
+    localStorage.setItem("items",JSON.stringify(items));
     storeSaleHistory();
     redirectToThankyouPage();
+
+    
+    
+
 
 
 }; 
