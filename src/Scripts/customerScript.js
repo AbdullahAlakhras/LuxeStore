@@ -10,14 +10,14 @@ let user =localStorage.getItem("activeUser") ?
 let allUsers=localStorage.getItem("users") ?
     JSON.parse(localStorage.getItem("users")): [];
 
-
+document.querySelector("#main-link").setAttribute("href","/src/Html/customer.html");
 document.querySelector("#balance").textContent+=user.balance+ " $";
 document.querySelector("#first-name").textContent+=user.firstName;
 document.querySelector("#last-name").textContent+=user.lastName;
 document.querySelector("#shipping").textContent+=user.shipping;
 document.querySelector("#user-name").textContent+=user.userName;
 document.querySelector("#email").textContent+=user.email;
- document.querySelector("#balance-cart").textContent=user.balance+" $";
+document.querySelector("#balance-cart").textContent=user.balance+" $";
 
 if(!Object.keys(user).length==0){
     document.querySelector("#user-label").textContent+=user.userName;

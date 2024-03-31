@@ -20,7 +20,7 @@ if(!Object.keys(user).length==0){
 
 let cartItems =[];
 localStorage.setItem("cartItems",JSON.stringify(cartItems));
-
+document.querySelector("#main-link").setAttribute("href","/src/Html/seller.html");
 
     
     

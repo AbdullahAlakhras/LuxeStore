@@ -9,6 +9,7 @@
     });
     
 };
+document.querySelector("#main-link").setAttribute("href","/src/Html/admin.html");
         console.log(); 
         const main =document.querySelector("#main");
         items.forEach(item => {
