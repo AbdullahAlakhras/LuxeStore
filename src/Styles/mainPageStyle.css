@@ -11,7 +11,7 @@
     --black-color:#000000;
 }
 header{
-    height: 10vh;
+    height: 16vh;
 }
 
 .hero{
@@ -96,6 +96,7 @@ header{
     flex-wrap: wrap;
     justify-content: flex-start;
     gap: 4em;
+    padding-top: 1em ;
     
 }
 #menu-button{
@@ -275,6 +276,8 @@ header{
     flex-wrap: wrap;
     justify-content: center;
     gap: 1em;
+    padding-top: 1.5em;
+    padding-left: 2em;
 }
 #search-box {
     margin-left: 2em;
@@ -285,6 +288,8 @@ header{
     transition: box-shadow 0.3s ease;
     font-family: Arial, sans-serif;
     font-size: 1em;
+    padding-left: 0.7em;
+    
 }
 #search-box:focus{
     border-color:var(--black-color);

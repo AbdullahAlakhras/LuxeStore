@@ -83,31 +83,31 @@ document.addEventListener("DOMContentLoaded", () => {
             
         }
 
-        // console.log(productNames) for backend and testing purposes 
-    //     const resultBox = document.querySelector(".resultBox");
-    //     document.getElementById("search-box").addEventListener("keyup",(e)=>{
-    //         let filteredProductNames = [];
-    //         const liveSearch = e.target.value.toLowerCase();
-    //         if(productNames.length){
-    //             filteredProductNames = productNames.filter((prodName) => {
-    //                 return prodName.toLowerCase().includes(liveSearch.toLowerCase());
+        console.log(productNames) 
+        // const resultBox = document.querySelector(".resultBox");
+        // document.getElementById("search-box").addEventListener("keyup",(e)=>{
+        //     let filteredProductNames = [];
+        //     const liveSearch = e.target.value.toLowerCase();
+        //     if(productNames.length){
+        //         filteredProductNames = productNames.filter((prodName) => {
+        //             return prodName.toLowerCase().includes(liveSearch.toLowerCase());
                     
-    //             })
-    //             console.log(filteredProductNames); 
-    //         }
-    //         // console.log(liveSearch);
-    //         displaySearch(filteredProductNames) 
-    //     });
+        //         })
+        //         console.log(filteredProductNames); 
+        //     }
+        //     // console.log(liveSearch);
+        //     displaySearch(filteredProductNames) 
+        // });
 
         
-    //     function displaySearch(filteredProductNames){
-    //         const dis = filteredProductNames.map((list) => {
-    //             return `<li>` + list + `</li>`;
-    //         });
+        // function displaySearch(filteredProductNames){
+        //     const dis = filteredProductNames.map((list) => {
+        //         return `<li>` + list + `</li>`;
+        //     });
 
-    //         resultBox.innerHTML = "<ul>" + dis + "</ul>";
-    //     }
-    // });
+        //     resultBox.innerHTML = "<ul>" + dis + "</ul>";
+        // }
+    });
 
    
     
