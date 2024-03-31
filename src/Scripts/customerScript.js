@@ -17,6 +17,7 @@ document.querySelector("#last-name").textContent+=user.lastName;
 document.querySelector("#shipping").textContent+=user.shipping;
 document.querySelector("#user-name").textContent+=user.userName;
 document.querySelector("#email").textContent+=user.email;
+ document.querySelector("#balance-cart").textContent=user.balance+" $";
 
 if(!Object.keys(user).length==0){
     document.querySelector("#user-label").textContent+=user.userName;
@@ -171,6 +172,7 @@ if(items.length==0){
 
             itemDiv.appendChild(itemDescDiv);
             main.appendChild(itemDiv);
+           
         });
         if (cartItems.length!=0){
             document.querySelector("#no-items-decleration").classList.add("hidden");

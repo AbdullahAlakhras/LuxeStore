@@ -156,7 +156,7 @@
   },
   {
     "id": 12,
-    
+
     "link": "/src/Images/products/hyperx3-cloud3-wireless.jpg",
     "description": "HeadSet",
     "nameProduct": "HyperX Cloud3 Wireless Gaming Headset",
@@ -243,7 +243,7 @@
     "id": 18,
     "link": "/src/Images/products/ps4_Pro.jpg",
     "description": "",
-    "nameProduct": "",
+    "nameProduct": "PS4",
     "price": 0,
     "seller": {
       "companyName": "",
