@@ -33,6 +33,17 @@
     "balance": 1000
   },
   {
+    "userName": "user4",
+    "firstName": "Mohammed",
+    "lastName": "ALjaber",
+    "password": "pass4",
+    "email": "aa123@gmial.com",
+    "typeOfAccount": "seller",
+    "bankAccount": "1234",
+    "shipping": "-",
+    "balance": 0
+  },
+  {
     "userName": "admin2",
     "password": "admin2",
     "firstName": "Abdullah",

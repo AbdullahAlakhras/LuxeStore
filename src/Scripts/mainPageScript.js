@@ -1,11 +1,14 @@
-
-document.addEventListener("DOMContentLoaded", () => {
-    fetch('/src/Jsons/items.json')
-        .then(response => response.json())
-        .then(data => {
-        console.log(data); 
+ let items=localStorage.getItem("items") ?
+    JSON.parse(localStorage.getItem("items")): [];   
+if(items.length==0){
+    fetch('/src/Jsons/items.json').then(res =>res.json()).then(data => {
+        items=data;
+        localStorage.setItem("items",JSON.stringify(items));    
+    });
+    
+};
         const main =document.querySelector("#main");
-        data.forEach(item => {
+        items.forEach(item => {
             const itemDiv=document.createElement("div");
                 itemDiv.classList.add("item");
             
@@ -37,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 paraPrice.textContent=`Price: ${item.price}$`;
                 paraPrice.classList.add("item-price");
                 const paraSeller =document.createElement("p");
-                paraSeller.textContent=`Seller: ${item.seller}`;
+                paraSeller.textContent=`Seller: ${item.seller.companyName}`;
                 paraSeller.classList.add("item-price");
                 // spanDiv.appendChild(paraPrice);
                 // spanDiv.appendChild(paraSeller);
@@ -60,23 +63,38 @@ document.addEventListener("DOMContentLoaded", () => {
                 removeCartButton.disabled=true;
                 itemsButtonDiv.appendChild(removeCartButton);
                 
-                itemDescDiv.appendChild(itemsButtonDiv);
+                addCartButton.addEventListener("click", ()=>{
+                        let warningContainer = document.getElementById('warningContainer');
+                        warningContainer.style.display = 'flex';
+                        warningContainer.style.top = `${window.innerHeight / 9}px`;
+                        setTimeout(function() {
+                            warningContainer.style.display = 'none';
+                        }, 2000); 
+                });
 
                 
 
-                itemDiv.addEventListener("click", ()=> {
+                itemDescDiv.addEventListener("click", ()=> {
                     window.open("  ../Html/productDetails.html", "_blank");
                     // window.location.href = "/src/Html/productDetails.html";
 
                     localStorage.setItem("itemId",JSON.stringify(paraName.textContent.trim()));
                     
-                })
+                });
+                itemImgDiv.addEventListener("click", ()=> {
+                    window.open("  ../Html/productDetails.html", "_blank");
+                    // window.location.href = "/src/Html/productDetails.html";
+
+                    localStorage.setItem("itemId",JSON.stringify(paraName.textContent.trim()));
+                    
+                });
             itemDiv.appendChild(itemDescDiv);
+            itemDiv.appendChild(itemsButtonDiv);
             main.appendChild(itemDiv);
         });
 
         let productNames = []
-        for (const item of data){
+        for (const item of items){
             if(item.nameProduct != ""){
                 productNames.push(item.nameProduct);
             }
@@ -107,11 +125,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
         //     resultBox.innerHTML = "<ul>" + dis + "</ul>";
         // }
-    });
+
 
    
     
-});
+
 
 
 const heroBtn = document.getElementById("hero-btn");

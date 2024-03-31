@@ -76,6 +76,34 @@ header{
     grid-template-rows: 0.3fr 2fr 0.2fr;
     margin: 0;
 }
+#warningContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color:transparent;
+    z-index: 1000;
+    background-color: transparent;
+    padding: 20px;
+    color: red;
+    font-weight: bold;
+    font-size: 21pt;
+    border-radius: 5px;
+}
+
+
+#warningMessage {
+    background-color: white;
+    padding: 20px;
+    color: red;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
 #header{
     grid-area: head;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
@@ -390,6 +418,8 @@ header{
     flex-wrap: wrap;
     gap: 1em;
     margin-bottom: 0.9em;
+    justify-content: center;
+    align-items: center;
 }
 
 .item-buttons {
