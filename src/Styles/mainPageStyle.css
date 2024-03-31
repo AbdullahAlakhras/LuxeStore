@@ -10,6 +10,10 @@
     --logo-color: RGB(255, 215, 0);
     --black-color:#000000;
 }
+.dark-theme{
+    background-color: black;
+    color: white;
+}
 header{
     height: 16vh;
 }
@@ -64,7 +68,6 @@ header{
     font-family: "Truculenta", sans-serif;
     text-shadow: 0.1px 0.1px gray;
 }
-
 
 
 
@@ -323,6 +326,17 @@ header{
     width: 2em;
     height: fit-content;
 }
+
+#mode-button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+#mode-icon{
+    width: 2em;
+    height: fit-content;
+}
 #counter {
     position: relative;
     bottom: 4px;
@@ -511,7 +525,6 @@ footer{
     font-weight: 400;
     margin: 0px 5px;
 }
-
 /*HERO ANIMATIONS*/
 #animatedProduct {
 

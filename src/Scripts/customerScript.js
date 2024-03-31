@@ -330,6 +330,7 @@ function redirectLoginPage(){
 }
 function redirectMainPage(){
     window.location.href = "/src/Html/mainPage.html";
+   
 }
 
 function redirecttoModifyAccountPage(){

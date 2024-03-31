@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     localStorage.setItem("itemId",JSON.stringify(paraName.textContent.trim()));
                     
                 })
-            itemDiv.appendChild(itemDescDiv);
+            itemDiv.appendChild(itemDescDiv);            itemDiv.classList.add('hidden')
             main.appendChild(itemDiv);
         });
 
@@ -107,11 +107,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
         //     resultBox.innerHTML = "<ul>" + dis + "</ul>";
         // }
-    });
-
-   
-    
+    });   
 });
+
+const modeButton = document.getElementById("mode-button");
+modeButton.addEventListener("click", ()=>{
+    document.body.classList.toggle("dark-theme")
+})
 
 
 const heroBtn = document.getElementById("hero-btn");
