@@ -85,25 +85,67 @@
     "type": "Headphones"
   },
   {
-    "id": 0,
+    "id": 7,
     "link": "/src/Images/products/viperUltimate.jpg",
-    "description": "",
-    "nameProduct": "",
-    "price": 0,
+    "description": "Razer viperUltimate gaming mous, 16000dpi, different keys for users compatibility ",
+    "nameProduct": "Razer viperUltimate gaming mouse",
+    "price": 400,
     "seller": {
-      "companyName": "",
-      "userName": "",
-      "password": "",
-      "bankAccount": ""
+      "companyName": "Razer",
+      "userName": "FILL",
+      "password": "FILL",
+      "bankAccount": "Business"
     },
-    "type": ""
+    "type": "Mouse"
   },
   {
-    "id": 0,
+    "id": 8,
     "link": "/src/Images/products/alloyX.jpg",
     "description": "",
-    "nameProduct": "",
+    "nameProduct": "HyperX AlloyX Gaming Keyboard",
+    "price": 150,
+    "seller": {
+      "companyName": "HyperX",
+      "userName": "",
+      "password": "",
+      "bankAccount": "Business"
+    },
+    "type": "Keyboard"
+  },
+  {
+    "id": 9,
+    "link": "/src/Images/products/asusRog_strix _g15.jpeg",
+    "description": "Gaming laptop etc etc",
+    "nameProduct": "AsusROG Strix G15 Gaming Laptop",
     "price": 0,
+    "seller": {
+      "companyName": "Asus",
+      "userName": "",
+      "password": "",
+      "bankAccount": ""
+    },
+    "type": ""
+  },
+  {
+    "id": 10,
+    "link": "/src/Images/products/g-pro.jpg",
+    "description": "Gaming mouse",
+    "nameProduct": "Logitech G-PRO gaming mouse",
+    "price": 200,
+    "seller": {
+      "companyName": "Logitech",
+      "userName": "",
+      "password": "",
+      "bankAccount": ""
+    },
+    "type": ""
+  },
+  {
+    "id": 11,
+    "link": "/src/Images/products/gamingChair.jpg",
+    "description": "gaming chair",
+    "nameProduct": "Gaming Chair V3",
+    "price": 90,
     "seller": {
       "companyName": "",
       "userName": "",
@@ -113,8 +155,79 @@
     "type": ""
   },
   {
-    "id": 0,
-    "link": "",
+    "id": 12,
+    
+    "link": "/src/Images/products/hyperx3-cloud3-wireless.jpg",
+    "description": "HeadSet",
+    "nameProduct": "HyperX Cloud3 Wireless Gaming Headset",
+    "price": 70,
+    "seller": {
+      "companyName": "",
+      "userName": "",
+      "password": "",
+      "bankAccount": ""
+    },
+    "type": ""
+  },
+  {
+    "id": 13,
+    "link": "/src/Images/products/hzdfwps5.jpg",
+    "description": "ps5",
+    "nameProduct": "PlayStation 5 Horizon Forbidden West Bunbdle",
+    "price": 250,
+    "seller": {
+      "companyName": "Sony",
+      "userName": "",
+      "password": "",
+      "bankAccount": ""
+    },
+    "type": ""
+  },
+  {
+    "id": 14,
+    "link": "/src/Images/products/keyboard mageGee.jpg",
+    "description": "",
+    "nameProduct": "MageGee Gaming Keyboard, Full RGB lights",
+    "price": 60,
+    "seller": {
+      "companyName": "",
+      "userName": "",
+      "password": "",
+      "bankAccount": ""
+    },
+    "type": "Keyboard"
+  },
+  {
+    "id": 15,
+    "link": "/src/Images/products/logitc.jpg",
+    "description": "gaming mice",
+    "nameProduct": "Logitech G502-Hero Gaming mouse",
+    "price": 100,
+    "seller": {
+      "companyName": "Logitech",
+      "userName": "",
+      "password": "",
+      "bankAccount": ""
+    },
+    "type": "Mouse"
+  },
+  {
+    "id": 16,
+    "link": "/src/Images/products/logitechgpro-1280-1495575876625_160w.jpg",
+    "description": "",
+    "nameProduct": "Logitech G-PRO Gaming Keyboard",
+    "price": 140,
+    "seller": {
+      "companyName": "Logitech",
+      "userName": "",
+      "password": "",
+      "bankAccount": ""
+    },
+    "type": ""
+  },
+  {
+    "id": 17,
+    "link": "/src/Images/products/nintendo_Switch.jpg",
     "description": "",
     "nameProduct": "",
     "price": 0,
@@ -127,8 +240,8 @@
     "type": ""
   },
   {
-    "id": 0,
-    "link": "",
+    "id": 18,
+    "link": "/src/Images/products/ps4_Pro.jpg",
     "description": "",
     "nameProduct": "",
     "price": 0,
@@ -141,8 +254,8 @@
     "type": ""
   },
   {
-    "id": 0,
-    "link": "",
+    "id": 19,
+    "link": "/src/Images/products/ps5_Controller.jpg",
     "description": "",
     "nameProduct": "",
     "price": 0,
@@ -155,8 +268,8 @@
     "type": ""
   },
   {
-    "id": 0,
-    "link": "",
+    "id": 20,
+    "link": "/src/Images/products/quest2.jpg",
     "description": "",
     "nameProduct": "",
     "price": 0,
@@ -169,8 +282,8 @@
     "type": ""
   },
   {
-    "id": 0,
-    "link": "",
+    "id": 21,
+    "link": "/src/Images/products/rival 650.jpg",
     "description": "",
     "nameProduct": "",
     "price": 0,
@@ -183,8 +296,8 @@
     "type": ""
   },
   {
-    "id": 0,
-    "link": "",
+    "id": 22,
+    "link": "/src/Images/products/xbox series s.jpg",
     "description": "",
     "nameProduct": "",
     "price": 0,
@@ -197,8 +310,8 @@
     "type": ""
   },
   {
-    "id": 0,
-    "link": "",
+    "id": 23,
+    "link": "/src/Images/products/XVX-WOMIER_.jpg",
     "description": "",
     "nameProduct": "",
     "price": 0,
@@ -211,119 +324,7 @@
     "type": ""
   },
   {
-    "id": 0,
-    "link": "",
-    "description": "",
-    "nameProduct": "",
-    "price": 0,
-    "seller": {
-      "companyName": "",
-      "userName": "",
-      "password": "",
-      "bankAccount": ""
-    },
-    "type": ""
-  },
-  {
-    "id": 0,
-    "link": "",
-    "description": "",
-    "nameProduct": "",
-    "price": 0,
-    "seller": {
-      "companyName": "",
-      "userName": "",
-      "password": "",
-      "bankAccount": ""
-    },
-    "type": ""
-  },
-  {
-    "id": 0,
-    "link": "",
-    "description": "",
-    "nameProduct": "",
-    "price": 0,
-    "seller": {
-      "companyName": "",
-      "userName": "",
-      "password": "",
-      "bankAccount": ""
-    },
-    "type": ""
-  },
-  {
-    "id": 0,
-    "link": "",
-    "description": "",
-    "nameProduct": "",
-    "price": 0,
-    "seller": {
-      "companyName": "",
-      "userName": "",
-      "password": "",
-      "bankAccount": ""
-    },
-    "type": ""
-  },
-  {
-    "id": 0,
-    "link": "",
-    "description": "",
-    "nameProduct": "",
-    "price": 0,
-    "seller": {
-      "companyName": "",
-      "userName": "",
-      "password": "",
-      "bankAccount": ""
-    },
-    "type": ""
-  },
-  {
-    "id": 0,
-    "link": "",
-    "description": "",
-    "nameProduct": "",
-    "price": 0,
-    "seller": {
-      "companyName": "",
-      "userName": "",
-      "password": "",
-      "bankAccount": ""
-    },
-    "type": ""
-  },
-  {
-    "id": 0,
-    "link": "",
-    "description": "",
-    "nameProduct": "",
-    "price": 0,
-    "seller": {
-      "companyName": "",
-      "userName": "",
-      "password": "",
-      "bankAccount": ""
-    },
-    "type": ""
-  },
-  {
-    "id": 0,
-    "link": "",
-    "description": "",
-    "nameProduct": "",
-    "price": 0,
-    "seller": {
-      "companyName": "",
-      "userName": "",
-      "password": "",
-      "bankAccount": ""
-    },
-    "type": ""
-  },
-  {
-    "id": 0,
+    "id": 24,
     "link": "",
     "description": "",
     "nameProduct": "",
