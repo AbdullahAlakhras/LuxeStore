@@ -722,11 +722,33 @@ footer{
 @media screen and (max-width: 700px) {
     #page {
         gap: 0;
-    grid-template-rows: 200px 3fr 0.2fr;
+    grid-template-rows: 98px 1fr 400px;
+   }
+
+   #main{
+    align-items: center;
+    justify-content: center;
+   }
+
+   header{
+    flex-direction: column;
+    align-items: center;
+    height: 10em;
+   }
+
+   #main-link{
+    position: absolute;
+    left: 12.4em;
+   }
+
+   #login-cart-div{
+    position: absolute;
+    left: 13em;
+    top: 5em;
    }
 
    .hero{
-    display: flex;
+    display: none;
     flex-direction: column-reverse;
 
    }
