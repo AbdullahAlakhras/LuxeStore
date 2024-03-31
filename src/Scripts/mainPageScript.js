@@ -128,9 +128,6 @@ if(items.length==0){
 
 
    
-    
-
-
 
 const heroBtn = document.getElementById("hero-btn");
 const loginButton=document.querySelector("#login-button");
@@ -155,3 +152,8 @@ function toggleMenu() {
 function redirectLoginPage(){
     window.location.href = "/src/Html/login.html";
 }
+
+const modeButton = document.getElementById("mode-button");
+modeButton.addEventListener("click", ()=>{
+    document.body.classList.toggle("dark-theme")
+})
