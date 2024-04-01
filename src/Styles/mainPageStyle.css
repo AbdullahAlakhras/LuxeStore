@@ -49,15 +49,13 @@ header{
     align-items: center;
     flex-direction: row-reverse;
     height: 100vh ;
-    gap: 40px;
+    gap: 40em;
     background-color: #000000;
     z-index: 0;
 }
 
 
 .hero .text-hero {
-    align-items: center;
-    justify-content: center;
     text-align: center;
 }
 
@@ -77,6 +75,7 @@ header{
 
 
 .hero .text-hero h1{
+    
     padding-left: 1.5rem;
     color: white;
     font-size: 60px;
@@ -587,8 +586,7 @@ footer{
 /*HERO ANIMATIONS*/
 #animatedProduct {
 
-    height:42em;
-    width:45em;
+   
     padding-right: 55rem;
     }
     #animatedProduct img {
@@ -719,7 +717,7 @@ footer{
 }
 
 
-@media screen and (max-width: 700px) {
+@media screen and (min-width: 500px) {
     #page {
         gap: 0;
     grid-template-rows: 98px 1fr 400px;
@@ -735,7 +733,6 @@ footer{
     flex-direction: column;
     align-items: center;
     height: 10em;
-    
    }
 
    #main-link{
@@ -759,8 +756,6 @@ footer{
 
    #animatedProduct {
     position: absolute;
-    height:50em;
-    width: 38em;
     }
 
     #animatedProduct img {
@@ -778,4 +773,212 @@ footer{
         top: 10em
     }
     
+}
+
+@media screen and (min-width: 800px) {
+
+    #main-link{
+        left: 19em;
+    }
+
+    #login-cart-div{
+        left: 20em;
+    }
+    .search{
+        position: absolute;
+        left: 12em;
+        top: 10em
+    }
+
+    
+}
+
+@media screen and (min-width: 1100px) {
+
+   
+
+    #page {
+        grid-template-rows: 0.1fr 3fr 0.2fr;
+    }
+
+    #main {
+        align-items: normal;
+        grid-template-columns: repeat(2, minmax(20em, 30em));
+        
+
+    }
+
+    #page {
+    grid-template-rows: 0px 1fr 400px;
+   }
+
+    header{
+    height: 7em;
+    }
+
+    #main-link{
+        left: 7em;
+        top: 2em;
+    }
+
+    #login-cart-div{
+        left: 55em;
+        top: 1em;
+    }
+
+    .search{
+        left: 21em;
+        top: 1em;
+    }
+
+    .hero{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15rem;
+        align-items: center;
+        flex-direction: row-reverse;
+        height: 100vh;
+        background-color: #000000;
+        width: 100%;
+        margin-top: 7em;
+    }
+
+  
+    #animatedProduct img {
+        position:absolute;
+        left:0;
+        height:40em;
+        width:40em;
+        left: 15em;
+        top: 10em;
+        }
+
+    .hero .text-hero {
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 35em;
+        right: 25em;
+
+        font-size: 2em;
+    }
+
+    .hero #hero-btn{
+        font-size: 2rem;
+        padding: 1rem;
+        border-radius: 2rem;
+        margin-top: 4rem;
+        font-family: "Montserrat", sans-serif;
+        color: whitesmoke;
+        background-color:transparent;     
+        text-shadow: 0.4px 0.4px gray;
+        cursor: pointer;
+        transition: 0.6s;
+    }
+
+    .hero .text-hero h1{
+        padding-left: 1.5rem;
+        color: white;
+        font-size: 60px;
+        margin-bottom: 11px;
+        font-family: "Truculenta", sans-serif;
+        text-shadow: 1.5px 1.5px goldenrod;
+        
+    }
+
+    #menu-logo-div{
+        padding-top: 2em;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+  
+    #page {
+        grid-template-rows: 0.1fr 3fr 0.2fr;
+    }
+
+    #main {
+        align-items: normal;
+        grid-template-columns: repeat(3, minmax(20em, 30em));
+
+    }
+
+    #page {
+    grid-template-rows: 0px 1fr 400px;
+   }
+
+    header{
+    height: 10em;
+    }
+
+    #main-link{
+        left: 20em;
+        top: 5em;
+    }
+
+    #login-cart-div{
+        left: 105em;
+        top: 5em;
+    }
+
+    .search{
+        left: 50em;
+        top: 5em;
+    }
+
+    .hero{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15rem;
+        align-items: center;
+        flex-direction: row-reverse;
+        height: 100vh;
+        background-color: #000000;
+        width: 100%;
+    }
+
+  
+    #animatedProduct img {
+        position:absolute;
+        left:0;
+        height:40em;
+        width:40em;
+        left: 15em;
+        top: 10em;
+        }
+
+    .hero .text-hero {
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 35em;
+        right: 25em;
+
+        font-size: 2em;
+    }
+
+    .hero #hero-btn{
+        font-size: 2rem;
+        padding: 1rem;
+        border-radius: 2rem;
+        margin-top: 4rem;
+        font-family: "Montserrat", sans-serif;
+        color: whitesmoke;
+        background-color:transparent;     
+        text-shadow: 0.4px 0.4px gray;
+        cursor: pointer;
+        transition: 0.6s;
+    }
+
+    .hero .text-hero h1{
+        padding-left: 1.5rem;
+        color: white;
+        font-size: 60px;
+        margin-bottom: 11px;
+        font-family: "Truculenta", sans-serif;
+        text-shadow: 1.5px 1.5px goldenrod;
+        
+    }
 }
