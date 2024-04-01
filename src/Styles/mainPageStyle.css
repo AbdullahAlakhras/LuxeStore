@@ -913,18 +913,18 @@ footer{
     }
 
     #main-link{
-        left: 20em;
-        top: 5em;
+        left: 10em;
+        top: 2em;
     }
 
     #login-cart-div{
-        left: 105em;
-        top: 5em;
+        left: 104em;
+        top: 1em;
     }
 
     .search{
-        left: 50em;
-        top: 5em;
+        left: 45em;
+        top: 1em;
     }
 
     .hero{
@@ -944,7 +944,8 @@ footer{
         left:0;
         height:40em;
         width:40em;
-        left: 15em;
+        left: 13em;
+        bottom: 55em;
         top: 10em;
         }
 
