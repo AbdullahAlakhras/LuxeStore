@@ -804,6 +804,7 @@ footer{
     #main {
         align-items: normal;
         grid-template-columns: repeat(2, minmax(20em, 30em));
+        margin-top: 80em;
         
 
     }
@@ -847,21 +848,19 @@ footer{
     #animatedProduct img {
         position:absolute;
         left:0;
-        height:40em;
-        width:40em;
-        left: 15em;
-        top: 10em;
+        height:30em;
+        width:30em;
+        left: 20em;
+        top: -15em;
+
         }
 
     .hero .text-hero {
         position: absolute;
-        align-items: center;
-        justify-content: center;
         text-align: center;
-        width: 35em;
-        right: 25em;
-
-        font-size: 2em;
+        width: 59em;
+        right: 80em;
+        font-size: 0.5em;
     }
 
     .hero #hero-btn{
@@ -900,7 +899,7 @@ footer{
 
     #main {
         align-items: normal;
-        grid-template-columns: repeat(3, minmax(20em, 30em));
+        grid-template-columns: repeat(2, minmax(20em, 50em));
 
     }
 
@@ -908,8 +907,13 @@ footer{
     grid-template-rows: 0px 1fr 400px;
    }
 
+   #menu-logo-div{
+    padding-top: 2.3em;
+   }
+
     header{
     height: 10em;
+    width: 100%;
     }
 
     #main-link{
@@ -918,12 +922,13 @@ footer{
     }
 
     #login-cart-div{
-        left: 104em;
+        left: 68em;
         top: 1em;
+
     }
 
     .search{
-        left: 45em;
+        left: 34em;
         top: 1em;
     }
 
@@ -981,5 +986,21 @@ footer{
         font-family: "Truculenta", sans-serif;
         text-shadow: 1.5px 1.5px goldenrod;
         
+    }
+}
+
+@media screen and (min-width: 1500px) {
+
+    #main{
+        grid-template-columns: repeat(3, minmax(22em, 30em));
+
+    }
+    #login-cart-div{
+        left: 81em;
+        top: 1em;
+    }
+
+    #animatedProduct img {
+        top: -20em;
     }
 }
