@@ -378,3 +378,42 @@ const modeButton = document.getElementById("mode-button");
 modeButton.addEventListener("click", ()=>{
     document.body.classList.toggle("dark-theme")
 })
+
+let productNames = []
+        for (const item of items){
+            if(item.nameProduct != ""){
+                productNames.push(item.nameProduct);
+            }
+            
+        }
+
+        console.log(productNames) 
+        const resultBox = document.querySelector(".resultBox");
+        document.getElementById("search-box").addEventListener("keyup",(e)=>{
+            let filteredProductNames = [];
+            const liveSearch = e.target.value.toLowerCase();
+            if(productNames.length){
+                filteredProductNames = productNames.filter((prodName) => {
+                    return prodName.toLowerCase().includes(liveSearch.toLowerCase());
+                    
+                })
+                // console.log(filteredProductNames); 
+            }
+
+            // console.log(liveSearch)
+            if(!liveSearch){
+                filteredProductNames = [];
+            }
+            displaySearch(filteredProductNames) 
+        });
+
+        function fan(item){
+            window.open("  ../Html/productDetails.html", "_blank");
+            localStorage.setItem("itemId",JSON.stringify(item));                
+    }
+        function displaySearch(filteredProductNames){
+            const dis = filteredProductNames.map((list) => {
+                return `<li onClick="fan('${list}')">${list}</li>`;
+            });
+            resultBox.innerHTML = "<ul>" + dis.join("")+ "</ul>";
+        }
