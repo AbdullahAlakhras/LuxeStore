@@ -277,6 +277,43 @@ align-items: center;
     grid-area: main;
 }
 
+.resultBox{
+    backdrop-filter: blur(50px);
+    position: absolute;
+    top: 4em;
+    left: 2em;
+    z-index: -1;
+    width: 26em;
+
+    border-radius: 20px;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: left;
+}
+
+.resultBox ul{
+    padding: 0;
+    margin: 0;
+    
+}
+.resultBox li{
+    list-style: none;
+    padding: 0.5em;
+    margin: 0.2em;
+    color: white;
+    font-weight: bolder;
+    width: 22em;
+    cursor: pointer;
+    text-align: left;
+}
+
+.resultBox li:hover{
+    border: 1px solid gray;
+    background-color: rgba(red, green, blue, alpha);
+}
+
 footer{
     background-color: #111;
 }
@@ -345,25 +382,311 @@ footer{
     margin: 0px 5px;
 }
 
-@media screen and (min-width: 700px) {
-    #top-header {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        align-items: center;
+@media screen and (min-width: 500px) {
+    #page {
+        gap: 0;
+    grid-template-rows: 98px 1fr 400px;
+   }
+
+   #main{
+    align-items: center;
+    justify-content: center;
+    margin-top: 75em;
+   }
+
+   header{
+    flex-direction: column;
+    align-items: center;
+    height: 10em;
+   }
+
+   #main-link{
+    position: absolute;
+    left: 12.4em;
+   }
+
+   #login-cart-div{
+    position: absolute;
+    left: 13em;
+    top: 5em;
+   }
+
+   .hero{
+    margin-top: 10em;
+    flex-direction: column;
+    position: absolute;
+    height: 55em;
+
+   }
+
+   #animatedProduct {
+    position: absolute;
     }
 
+    #animatedProduct img {
+    position:absolute;
+    left:0;
+    height:20em;
+    width:20em;
+    left: 18em;
+    top: 30em;
+    }
 
+    .search{
+        position: absolute;
+        left: 5.5em;
+        top: 10em
+    }
+    
 }
 
-@media screen and (min-width: 900px) {
-    #top-header {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
+@media screen and (min-width: 800px) {
+
+    #main-link{
+        left: 19em;
     }
 
+    #login-cart-div{
+        left: 20em;
+    }
+    .search{
+        position: absolute;
+        left: 12em;
+        top: 10em
+    }
+
+    
+}
+
+@media screen and (min-width: 1100px) {
+
+   
+
+    #page {
+        grid-template-rows: 0.1fr 3fr 0.2fr;
+    }
+
+    #main {
+        align-items: normal;
+        grid-template-columns: repeat(2, minmax(20em, 30em));
+        margin-top: 80em;
+        
+
+    }
+
+    #page {
+    grid-template-rows: 0px 1fr 400px;
+   }
+
+    header{
+    height: 7em;
+    }
+
+    #main-link{
+        left: 7em;
+        top: 2em;
+    }
+
+    #login-cart-div{
+        left: 55em;
+        top: 1em;
+    }
+
+    .search{
+        left: 21em;
+        top: 1em;
+    }
+
+    .hero{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15rem;
+        align-items: center;
+        flex-direction: row-reverse;
+        height: 100vh;
+        background-color: #000000;
+        width: 100%;
+        margin-top: 7em;
+    }
+
+  
+    #animatedProduct img {
+        position:absolute;
+        left:0;
+        height:30em;
+        width:30em;
+        left: 20em;
+        top: -15em;
+
+        }
+
+    .hero .text-hero {
+        position: absolute;
+        text-align: center;
+        width: 59em;
+        right: 80em;
+        font-size: 0.5em;
+    }
+
+    .hero #hero-btn{
+        font-size: 2rem;
+        padding: 1rem;
+        border-radius: 2rem;
+        margin-top: 4rem;
+        font-family: "Montserrat", sans-serif;
+        color: whitesmoke;
+        background-color:transparent;     
+        text-shadow: 0.4px 0.4px gray;
+        cursor: pointer;
+        transition: 0.6s;
+    }
+
+    .hero .text-hero h1{
+        padding-left: 1.5rem;
+        color: white;
+        font-size: 60px;
+        margin-bottom: 11px;
+        font-family: "Truculenta", sans-serif;
+        text-shadow: 1.5px 1.5px goldenrod;
+        
+    }
+
+    #menu-logo-div{
+        padding-top: 2em;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+  
+    #page {
+        grid-template-rows: 0.1fr 3fr 0.2fr;
+    }
+
+    #main {
+        align-items: normal;
+        grid-template-columns: repeat(2, minmax(20em, 50em));
+
+    }
+
+    #page {
+    grid-template-rows: 0px 1fr 400px;
+   }
+
+   #menu-logo-div{
+    padding-top: 2.3em;
+   }
+
+    header{
+    height: 10em;
+    width: 100%;
+    }
+
+    #main-link{
+        left: 10em;
+        top: 2em;
+    }
+
+    #login-cart-div{
+        left: 68em;
+        top: 1em;
+
+    }
+
+    .search{
+        left: 34em;
+        top: 1em;
+    }
+
+    .hero{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15rem;
+        align-items: center;
+        flex-direction: row-reverse;
+        height: 100vh;
+        background-color: #000000;
+        width: 100%;
+    }
+
+  
+    #animatedProduct img {
+        position:absolute;
+        left:0;
+        height:40em;
+        width:40em;
+        left: 13em;
+        bottom: 55em;
+        top: 10em;
+        }
+
+    .hero .text-hero {
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 35em;
+        right: 25em;
+
+        font-size: 2em;
+    }
+
+    .hero #hero-btn{
+        font-size: 2rem;
+        padding: 1rem;
+        border-radius: 2rem;
+        margin-top: 4rem;
+        font-family: "Montserrat", sans-serif;
+        color: whitesmoke;
+        background-color:transparent;     
+        text-shadow: 0.4px 0.4px gray;
+        cursor: pointer;
+        transition: 0.6s;
+    }
+
+    .hero .text-hero h1{
+        padding-left: 1.5rem;
+        color: white;
+        font-size: 60px;
+        margin-bottom: 11px;
+        font-family: "Truculenta", sans-serif;
+        text-shadow: 1.5px 1.5px goldenrod;
+        
+    }
+}
+
+@media screen and (min-width: 1500px) {
+
+    #main{
+        grid-template-columns: repeat(3, minmax(22em, 30em));
+
+    }
+    #login-cart-div{
+        left: 80em;
+        top: 1em;
+    }
+
+    #animatedProduct img {
+        top: -20em;
+    }
+}
+
+@media screen and (min-width: 1800px) {
+
+    #main{
+        grid-template-columns: repeat(3, minmax(22em, 30em));
+
+    }
+    #login-cart-div{
+        left: 103em;
+        top: 1em;
+    }
+
+    #animatedProduct img {
+        top: -20em;
+    }
+
+    .search{
+        left: 45em;
+        top: 1em;
+    }
 }

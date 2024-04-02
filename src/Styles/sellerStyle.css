@@ -13,7 +13,7 @@
     grid-template-areas: "head"
         "main"
         "footer";
-    grid-template-rows: 0.3fr 3fr 0.2fr;
+    grid-template-rows: 0.3fr 1fr 0.2fr;
     margin: 0;
 }
 
@@ -34,37 +34,11 @@
         "loginCart";
 }
 
-#menu-logo-div {
-    grid-area: menuLogo;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    gap: 4em;
-
+.dark-theme{
+    background-color: rgba(49, 49, 49, 0.81);
+    color: white;
 }
 
-#menu-button {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-}
-
-#menu {
-    position: fixed;
-    top: 60px;
-    left: -150px;
-    width: 150px;
-    height: 100%;
-    background-color: var(--white-color);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    transition: left 0.3s;
-}
-
-.menu-divs {
-    border-bottom: 1pt solid;
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
-}
 
 /* FILTER BUTTON */
 #filter-button {
@@ -192,6 +166,17 @@
     width: auto;
 }
 
+#mode-button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+#mode-icon{
+    width: 2em;
+    height: fit-content;
+}
+
 #sign-out-button:hover,
 #sign-out-button:focus {
     border-color: rgba(0, 0, 0, 0.15);
@@ -213,7 +198,7 @@
 
 #main-link {
     text-align: center;
-    /* padding-left: 3em; */
+
     color: var(--logo-color);
 }
 /* ACCOUNT BUTTON AND DIV */
@@ -223,9 +208,8 @@
     cursor: pointer;
 }
 #account-div{
-    position: fixed;
-    top: -400px;
-    right: 4em;
+    position: absolute;
+    left: 0em;
     width: 70%;
     max-width: 532px;
     height: 400px;
@@ -240,14 +224,7 @@
                         ;
     grid-template-rows: 3em;
     z-index: 2;
-    /* position: fixed;
-    top: -150px;
-    right: 8em;
-    width: 70%;
-    height: 150px;
-    background-color: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    transition: top 0.3s; */
+
 }
 #back-account-div{
     grid-area: first;
@@ -401,8 +378,10 @@
     padding: 0;
 }
 #add-items-button{
-    margin-left: 50px;
-    margin-top: 20px;
+    margin-left: 2em;
+    margin-top: 0em;
+    width: 10em;
+    font-size: 1em;
 }
 
 #cart-icon {
@@ -431,11 +410,16 @@
 
 #main {
     grid-area: main;
-    margin: 1em;
+    margin: 0em;
     display: grid;
     grid-template-columns: repeat(1, minmax(10em, 30em));
-    gap: 1em;
+    gap: 10em;
 
+}
+
+#add-items-div{
+    width: 2em;
+    height: 2em;
 }
 
 .item {
@@ -484,11 +468,6 @@
     font-weight: bolder;
     font-size: 1em;
 }
-/* #span-div{
-    display: flex;
-    flex-direction: row;
-    gap: 0.9em;
-} */
 
 .item-button-div {
     display: flex;
@@ -641,75 +620,223 @@ footer{
     text-align: center;
 }
 
+.resultBox{
+    backdrop-filter: blur(50px);
+    position: absolute;
+    top: 4em;
+    left: 2em;
+    z-index: 1;
+    width: 26em;
 
+    border-radius: 20px;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: left;
+}
 
-@media screen and (min-width: 700px) {
+.resultBox ul{
+    padding: 0;
+    margin: 0;
+    
+}
+.resultBox li{
+    list-style: none;
+    padding: 0.5em;
+    margin: 0.2em;
+    color: black;
+    font-weight: bolder;
+    width: 22em;
+    cursor: pointer;
+    text-align: left;
+}
+
+.resultBox li:hover{
+    border: 1px solid gray;
+    background-color: rgba(red, green, blue, alpha);
+}
+
+@media screen and (min-width: 500px) {
+    #page {
+    gap: 0;
+    grid-template-rows: 0.1fr 1.3fr 0.1fr;
+   }
+
+   #main{
+    align-items: center;
+    justify-content: center;
+    margin-top: 10em;
+   }
+
+   header{
+    flex-direction: column;
+    align-items: center;
+    height: 10em;
+
+   }
+
+   #account-button{
+    margin-top: 8em;
+   }
+   #main-link{
+    position: absolute;
+    top: 1em;
+    left: 12.4em;
+   }
+
+   #login-cart-div{
+    position: absolute;
+    left: 6em;
+    top: 5em;
+   }
+
+    .search{
+        position: absolute;
+        left: 5.5em;
+        top: 14em
+    }
+
+    #add-items-div{
+        position: absolute;
+        top: 24em;
+    }
+    
+}
+
+@media screen and (min-width: 800px) {
+
+    #main-link{
+        left: 19em;
+    }
+
+    #login-cart-div{
+        left: 20em;
+    }
+
+    .search{
+        position: absolute;
+        left: 12em;
+        top: 10em
+    }
+
+    
+}
+
+@media screen and (min-width: 1100px) {
+
+   
+
     #page {
         grid-template-rows: 0.1fr 3fr 0.2fr;
     }
 
-    #top-header {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        align-items: center;
+    #main {
+        align-items: normal;
+        grid-template-columns: repeat(2, minmax(20em, 30em));
+        margin-top: 80em;
+        
+
+    }
+
+    #page {
+    grid-template-rows: 0px 1fr 400px;
+   }
+
+    header{
+    height: 7em;
+    }
+
+    #main-link{
+        left: 7em;
+        top: 2em;
+    }
+
+    #login-cart-div{
+        left: 55em;
+        top: 1em;
+    }
+
+    .search{
+        left: 21em;
+        top: 1em;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+  
+    #page {
+        grid-template-rows: 0.1fr 3fr 0.2fr;
     }
 
     #main {
-        grid-template-columns: repeat(2, minmax(10em, 30em));
+        align-items: normal;
+        grid-template-columns: repeat(2, minmax(20em, 50em));
+
     }
 
-    .photo {
-        height: 230px;
+    #page {
+    grid-template-rows: 0px 1fr 400px;
+   }
+
+   #menu-logo-div{
+    padding-top: 2.3em;
+   }
+
+    header{
+    height: 10em;
+    width: 100%;
     }
-    #account-div {
-        left: 50%;
-        transform: translate(-50%, 0);
+
+    #main-link{
+        left: 10em;
+        top: 2em;
     }
-    #account-div {
-        position: fixed;
-        top: -300px;
-        right: 4em;
-        width: 70%;
-        max-width: 532px;
-        height: 300px;
-        background-color: rgba(255, 255, 255, 0.9);
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-        transition: top 0.3s;
-        display: grid;
-        grid-template-areas: "first"
-            "second"
-            "third"
-            "fourth"
-        ;
-        grid-template-rows: 3em;
-        z-index: 2;
-        left: 50%;
-        transform: translate(-50%, 0);
-        /* position: fixed;
-    top: -150px;
-    right: 8em;
-    width: 70%;
-    height: 150px;
-    background-color: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    transition: top 0.3s; */
+
+    #login-cart-div{
+        left: 68em;
+        top: 1em;
+
+    }
+
+    .search{
+        left: 34em;
+        top: 1em;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+
+    #page {
+        gap: 1em;
+        grid-template-rows: 13em 1fr 400px;
+       }
+
+    #main{
+        grid-template-columns: repeat(3, minmax(22em, 30em));
+
+    }
+    #login-cart-div{
+        left: 80em;
+        top: 1em;
     }
 
 }
 
-@media screen and (min-width: 900px) {
-    #top-header {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
+@media screen and (min-width: 1800px) {
+
+    #main{
+        margin-top: 10em;
+        grid-template-columns: repeat(3, minmax(22em, 30em));
+
+    }
+    #login-cart-div{
+        left: 103em;
+        top: 1em;
     }
 
-    #main {
-        grid-template-columns: repeat(3, minmax(10em, 30em));
+    .search{
+        left: 45em;
+        top: 5em;
     }
-
 }

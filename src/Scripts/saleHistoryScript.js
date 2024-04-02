@@ -29,6 +29,8 @@ if (!saleHistory.length == 0) {
    
 };
 
+
+
 document.querySelector("#main-page-button").addEventListener("click",function (){
     redirectToMainPage();
 });
