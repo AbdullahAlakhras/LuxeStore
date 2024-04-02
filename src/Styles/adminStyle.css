@@ -238,6 +238,11 @@ header{
     color: rgba(0, 0, 0, 0.65);
 }
 
+.dark-theme{
+    background-color: rgba(49, 49, 49, 0.81);
+    color: white;
+}
+
 #filter-button:hover {
     transform: translateY(-1px);
 }

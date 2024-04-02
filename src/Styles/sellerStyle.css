@@ -836,12 +836,32 @@ footer{
 
     }
     #login-cart-div{
-        left: 103em;
+        left: 90em;
         top: 1em;
+    }
+
+    header{
+        height: 7em;
+        width: 100%;
     }
 
     .search{
         left: 45em;
-        top: 5em;
+        top: 3em;
+    }
+
+    #account-button{
+        position: absolute;
+        top: -1.5em;
+
+    }
+
+    #add-items-div{
+        top:15em;
+    }
+
+    .resultBox{
+        top: 2em;
+    left: 0em;
     }
 }

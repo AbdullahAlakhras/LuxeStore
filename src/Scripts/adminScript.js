@@ -120,3 +120,8 @@ function toggleMenu() {
 function redirectLoginPage(){
     window.location.href = "/src/Html/login.html";
 }
+
+const modeButton = document.getElementById("mode-button");
+modeButton.addEventListener("click", ()=>{
+    document.body.classList.toggle("dark-theme")
+})
