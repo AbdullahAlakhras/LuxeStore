@@ -1337,6 +1337,30 @@ footer{
         right: 45em;
         font-size: 1em;
     }
+
+    #animatedProduct img {
+        top: -15em;
+        left: 20em;
+        width: 30em;
+        height: 30em;
+    }
+
+    .hero{
+        margin-top: 10em;
+    }
+    .hero .text-hero{
+     position: absolute;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 54em;
+    right: 43em;
+    font-size: 1em; 
+    }
+
+    .hero #hero-btn{
+        margin-top: 4em;
+    }
 }
 
 @media screen and (min-width: 1800px) {
@@ -1348,14 +1372,6 @@ footer{
     #login-cart-div{
         left: 90em;
         top: 1em;
-    }
-
-    #animatedProduct img {
-        top: -20em;
-    }
-
-    .hero{
-        margin-top: 10em;
     }
 
     .search{
