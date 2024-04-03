@@ -80,8 +80,8 @@
     position: absolute;
     top: 4em;
     left: 2em;
-    z-index: -1;
-    width: 26em;
+    z-index: 0;
+    width: 20em;
 
     border-radius: 20px;
     padding: 1em;
@@ -102,14 +102,14 @@
     margin: 0.2em;
     color: goldenrod;
     font-weight: bolder;
-    width: 22em;
+    width: 15em;
     cursor: pointer;
     text-align: left;
 }
 
 .resultBox li:hover{
-    border: 1px solid black;
-    background-color: rgba(red, green, blue, alpha);
+    border: 1px solid whitesmoke;
+    border-radius: 20px;
 }
 
 .hero{
@@ -336,6 +336,10 @@
 .dark-theme{
     background-color: rgba(49, 49, 49, 0.81);
     color: white;
+
+    #menu{
+        color: black;
+    }
 }
 
 #filter-button:hover,
@@ -494,7 +498,7 @@
         "fourth"
     ;
     grid-template-rows: 3em;
-    z-index: 2;
+    z-index: 3;
     /* position: fixed;
     top: -150px;
     right: 8em;
@@ -1296,8 +1300,22 @@ footer{
 
     }
     #login-cart-div{
-        left: 67em;
+        left: 65em;
         top: 1em;
+    }
+
+    #main-link{
+        top: 2em;
+        cursor: pointer;
+    }
+
+    header{
+        z-index: 2;
+    }
+
+    #menu-logo-div{
+        padding-top: 2em;
+        cursor: pointer;
     }
 
     .search{
