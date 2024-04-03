@@ -1238,7 +1238,7 @@ footer{
         margin-bottom: 15rem;
         align-items: center;
         flex-direction: row-reverse;
-        height: 100vh;
+        height: 125vh;
         background-color: #000000;
         width: 100%;
     }
@@ -1246,21 +1246,21 @@ footer{
   
     #animatedProduct img {
         position:absolute;
-        left:0;
-        height:40em;
-        width:40em;
-        left: 13em;
+        
+        height:20em;
+        width:20em;
+        left: -1em;
         bottom: 55em;
         top: 10em;
         }
 
     .hero .text-hero {
         position: absolute;
-        align-items: center;
+        align-items: top;
         justify-content: center;
         text-align: center;
         width: 35em;
-        right: 25em;
+        right: 5em;
 
         font-size: 2em;
     }
@@ -1269,7 +1269,7 @@ footer{
         font-size: 2rem;
         padding: 1rem;
         border-radius: 2rem;
-        margin-top: 4rem;
+        margin-top: -3rem;
         font-family: "Montserrat", sans-serif;
         color: whitesmoke;
         background-color:transparent;     
