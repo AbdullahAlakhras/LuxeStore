@@ -71,8 +71,8 @@ header{
 .hero{
     display: flex;
     position: relative;
-    justify-content: space-between;
     align-items: center;
+    justify-content: center;
     flex-direction: row-reverse;
     height: 100vh ;
     gap: 40em;
@@ -83,6 +83,7 @@ header{
 
 .hero .text-hero {
     text-align: center;
+    right: 6em;
 }
 
 .hero #hero-btn{
@@ -1001,8 +1002,7 @@ footer{
         justify-content: center;
         text-align: center;
         width: 35em;
-        right: 25em;
-
+        right: 6em;
         font-size: 2em;
     }
 

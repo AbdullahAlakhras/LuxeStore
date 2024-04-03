@@ -926,6 +926,7 @@ footer{
     #main {
         align-items: normal;
         grid-template-columns: repeat(2, minmax(20em, 50em));
+        margin-top: 100em;
 
     }
 
@@ -973,11 +974,10 @@ footer{
     #animatedProduct img {
         position:absolute;
         left:0;
-        height:40em;
-        width:40em;
-        left: 13em;
-        bottom: 55em;
-        top: 10em;
+        height:30em;
+        width:30em;
+        left: 20em;
+        top: -15em;
         }
 
     .hero .text-hero {
@@ -985,10 +985,9 @@ footer{
         align-items: center;
         justify-content: center;
         text-align: center;
-        width: 35em;
-        right: 25em;
-
-        font-size: 2em;
+        width: 40em;
+        right: 40em;
+        font-size: 1em;
     }
 
     .hero #hero-btn{
@@ -1028,6 +1027,16 @@ footer{
 
     #animatedProduct img {
         top: -20em;
+    }
+
+    .hero .text-hero{
+        position: absolute;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 54em;
+    right: 43em;
+    font-size: 1em; 
     }
 }
 
