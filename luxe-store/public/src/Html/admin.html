@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link rel="icon" type="image/x-icon" href="/src/Images/online-shopping.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Allerta Stencil Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/Styles/adminStyle.css">
+    <title>Luxe Store</title>
+    <link rel="icon" type="image/x-icon" href="/src/Images/online-shopping.png">
+</head>
+<body id="page">
+    <header id="header">
+        <div id="top-header">
+            <div id="menu-logo-div">
+                <button id="menu-button"><img src="../Images/icons8-menu-30.png" alt="menue-icon" onclick="toggleMenu()"></button>
+                <a href="./mainPage.html" id="main-link"> <svg width="200" height="40" xmlns="http://www.w3.org/2000/svg">
+                   <text x="19" y="30" font-family="Allerta Stencil" font-size="30" fill="RGB(255, 215, 0)">Luxe Store</text>
+                </svg></a>
+            </div>
+            <div id="menu">
+                <div id="products-div" class="menu-divs">
+                    <form id="products-form" action="">
+                        <h3>Products</h3>
+                        <input class="products-checkboxes" id="phone-ch" type="checkbox" name="product-checkboxes">
+                        <label for="phone-ch" class="products-labels">Phones</label><br>
+                        <input class="products-checkboxes" id="headphone-ch" type="checkbox" name="product-checkboxes">
+                        <label for="headphone-ch" class="products-labels">Headphones</label><br>
+                        <input class="products-checkboxes" id="phone-covers-ch" type="checkbox" name="product-checkboxes">
+                        <label for="phone-covers-ch" class="products-labels">Phone Covers</label><br>
+                        <input class="products-checkboxes" id="other-ch" type="checkbox" name="product-checkboxes">
+                        <label for="other-ch" class="products-labels">Others</label><br>
+                    </form>
+                </div>
+                <div id="prices-div" class="menu-divs">
+                    <form action="">
+                        <h3>Prices</h3>
+                        <input type="radio" id="all-radio" class="prices-rd" name="prices-radio-buttons" checked>
+                        <Label for="all-radio" class="prices-labels">All-Prices</Label><br>
+                        <input type="radio" id="0-500-radio" class="prices-rd" name="prices-radio-buttons">
+                        <Label for="0-500-radio" class="prices-labels">0-500 &dollar;</Label><br>
+                        <input type="radio" id="500-2000-radio" class="prices-rd" name="prices-radio-buttons">
+                        <Label for="500-2000-radio" class="prices-labels">500-2000 &dollar;</Label><br>
+                        <input type="radio" id="2000-5000-radio" class="prices-rd" name="prices-radio-buttons">
+                        <Label for="2000-5000-radio" class="prices-labels">2000-5000 &dollar;</Label><br>
+                        <input type="radio" id="5000-8000-radio" class="prices-rd" name="prices-radio-buttons">
+                        <Label for="5000-8000-radio" class="prices-labels">5000-8000 &dollar;</Label><br>
+                        <input type="radio" id="8000-10000-radio" class="prices-rd" name="prices-radio-buttons">
+                        <Label for="8000-10000-radio" class="prices-labels">8000-10000 &dollar;</Label><br>
+                        <input type="radio" id="more-radio" class="prices-rd" name="prices-radio-buttons">
+                        <Label for="more-radio" class="prices-labels">more ...</Label><br>
+                    </form>
+                </div>
+                <div id="brands-div" class="menu-divs">
+                    <form action="">
+                        <h3>Brands</h3>
+                        <input class="brands-checkboxes" type="checkbox" id="apple-ch" name="brand-checkboxes">
+                        <label for="apple-ch" class="brands-labels">Apple</label><br>
+                        <input class="brands-checkboxes" type="checkbox" id="samsung-ch" name="brand-checkboxes">
+                        <label for="samsung-ch" class="brands-labels">Samsung</label><br>
+                        <input class="brands-checkboxes" type="checkbox" id="sony-ch" name="brand-checkboxes">
+                        <label for="sony-ch" class="brands-labels">Sony</label><br>
+                        <input class="brands-checkboxes" type="checkbox" id="others-ch" name="brand-checkboxes">
+                        <label for="others-ch" class="brands-labels">Others</label><br>
+                    </form>
+                </div>
+                <div id="menu-button-div" >
+                    <button id="filter-button" type="submit">Filter</button>
+                    <button id="reset-button" type="reset">Reset</button>
+                </div>
+            </div>
+
+            <div id="login-cart-div">
+                <button id="mode-button"><img id="mode-icon" src="/src/Images/iconamoon--mode-light-fill.svg" alt="cart-icon"></button>
+                <button id="sign-out-button" role="button">Sign Out</button>
+            </div>
+        </div>
+        
+
+    </header>
+
+    <div class="search">
+        <div id="search-div">
+            <input id="search-box" type="search" placeholder="Search">
+            <img id="search-icon" src="../Images/icons8-search-30.png" alt="search-icon">
+
+            
+        </div>
+
+        <div class="resultBox">
+            
+        </div>
+    </div>
+    <main >
+
+        <div class="hero" style="justify-content: center;">
+           <div class="text-hero">
+            <h1>Welcome to the admin page</h1>
+            <p>Please check the report logs and the flagged items and take immediate actions</p>
+           </div>
+        </div>
+        <hr>
+        <div id="main">
+
+        </div>
+
+    </main>
+    <footer>
+        <div class="footerContainer">
+         <div class="socialIcons">
+             <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+             <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+             <a href="https://twitter.com/?lang=en"><i class="fa-brands fa-twitter"></i></a>
+             <a href="https://www.google.com/"><i class="fa-brands fa-google-plus"></i></a>
+             <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+         </div>
+             <div class="ftNav">
+                 <ul>
+                     <li><a href="/src/Html/mainPage.html">Home</a></li>
+                     <li><a href="https://example.com/">News</a></li>
+                     <li><a href="https://example.com/">About</a></li>
+                     <li><a href="https://example.com/">Contact Us</a></li>
+                     <li><a href="https://www.qu.edu.qa/sites/">University</a></li>
+                 </ul>
+             </div>
+ 
+         <div class="ftBtm">
+             <p>CopyRight &copy; 2024; Designed By <span class="designers">Qu Students</span></p>
+         </div>
+ 
+        </div>
+        
+     </footer>
+    <script src="/src/Scripts/adminScript.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="/src/Styles/paymentStyle.css">
+    <link rel="icon" type="image/x-icon" href="/src/Images/online-shopping.png">
+    
+</head>
+<body>
+    <main>
+        <div class="container">
+            <h1><svg width="300" height="50" xmlns="http://www.w3.org/2000/svg">
+                    <text x="19" y="40" font-family="Allerta Stencil" font-size="50" fill="RGB(255, 215, 0)">Luxe
+                        Store</text>
+                </svg></h1>
+            <h2>Payment Info</h2>
+            <h2>Your Cart</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-items">
+                </tbody>
+            </table>
+            <h2>Billing Information</h2>
+            <p id="#user-para">Username: <span id="username"></span></p>
+            <p id="amount-para">Amount: <span id="amount"></span></p>
+            <div id="info">
+                <p id="balance-para">Balance: <span id="balance"></span><p id="bankError" class="hidden">You don't have enough balance</p> </p>
+                
+                <button id="pay-button">Pay Now</button>
+            </div>
+        </div>
+    </main>
+    <script src="/src/Scripts/paymentScript.js"></script>
+</body>
+
+</html>

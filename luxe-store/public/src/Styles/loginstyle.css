@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 52rem;
+    background: url('/src/Images/empty-dark-room-modern-futuristic-sci-fi-background-3d-illustration.jpg') no-repeat;
+    background-size: cover;
+}
+
+.wrapper{
+    width: 420px;
+    
+    background-color: transparent;
+    border: 2px solid rgba(255, 255,255, .2);
+    backdrop-filter: blur(20px);
+    color: #fff;
+    padding: 30px 40px;
+    border-radius: 10px;
+}
+
+#Register{
+    display:  none;
+}
+
+.wrapper-not-active{
+    display: none;
+}
+
+.wrapper h1{
+    font-size: 36px;
+    text-align: center;
+}
+
+.wrapper .input-box{
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+.input-box{
+    display: flex;
+    align-items: center;
+}
+.input-box input{
+    width: 100%;
+    height: 50px;
+    padding: 10px 0px;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    border: 2px solid rgba(255, 255,255, .2);
+    border-radius: 40px;
+    font-size: 15px;
+    padding-left: 12px;
+    padding-right: 12px;
+
+    color: white;
+}
+.input-box img{
+    position:absolute;
+    right: 60px;
+    width: 23px;
+    cursor: pointer;
+    filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(87deg) brightness(119%) contrast(119%);
+}
+
+.input-box input::placeholder{
+    color: #fff;
+}
+
+.wrapper .checkbox{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: -15px 0 15px;
+}
+
+.checkbox label input{
+    accent-color: #fff;
+    margin-right: 10px;
+}
+
+.wrapper .btn{
+    width: 100%;
+    height: 45px;
+    background: white;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0,0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600px;
+
+}
+
+.wrapper .btn:hover{
+    background-color: lightblue ;
+}
+
+.wrapper .Register-link{
+    font-size: 14.5px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.wrapper a:visited{
+    color: whitesmoke;
+}
+
+.wrapper a:hover{
+    color: lightskyblue;
+}
+
+@media (max-width: 480px) {
+    .wrapper {
+        padding: 30px 20px;
+    }
+
+    .wrapper h1 {
+        font-size: 28px;
+    }
+
+    .input-box img {
+        right: 10px;
+    }
+}

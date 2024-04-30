@@ -1,0 +1,57 @@
+[
+  {
+    "userName": "user1",
+    "firstName": "Ahmed",
+    "lastName": "Ali",
+    "password": "pass1",
+    "email": "aa123@gmial.com",
+    "typeOfAccount": "customer",
+    "bankAccount": "123",
+    "shipping": "Qatar-Doha-street203",
+    "balance": 1000
+  },
+  {
+    "userName": "user2",
+    "firstName": "Ahmed",
+    "lastName": "Ali",
+    "password": "pass2",
+    "email": "aa123@gmial.com",
+    "typeOfAccount": "seller",
+    "bankAccount": "1234",
+    "shipping": "-",
+    "balance": 0
+  },
+  {
+    "userName": "user3",
+    "password": "pass3",
+    "firstName": "Mohammed",
+    "lastName": "Ali",
+    "email": "aa123@gmial.com",
+    "typeOfAccount": "customer",
+    "bankAccount": "123",
+    "shipping": "Qatar-Doha-street203",
+    "balance": 1000
+  },
+  {
+    "userName": "user4",
+    "firstName": "Mohammed",
+    "lastName": "ALjaber",
+    "password": "pass4",
+    "email": "aa123@gmial.com",
+    "typeOfAccount": "seller",
+    "bankAccount": "1234",
+    "shipping": "-",
+    "balance": 0
+  },
+  {
+    "userName": "admin2",
+    "password": "admin2",
+    "firstName": "Abdullah",
+    "lastName": "Alakhras",
+    "email": "example@gmail.com",
+    "typeOfAccount": "Admin",
+    "bankAccount": "123",
+    "shipping": "Qatar-Doha-street203",
+    "balance": 1000
+  }
+]

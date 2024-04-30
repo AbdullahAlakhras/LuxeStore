@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/x-icon" href="/src/Images/online-shopping.png">
+
+    <!-- Allerta Stencil Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/src/Styles/customerStyle.css">
+    <title>Luxe Store Customer</title>
+</head>
+
+<body id="page">
+    <header id="header">
+        <div id="top-header">
+            <div id="menu-logo-div">
+                <button id="menu-button"><img src="../Images/icons8-menu-30.png" alt="menue-icon"
+                        onclick="toggleMenu()"></button>
+                <a href="" id="main-link"> <svg width="200" height="40"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <text x="19" y="30" font-family="Allerta Stencil" font-size="30" fill="RGB(255, 215, 0)">Luxe
+                            Store</text>
+                    </svg></a>
+                <button id="account-button" onclick="toggleAccount()"><img id="account-image"
+                        src="../Images/icons8-account-30.png" alt="account-icon">
+                </button>
+            </div>
+            <div id="account-div">
+                <div id="back-account-div">
+                    <button id="back-button" onclick="toggleAccount()"><img id="back-icon"
+                            src="../Images/icons8-account-30.png" alt="back-icon">Hide</button>
+                </div>
+                <div id="account-title-div">
+                    <p id="account-title">Account</p>
+                </div>
+                <div id="account-info-div">
+                    <Label id="balance">Balance: </Label>
+                    <Label id="first-name">First Name: </Label>
+                    <Label id="last-name">Last Name: </Label>
+                    <Label id="shipping">Shipping Addres: </Label>
+                    <label id="user-name">Username: </label>
+                    <Label id="email">Email: </Label>
+                </div>
+                <div id="account-info-buttons-div">
+                    <button id="modify-button" class="account-info-buttons">Modify Account</button>
+                    <button id="add-balance-button" class="account-info-buttons">Add Balance</button>
+                    <button id="sale-history-button" class="account-info-buttons">Sale History</button>
+                </div>
+            </div>
+            <div id="cart-div">
+                <div id="cart-title-div">
+                    <svg width="200" height="40" xmlns="http://www.w3.org/2000/svg">
+                        <text x="19" y="30" font-family="Allerta Stencil" font-size="30" fill="RGB(255, 215, 0)">Luxe
+                        Store
+                        </text>
+                    </svg>
+                    <button id="cart-button" onclick="toggleCart()"><img id="cart-icon" src="../Images/icons8-cart-30.png"
+                            alt="cart-icon"></button>
+                    
+                </div>
+                <div id="cart-items">
+                    <h3>Items in cart:</h3>
+                    <div id="list-of-items-in-cart" style="text-align: center;">
+                        <!-- <label for="">dsds</label>
+                        <label for="">fsdfs</label>
+                        <Label>No. Items: </Label> -->
+                        <Label id="no-items-decleration">CART IS EMPTY</Label>
+                        <table >
+                            <thead>
+                                <tr>
+                                    <th>Item</th>
+                                    <th>Price</th>
+                                    <th>Quantity</th>
+                                </tr>
+                            </thead>
+                            <tbody id="cart-table-body">
+                                <!-- <tr>
+                                    <td>222</td>
+                                    <td>333</td>
+                                    <td>4</td>
+                                </tr> -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div id="cart-calculations">
+                    <Label>Total: <span id="total-price"></span></Label>
+                    <Label>Balance: <span id="balance-cart"></span></Label>
+                </div>
+                <div id="cart-buttons">
+                    <button id="checkout-button" class="account-info-buttons" onclick="redirectToPaymentPage()">Checkout</button>
+                    <button id="clear-button" class="account-info-buttons">Clear Cart</button>
+
+                </div>
+            </div>
+            <div id="menu">
+                <div id="products-div" class="menu-divs">
+                    
+                        <h3>Products</h3>
+                        <input value="phone" class="products-checkboxes-class" id="phone-ch" type="checkbox" name="product-checkboxes">
+                        <label for="phone-ch" class="products-labels">Phones</label><br>
+                        <input value="headphone" class="products-checkboxes-class" id="headphone-ch" type="checkbox" name="product-checkboxes">
+                        <label for="headphone-ch" class="products-labels">Headphones</label><br>
+                        <input value="mouse" class="products-checkboxes-class" id="mouse-ch" type="checkbox"
+                            name="product-checkboxes">
+                        <label for="mouse-ch" class="products-labels">Mouse</label><br>
+                        <!-- <input value="others" class="products-checkboxes-class" id="other-ch" type="checkbox" name="product-checkboxes">
+                        <label for="other-ch" class="products-labels">Others</label><br> -->
+                  
+                </div>
+                <div id="prices-div" class="menu-divs">
+                   
+                        <h3>Prices</h3>
+                        <input value="all" type="radio" id="all-radio" class="prices-rd" name="prices-radio-buttons" checked>
+                        <Label for="all-radio" class="prices-labels">All-Prices</Label><br>
+                        <input value="500" type="radio" id="0-500-radio" class="prices-rd" name="prices-radio-buttons">
+                        <Label for="0-500-radio" class="prices-labels">Less than 500 &dollar;</Label><br>
+                        <input value="2000" type="radio" id="500-2000-radio" class="prices-rd" name="prices-radio-buttons">
+                        <Label for="500-2000-radio" class="prices-labels">Less than 2000 &dollar;</Label><br>
+                        <input value="5000" type="radio" id="2000-5000-radio" class="prices-rd" name="prices-radio-buttons">
+                        <Label for="2000-5000-radio" class="prices-labels">Less than 5000 &dollar;</Label><br>
+                        <input value="8000" type="radio" id="5000-8000-radio" class="prices-rd" name="prices-radio-buttons">
+                        <Label for="5000-8000-radio" class="prices-labels">Less than 8000 &dollar;</Label><br>
+                        <input value="10000" type="radio" id="8000-10000-radio" class="prices-rd" name="prices-radio-buttons">
+                        <Label for="8000-10000-radio" class="prices-labels">Less than 10000 &dollar;</Label><br>
+                        <!-- <input value="" type="radio" id="more-radio" class="prices-rd" name="prices-radio-buttons">
+                        <Label for="more-radio" class="prices-labels">more ...</Label><br> -->
+                 
+                </div>
+                <div id="brands-div" class="menu-divs">
+                    
+                        <h3>Brands</h3>
+                        <input value="apple" class="brands-checkboxes-class" type="checkbox" id="apple-ch" name="brand-checkboxes">
+                        <label for="apple-ch" class="brands-labels">Apple</label><br>
+                        <input value="samsung" class="brands-checkboxes-class" type="checkbox" id="samsung-ch" name="brand-checkboxes">
+                        <label for="samsung-ch" class="brands-labels">Samsung</label><br>
+                        <input value="sony" class="brands-checkboxes-class" type="checkbox" id="sony-ch" name="brand-checkboxes">
+                        <label for="sony-ch" class="brands-labels">Sony</label><br>
+                        <!-- <input value="others" class="brands-checkboxes-class" type="checkbox" id="others-ch" name="brand-checkboxes">
+                        <label for="others-ch" class="brands-labels">Others</label><br> -->
+                   
+                </div>
+                <div id="menu-button-div">
+                    <button id="filter-button" type="submit">Filter</button>
+                    <button id="reset-button" type="reset">Reset</button>
+                </div>
+            </div>
+          
+            <div id="login-cart-div">
+                <div id="user-info">
+                    <label id="user-label">USER: </label>
+                    <label id="email-label">EMAIL: </label>
+                </div>
+                <button id="mode-button"><img id="mode-icon" src="/src/Images/iconamoon--mode-light-fill.svg" alt="cart-icon"></button>
+                <button id="sign-out-button" role="button">Sign Out</button>
+
+                <button id="cart-button" onclick="toggleCart()"><img id="cart-icon" src="../Images/icons8-cart-30.png"
+                        alt="cart-icon"></button>
+                <label id="counter">0</label>
+            </div>
+        </div>
+        <div id="bottom-header"></div>
+
+
+    </header>
+    <div class="search">
+        <div id="search-div">
+            <input id="search-box" type="search" placeholder="Search">
+            <img id="search-icon" src="../Images/icons8-search-30.png" alt="search-icon">
+
+            
+        </div>
+
+        <div class="resultBox">
+            
+        </div>
+    </div>
+
+    <main>
+        <div class="hero">
+            <div id="animatedProduct">
+                <img src="/src/Images/keyboard.jpg">
+                <img src="/src/Images/products/blackShark.jpg">
+                <img src="/src/Images/products/logitc.jpg">
+            </div>
+
+           <div class="text-hero">
+            <h1>☀️Summer Sales☀️</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio, ducimus cum architecto pariatur temporibus corrupti inventore sed illum magnam exercitationem quae adipisci hic earum voluptatibus. Laborum praesentium error deleniti nemo?</p>
+            <button id="hero-btn">Start Shopping</button>
+           </div>
+        </div>
+        <div id="main">
+            <div id="warningContainer" style="display: none;">
+                     You need to Login First!!!
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footerContainer">
+         <div class="socialIcons">
+             <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+             <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+             <a href="https://twitter.com/?lang=en"><i class="fa-brands fa-twitter"></i></a>
+             <a href="https://www.google.com/"><i class="fa-brands fa-google-plus"></i></a>
+             <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+         </div>
+             <div class="ftNav">
+                 <ul>
+                    <li><a href="/src/Html/mainPage.html">Home</a></li>
+                    <li><a href="https://example.com/">News</a></li>
+                    <li><a href="https://example.com/">About</a></li>
+                    <li><a href="https://example.com/">Contact Us</a></li>
+                    <li><a href="https://www.qu.edu.qa/sites/">University</a></li>
+                 </ul>
+             </div>
+ 
+         <div class="ftBtm">
+             <p>CopyRight &copy; 2024; Designed By <span class="designers">Qu Students</span></p>
+         </div>
+ 
+        </div>
+        
+     </footer>
+    <script src="/src/Scripts/customerScript.js"></script>
+    <script>
+
+
+    </script>
+</body>
+
+</html>
