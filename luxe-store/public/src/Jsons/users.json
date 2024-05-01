@@ -49,7 +49,7 @@
     "firstName": "Abdullah",
     "lastName": "Alakhras",
     "email": "example@gmail.com",
-    "typeOfAccount": "Admin",
+    "typeOfAccount": "admin",
     "bankAccount": "123",
     "shipping": "Qatar-Doha-street203",
     "balance": 1000

@@ -3,11 +3,7 @@
     "userName": "user1",
     "items": [
       {
-        "name": "iphone x",
-        "price": 10,
-        "quantity": 1
-      },
-      {
+        "id": 1,
         "name": "iphone x",
         "price": 10,
         "quantity": 1
