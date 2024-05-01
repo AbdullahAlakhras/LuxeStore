@@ -5,5 +5,12 @@
     "password": "pass2",
     "bankAccount": "12312341241",
     "items": {}
+  },
+  {
+    "companyName": "Samsung",
+    "userName": "user4",
+    "password": "pass4",
+    "bankAccount": "1234",
+    "items": {}
   }
 ]

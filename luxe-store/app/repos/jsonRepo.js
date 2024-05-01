@@ -25,7 +25,7 @@ export async function readsaleHistory(){
     return await readJson(saleHistoryPath);
 }
 
-export async function readsellerObject(){
+export async function readSeller(){
     return await readJson(sellerobjectPath);
 }
 

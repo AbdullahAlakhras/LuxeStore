@@ -22,17 +22,16 @@ model Item {
   nameProduct String @unique
   price       Float
   type        String
-  seller      Seller @relation(fields: [sellerId], references: [id])
-  sellerId    Int
+  seller      Seller @relation(fields: [sellerName], references: [userName], onDelete: Cascade)
+  sellerName  String
 
   CartItem    CartItem?
   SaleHistory SaleHistory[]
 }
 
 model Seller {
-  id          Int    @id @default(autoincrement())
+  userName    String @id @unique
   companyName String
-  userName    String @unique
   password    String
   bankAccount String
   items       Item[]
