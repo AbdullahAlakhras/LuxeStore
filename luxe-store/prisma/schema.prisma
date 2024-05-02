@@ -25,7 +25,6 @@ model Item {
   seller      Seller @relation(fields: [sellerName], references: [userName], onDelete: Cascade)
   sellerName  String
 
-  CartItem    CartItem?
   SaleHistory SaleHistory[]
 }
 
@@ -46,22 +45,24 @@ model User {
   typeOfAccount String
   bankAccount   String
   shipping      String
-  balance       Float
+  balance       Float         @default(0)
   SaleHistory   SaleHistory[]
 }
 
 model SaleHistory {
-  id       Int    @id @default(autoincrement())
-  userName String
-  user     User   @relation(fields: [userName], references: [userName])
-  item     Item   @relation(fields: [itemId], references: [id])
-  itemId   Int
+  id          Int    @id @default(autoincrement())
+  userName    String
+  user        User   @relation(fields: [userName], references: [userName])
+  item        Item   @relation(fields: [itemId], references: [id])
+  itemId      Int
+  nameProduct String
+  price       Float
+  quantity    Int
 }
 
 model CartItem {
-  id       Int   @id @default(autoincrement())
-  item     Item  @relation(fields: [itemId], references: [id])
-  itemId   Int   @unique
-  price    Float
-  qunatity Int
+  id          Int    @id @default(autoincrement())
+  nameProduct String
+  price       Float
+  quantity    Int
 }

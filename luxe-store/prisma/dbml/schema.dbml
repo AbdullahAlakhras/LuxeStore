@@ -12,7 +12,6 @@ Table Item {
   type String [not null]
   seller Seller [not null]
   sellerName String [not null]
-  CartItem CartItem
   SaleHistory SaleHistory [not null]
 }
 
@@ -43,14 +42,16 @@ Table SaleHistory {
   user User [not null]
   item Item [not null]
   itemId Int [not null]
+  nameProduct String [not null]
+  price Float [not null]
+  quantity Int [not null]
 }
 
 Table CartItem {
   id Int [pk, increment]
-  item Item [not null]
-  itemId Int [unique, not null]
+  nameProduct String [not null]
   price Float [not null]
-  qunatity Int [not null]
+  quantity Int [not null]
 }
 
 Ref: Item.sellerName > Seller.userName [delete: Cascade]
@@ -58,5 +59,3 @@ Ref: Item.sellerName > Seller.userName [delete: Cascade]
 Ref: SaleHistory.userName > User.userName
 
 Ref: SaleHistory.itemId > Item.id
-
-Ref: CartItem.itemId - Item.id

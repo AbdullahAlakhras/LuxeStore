@@ -1,5 +1,5 @@
 import { PrismaClient } from "@prisma/client";
-import * as json from "../app/repos/jsonRepo.js";
+import * as json from "../repos/jsonRepo.js";
 import fs from "fs/promises";
 const prisma = new PrismaClient();
 const userSeed = async ()=>{
@@ -56,12 +56,26 @@ const itemsSeed =async ()=> {
   });
 }
 
+const saleHistorySeed= async () => {
+  const slaHistories=await json.readsaleHistory();
+  slaHistories.map(async(sale) =>  {
+      await prisma.saleHistory.create({
+          data:{
+              userName: sale.userName,
+              itemId: sale.items[0].id,
+              nameProduct: sale.items[0].name,
+              price:sale.items[0].price,
+              quantity: sale.items[0].quantity
+          }
+      })
+  });
+}
 async function seedData(){
   try {
     // await sellerSeed();
     // await userSeed();
-   
-    await itemsSeed();
+    // await itemsSeed();
+      await saleHistorySeed();
   } catch (e) {
     console.error(e);
     await prisma.$disconnect();
