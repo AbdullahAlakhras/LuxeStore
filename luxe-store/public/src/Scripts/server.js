@@ -29,3 +29,4 @@ app.post('/write', express.json(), async (req, res) => {
 app.listen(PORT, () => {
     console.log(`Server running at http://localhost:${PORT}`);
 });
+

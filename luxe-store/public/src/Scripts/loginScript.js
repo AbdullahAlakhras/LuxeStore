@@ -1,3 +1,10 @@
+import * as repo from "../../../repos/repository.js";
+
+
+
+
+document.getElementById("loginBtn").addEventListener("click" , authO);
+
 let users=localStorage.getItem("users") ?JSON.parse(localStorage.getItem("users")): [];
 
 if(users.length == 0){
@@ -54,21 +61,24 @@ function redirectToAdmin(){
 
 function authO(){
 
-    for (u of users){
-        console.log(u.typeOfAccount)
-        if(userName.value===u.userName && passWord.value===u.password){
-            if(u.typeOfAccount==="customer"){
-                storeUser(u);
-                redirectToCustomer();
-                console.log(u);
-            }  
-            else if(u.typeOfAccount==="seller"){
-                storeUser(u);
-                redirectToSeller();
-            }else if(u.typeOfAccount==="Admin"){
-                storeUser(u);
-                redirectToAdmin();
-            }
-        };
-    };
+    // for (u of users){
+    //     console.log(u.typeOfAccount)
+    //     if(userName.value===u.userName && passWord.value===u.password){
+    //         if(u.typeOfAccount==="customer"){
+    //             storeUser(u);
+    //             redirectToCustomer();
+    //             console.log(u);
+    //         }  
+    //         else if(u.typeOfAccount==="seller"){
+    //             storeUser(u);
+    //             redirectToSeller();
+    //         }else if(u.typeOfAccount==="Admin"){
+    //             storeUser(u);
+    //             redirectToAdmin();
+    //         }
+    //     };
+    // };
+    const user=userName.value;
+    const pass=passWord.value;
+    console.log(user);
 }
