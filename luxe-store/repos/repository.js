@@ -27,6 +27,19 @@ export async function changeUserActive(userName,isActive){
    return userRecord;
 };
 
+export async function getActiveUserName(){
+    const userName = await prisma.user.findFirst({
+        where: {
+            active:true,
+        },
+        select:{
+            userName:true,
+        }
+    });
+
+   return userName.userName;
+}
+
 export async function createCartItem(nameProduct,price,quantity){
     const cartItemRecord = await prisma.cartItem.create({
         data:{
@@ -333,5 +346,69 @@ export async function getAllItems(){
     return items;
 };
 
+export async function getCartItems(){
+    const cartItems = await prisma.cartItem.findMany({
 
-// console.log(await changeUserActive("user1",false));
+    });
+    return cartItems;
+};
+
+export async function getCartItemNameProduct(id){
+    const nameProduct = await prisma.cartItem.findUnique({
+        where:{
+            id,
+        }
+    });
+    return nameProduct;
+};
+export async function getCartItemPrice(nameProduct){
+    const priceOfItem = await prisma.cartItem.findUnique({
+        where:{
+            nameProduct,
+        },select:{
+            price:true,
+        }
+    });
+    return priceOfItem.price;
+};
+
+export async function getCartItemQuantity(nameProduct){
+    const priceOfItem = await prisma.cartItem.findUnique({
+        where:{
+            nameProduct,
+        },select:{
+            quantity:true,
+        }
+    });
+    return priceOfItem.quantity;
+};
+
+export async function addCartItem(nameProduct,price,quantity){
+    const cartItem = await prisma.cartItem.create({
+        data:{
+            nameProduct,
+            price,
+            quantity,
+
+        }
+    });
+    return cartItem;
+};
+
+export async function removeCartItem(nameProduct){
+    const cartItem = await prisma.cartItem.delete({
+        where:{
+            nameProduct
+        }
+    });
+    return cartItem;
+};
+
+export async function removeAllCartItems(){
+    const cartItems = await prisma.cartItem.deleteMany({
+        
+    });
+    return cartItems;
+};
+
+// console.log(await getCartItems());

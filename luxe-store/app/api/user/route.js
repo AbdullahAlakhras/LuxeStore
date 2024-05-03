@@ -1,6 +1,8 @@
 import * as repo from "../../../repos/repository.js";
 
 export async function GET(request, { params }){
-    return;    
+
+    const activeUserName=await repo.getActiveUserName();
+    return Response.json(activeUserName);    
 };
 

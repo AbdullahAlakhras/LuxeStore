@@ -64,7 +64,7 @@ model SaleHistory {
 
 model CartItem {
   id          Int    @id @default(autoincrement())
-  nameProduct String
+  nameProduct String @unique
   price       Float
   quantity    Int
 }

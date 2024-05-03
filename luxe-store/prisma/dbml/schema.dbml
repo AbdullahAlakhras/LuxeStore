@@ -51,7 +51,7 @@ Table SaleHistory {
 
 Table CartItem {
   id Int [pk, increment]
-  nameProduct String [not null]
+  nameProduct String [unique, not null]
   price Float [not null]
   quantity Int [not null]
 }

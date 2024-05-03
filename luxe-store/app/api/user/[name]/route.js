@@ -2,8 +2,8 @@ import * as repo from "../../../../repos/repository.js";
 
 export async function GET(request, { params }){
     const userName=params.name
-    const typeOfAccount=await repo.getTypeOfAccount(userName);
-    return Response.json(typeOfAccount);
+    const changeState=await repo.getTypeOfAccount(userName);
+    return Response.json(changeState);
 };
 
 
