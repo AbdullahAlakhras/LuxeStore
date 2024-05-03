@@ -1,23 +1,29 @@
-"use client"
-import { redirect } from "next/navigation";
+"use client";
+import "./mainPageStyle.css";
 import { useRouter } from "next/router";
-import Link from "next/link";
-import Script from "next/script";
+import { redirect } from "next/navigation";
+import React from 'react';
 
-export default function Home() {
+export default function Header() {
+    
+
+  
   return (
     <>
-        <body id="page">
-            <header id="header">
-        <div id="top-header">
-            <div id="menu-logo-div">
-                <button id="menu-button"><img src="../Images/icons8-menu-30.png" alt="menue-icon" onclick="toggleMenu()"/></button>
-                <a href="./mainPage.html" id="main-link"> <svg width="200" height="40" xmlns="http://www.w3.org/2000/svg">
-                   <text x="19" y="30" font-family="Allerta Stencil" font-size="30" fill="RGB(255, 215, 0)">Luxe Store</text>
-                </svg></a>
-            </div>
-            <div id="menu">
-                <div id="products-div" class="menu-divs">
+    <header id="header">
+      <div id="top-header">
+        <div id="menu-logo-div">
+          <button id="menu-button" onClick={toggleMenu}>
+            <img src="../Images/icons8-menu-30.png" alt="menu-icon"/>
+          </button>
+          <a href="./page.js" id="main-link">
+            <svg width="200" height="40" xmlns="http://www.w3.org/2000/svg">
+              <text x="19" y="30" font-family="Allerta Stencil" font-size="30" fill="RGB(255, 215, 0)">Luxe Store</text>
+            </svg>
+          </a>
+        </div>
+        <div id="menu">
+           <div id="products-div" class="menu-divs">
                     <form id="products-form" action="">
                         <h3>Products</h3>
                         <input class="products-checkboxes" id="phone-ch" type="checkbox" name="product-checkboxes"/>
@@ -66,87 +72,44 @@ export default function Home() {
                     <button id="filter-button" type="submit">Filter</button>
                     <button id="reset-button" type="reset">Reset</button>
                 </div>
-            </div>
-      
-            
-            <div id="login-cart-div">
-                <button id="mode-button"><img id="mode-icon" src="/src/Images/iconamoon--mode-light-fill.svg" alt="cart-icon"/></button>
-                <button id="login-button" role="button">Login</button>
-        
-                <button id="cart-button"><img id="cart-icon" src="../Images/icons8-cart-30.png" alt="cart-icon"/></button>
-                <label id="counter">0</label>
-                
-                
-                
-            </div>
-
-
         </div>
-        
-
-    </header>
-     <div class="search">
+        <div id="login-cart-div">
+          <button id="mode-button">
+            <img id="mode-icon" src="/src/Images/iconamoon--mode-light-fill.svg" alt="mode-icon"/>
+          </button>
+          <button id="login-button" onClick={redirectLoginPage}>Login</button>
+          <button id="cart-button">
+            <img id="cart-icon" src="../Images/icons8-cart-30.png" alt="cart-icon"/>
+          </button>
+          <label id="counter">0</label>
+        </div>
+      </div>
+      <div className="search">
         <div id="search-div">
-            <input id="search-box" type="search" placeholder="Search"/>
-            <img id="search-icon" src="../Images/icons8-search-30.png" alt="search-icon"/>
-
-            
+          <input id="search-box" type="search" placeholder="Search"/>
+          <img id="search-icon" src="../Images/icons8-search-30.png" alt="search-icon"/>
         </div>
-
-        <div class="resultBox">
-            
+        <div className="resultBox">
+         
         </div>
-    </div>
-    <main >
+      </div>
+    </header>
 
-        <div class="hero">
-            <div id="animatedProduct">
-                <img src="/src/Images/keyboard.jpg"/>
-                <img src="/src/Images/products/blackShark.jpg"/>
-                <img src="/src/Images/products/logitc.jpg"/>
-            </div>
 
-           <div class="text-hero">
-            <h1>☀️Summer Sales☀️</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio, ducimus cum architecto pariatur temporibus corrupti inventore sed illum magnam exercitationem quae adipisci hic earum voluptatibus. Laborum praesentium error deleniti nemo?</p>
-            <button id="hero-btn">Start Shopping</button>
-           </div>
-        </div>
-        <div id="main">
-            {/* <div id="warningContainer" className="disp-none">
-                     You need to Login First!!!
-            </div> */}
-        </div>
-
-    </main>
-    <footer>
-        <div class="footerContainer">
-         <div class="socialIcons">
-             <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
-             <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
-             <a href="https://twitter.com/?lang=en"><i class="fa-brands fa-twitter"></i></a>
-             <a href="https://www.google.com/"><i class="fa-brands fa-google-plus"></i></a>
-             <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
-         </div>
-             <div class="ftNav">
-                 <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="https://example.com/">News</a></li>
-                    <li><a href="https://example.com/">About</a></li>
-                    <li><a href="https://example.com/">Contact Us</a></li>
-                    <li><a href="https://www.qu.edu.qa/sites/">University</a></li>
-                 </ul>
-             </div>
- 
-         <div class="ftBtm">
-             <p>CopyRight &copy; 2024; Designed By <span class="designers">Qu Students</span></p>
-         </div>
- 
-        </div>
-        
-     </footer>
-          
-    </body>    
-    </>
+  </>
   );
+   
+}
+
+export async function toggleMenu(){
+ let menu = document.getElementById('menu');
+    if (menu.style.left === '0px') {
+        menu.style.left = '-100%'; 
+    } else {
+        menu.style.left = '0px'; 
+    }
+};
+
+function redirectLoginPage() {
+    redirect("../src/Html/mainPage.html");
 }

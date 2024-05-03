@@ -8,7 +8,23 @@ export async function verifyLogin(user,pass){
         },
     });
 
-    return userRecord !== null;
+    if(userRecord)
+        return "found";
+    else
+        return "not found";
+};
+
+export async function changeUserActive(userName,isActive){
+   const userRecord = await prisma.user.update({
+        where: {
+            userName,
+        },
+        data:{
+            active:isActive,
+        },
+    });
+
+   return userRecord;
 };
 
 export async function createCartItem(nameProduct,price,quantity){
@@ -317,4 +333,5 @@ export async function getAllItems(){
     return items;
 };
 
-console.log(await getAllItems());
+
+// console.log(await changeUserActive("user1",false));

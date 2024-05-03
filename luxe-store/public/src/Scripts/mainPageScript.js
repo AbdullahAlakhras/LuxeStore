@@ -1,12 +1,23 @@
- let items=localStorage.getItem("items") ?
-    JSON.parse(localStorage.getItem("items")): [];   
-if(items.length==0){
-    fetch('/src/Jsons/items.json').then(res =>res.json()).then(data => {
-        items=data;
-        localStorage.setItem("items",JSON.stringify(items));    
-    });
+//  let items=localStorage.getItem("items") ?
+//     JSON.parse(localStorage.getItem("items")): [];   
+// if(items.length==0){
+//     fetch('/src/Jsons/items.json').then(res =>res.json()).then(data => {
+//         items=data;
+//         localStorage.setItem("items",JSON.stringify(items));    
+//     });
     
-};
+// };
+
+async function getItems(){
+    const items = await fetch("../../api/item",{
+        method:"GET",
+    }).then(res => res.json());
+    return items;
+} 
+
+document.addEventListener("DOMContentLoaded", async () => {
+        let items= await  getItems();
+        document.getElementById("menu-button").addEventListener("click",toggleMenu);
         const main =document.querySelector("#main");
         items.forEach(item => {
             const itemDiv=document.createElement("div");
@@ -40,7 +51,7 @@ if(items.length==0){
                 paraPrice.textContent=`Price: ${item.price}$`;
                 paraPrice.classList.add("item-price");
                 const paraSeller =document.createElement("p");
-                paraSeller.textContent=`Seller: ${item.seller.companyName}`;
+                paraSeller.textContent=`Seller: ${item.companyName}`;
                 paraSeller.classList.add("item-price");
                 // spanDiv.appendChild(paraPrice);
                 // spanDiv.appendChild(paraSeller);
@@ -160,3 +171,5 @@ const modeButton = document.getElementById("mode-button");
 modeButton.addEventListener("click", ()=>{
     document.body.classList.toggle("dark-theme")
 })
+});
+

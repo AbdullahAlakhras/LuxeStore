@@ -15,15 +15,16 @@ datasource db {
 }
 
 model Item {
-  id          Int    @id @default(autoincrement())
+  id          Int     @id @default(autoincrement())
   link        String
   description String
   quantity    Int
-  nameProduct String @unique
+  nameProduct String  @unique
   price       Float
   type        String
-  seller      Seller @relation(fields: [sellerName], references: [userName], onDelete: Cascade)
+  seller      Seller  @relation(fields: [sellerName], references: [userName], onDelete: Cascade)
   sellerName  String
+  companyName String?
 
   SaleHistory SaleHistory[]
 }
@@ -46,6 +47,7 @@ model User {
   bankAccount   String
   shipping      String
   balance       Float         @default(0)
+  active        Boolean       @default(false)
   SaleHistory   SaleHistory[]
 }
 

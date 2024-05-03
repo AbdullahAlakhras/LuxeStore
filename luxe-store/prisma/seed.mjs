@@ -50,7 +50,8 @@ const itemsSeed =async ()=> {
               nameProduct: item.nameProduct,
               price: item.price,
               type: item.type,
-              sellerName: item.seller.userName,             
+              sellerName: item.seller.userName, 
+              companyName: item.seller.companyName,              
           }
       })
   });
@@ -75,7 +76,7 @@ async function seedData(){
     // await sellerSeed();
     // await userSeed();
     // await itemsSeed();
-      await saleHistorySeed();
+    await saleHistorySeed();
   } catch (e) {
     console.error(e);
     await prisma.$disconnect();

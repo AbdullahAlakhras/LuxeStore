@@ -1,5 +1,6 @@
 import "./mainPageStyle.css";
-import "./mainPageScript.js"
+import React from 'react';
+
 
 export const metadata = {
   title: "Luxe Store",
@@ -9,7 +10,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      {children}
+      <body>
+        {children}
+      </body>
+      
     </html>
   );
 }
