@@ -662,7 +662,7 @@
     gap: 1em;
 }
 
-#cart-button {
+#cart-button,#cart-button-a {
     background-color: transparent;
     border: none;
     cursor: pointer;

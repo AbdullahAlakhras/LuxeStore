@@ -13,7 +13,6 @@ Table Item {
   seller Seller [not null]
   sellerName String [not null]
   companyName String
-  SaleHistory SaleHistory [not null]
 }
 
 Table Seller {
@@ -42,8 +41,6 @@ Table SaleHistory {
   id Int [pk, increment]
   userName String [not null]
   user User [not null]
-  item Item [not null]
-  itemId Int [not null]
   nameProduct String [not null]
   price Float [not null]
   quantity Int [not null]
@@ -59,5 +56,3 @@ Table CartItem {
 Ref: Item.sellerName > Seller.userName [delete: Cascade]
 
 Ref: SaleHistory.userName > User.userName
-
-Ref: SaleHistory.itemId > Item.id

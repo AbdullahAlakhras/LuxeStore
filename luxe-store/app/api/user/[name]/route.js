@@ -12,3 +12,13 @@ export async function PATCH(request, { params }){
     const changeState=await repo.changeUserActive(props.userName,props.isActive);
     return Response.json(changeState);
 };
+
+export async function POST(request, { params }){
+    const userName=params.name
+    const props=await request.json();
+    const nameProduct=props.nameProduct
+    const price=props.price
+    const quantity=props.quantity
+    const saleHistory=await repo.createSaleHistory(userName,nameProduct,parseFloat(price),Number(quantity));
+    return Response.json(saleHistory);
+};

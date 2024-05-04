@@ -52,11 +52,10 @@ export async function createCartItem(nameProduct,price,quantity){
     return cartItemRecord;
 };
 
-export async function createSaleHistory(userName,itemId,nameProduct,price,quantity){
+export async function createSaleHistory(userName,nameProduct,price,quantity){
     const saleHistoryRecord = await prisma.saleHistory.create({
         data:{
             userName,
-            itemId,
             nameProduct,
             price,
             quantity 
@@ -346,6 +345,30 @@ export async function getAllItems(){
     return items;
 };
 
+export async function getItemQuantity(nameProduct){
+    const quantity = await prisma.item.findUnique({
+        where:{
+            nameProduct,
+        },
+        select:{
+            quantity:true,
+        }
+    });
+    return quantity.quantity;
+};
+
+export async function updateItemQuantity(nameProduct,quantity){
+    const newQuantity = await prisma.item.update({
+        where:{
+            nameProduct,
+        },
+        data:{
+            quantity,
+        }
+    });
+    return newQuantity.quantity;
+};
+
 export async function getCartItems(){
     const cartItems = await prisma.cartItem.findMany({
 
@@ -384,15 +407,33 @@ export async function getCartItemQuantity(nameProduct){
 };
 
 export async function addCartItem(nameProduct,price,quantity){
-    const cartItem = await prisma.cartItem.create({
+    const isExist=await prisma.cartItem.findUnique({
+        where:{
+            nameProduct,
+        }
+    });
+    if(isExist){
+         const cartItem=await prisma.cartItem.update({
+        where:{
+            nameProduct,
+        },
+        data:{
+            quantity,
+        }
+    });
+    return cartItem;
+    }else{
+        const cartItem = await prisma.cartItem.create({
         data:{
             nameProduct,
             price,
             quantity,
 
-        }
-    });
-    return cartItem;
+            }
+        });
+        return cartItem;
+    }
+    
 };
 
 export async function removeCartItem(nameProduct){
@@ -411,4 +452,38 @@ export async function removeAllCartItems(){
     return cartItems;
 };
 
-// console.log(await getCartItems());
+export async function updateCartItemQuantity(nameProduct,quantity){
+    const item = await prisma.cartItem.update({
+        where:{
+            nameProduct,
+        },
+        data:{
+            quantity
+        }
+    });
+    return item;
+};
+
+export async function updateCartItemPrice(nameProduct,price){
+    const item = await prisma.cartItem.update({
+        where:{
+            nameProduct,
+        },
+        data:{
+            price
+        }
+    });
+    return item;
+};
+
+export async function getCartItemSumQuantity(){
+    const sumResult = await prisma.cartItem.aggregate({
+        _sum: {
+          quantity: true,
+        },
+    });
+    return sumResult._sum;
+};
+
+
+// console.log(await getSaleHistoryPerUser("user1"));
