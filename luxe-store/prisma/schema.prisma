@@ -64,3 +64,8 @@ model CartItem {
   price       Float
   quantity    Int
 }
+
+model ModifyItem {
+  id          Int    @id @default(autoincrement())
+  nameProduct String @unique
+}

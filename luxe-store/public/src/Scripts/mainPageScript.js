@@ -15,7 +15,39 @@ async function getItems(){
     return items;
 } 
 
+
+async function changeUserActiveState(name, isActive) {
+    const isUser = await fetch(`../../api/user/${name}`, {
+        method: "PATCH",
+
+        body: JSON.stringify({
+            userName: name,
+            isActive: isActive
+        })
+    }).then(res => res.json());
+
+    return isUser; 
+}
+
+async function getActiveUserName(){
+    const data = await fetch(`../../api/user/`,{
+        method:"GET",
+        
+    }).then(res => res.json());
+    
+    return data;
+}
+
 document.addEventListener("DOMContentLoaded", async () => {
+            let activeUser =null;
+            try{
+                activeUser=await getActiveUserName();
+            }catch(error){
+
+            }
+            if(activeUser){
+                await changeUserActiveState(activeUser,false);
+            }
         let items= await  getItems();
         document.getElementById("menu-button").addEventListener("click",toggleMenu);
         const main =document.querySelector("#main");

@@ -27,6 +27,8 @@ export async function changeUserActive(userName,isActive){
    return userRecord;
 };
 
+
+
 export async function removeUser(userName){
     const userRecord = await prisma.user.delete({
         where: {
@@ -325,6 +327,8 @@ export async function getBankAccountFromSeller(userName){
     }
 };
 
+
+
 export async function getItemsPerSeller(userName){
     const itemsOfSeller = await prisma.seller.findUnique({
         where:{
@@ -525,5 +529,171 @@ export async function updateUser(userName,password,firstName,lastName,email,ship
     return updatedUser;
 };
 
+export async function removeItem(nameProduct){
+    const item = await prisma.item.delete({
+        where:{
+            nameProduct
+        }
+    });
+    return item;
+};
+
+export async function createModifyItem(nameProduct){
+    const item = await prisma.modifyItem.create({
+        data:{
+            nameProduct,
+        }
+    });
+    return item;
+};
+
+export async function clearModifyItem(){
+    const item = await prisma.modifyItem.deleteMany({
+        
+    });
+    return item;
+};
+
+export async function getModifyItemName(){
+    const item = await prisma.modifyItem.findFirst({
+        select:{
+            nameProduct:true
+        }
+    });
+    return item.nameProduct;
+};
+
+export async function changeModifyItemName(oldName,newName){
+    const item = await prisma.modifyItem.update({
+        where:{
+            nameProduct:oldName,
+        },
+        data:{
+            nameProduct:newName,
+        }
+    });
+    return item;
+};
+
+export async function getLinkFromItem(nameProduct){
+    const data = await prisma.item.findUnique({
+        where:{
+            nameProduct,
+        },
+        select:{
+            link:true,
+        }
+    });
+    return data.link;
+};
+export async function getDescriptionFromItem(nameProduct){
+    const data = await prisma.item.findUnique({
+        where:{
+            nameProduct,
+        },
+        select:{
+            description:true,
+        }
+    });
+    return data.description;
+};
+
+export async function getQuantityFromItem(nameProduct){
+    const data = await prisma.item.findUnique({
+        where:{
+            nameProduct,
+        },
+        select:{
+            quantity:true,
+        }
+    });
+    return data.quantity;
+};
+
+export async function getPriceFromItem(nameProduct){
+    const data = await prisma.item.findUnique({
+        where:{
+            nameProduct,
+        },
+        select:{
+            price:true,
+        }
+    });
+    return data.price;
+};
+
+
+export async function getTypeFromItem(nameProduct){
+    const data = await prisma.item.findUnique({
+        where:{
+            nameProduct,
+        },
+        select:{
+            type:true,
+        }
+    });
+    return data.type;
+};
+
+export async function getSellerFromItem(nameProduct){
+    const data = await prisma.item.findUnique({
+        where:{
+            nameProduct,
+        },
+        select:{
+            sellerName:true,
+        }
+    });
+    return data.sellerName;
+};
+
+export async function getCompanyFromItem(nameProduct){
+    const data = await prisma.item.findUnique({
+        where:{
+            nameProduct,
+        },
+        select:{
+            companyName:true,
+        }
+    });
+    return data.companyName;
+};
+
+export async function modifyItem(currentNameProduct,nameProduct,link,description,quantity,price,type,companyName){
+    const data = await prisma.item.update({
+        where:{
+            nameProduct:currentNameProduct,
+        },
+        data:{
+            nameProduct,
+            link,
+            description,
+            quantity,
+            price,
+            type,
+            companyName
+        }
+    });
+    return data;
+};
+
+export async function addItem(link,description,quantity,nameProduct,price,type,sellerName,companyName){
+   const itemRecord = await prisma.item.create({
+        data:{
+            link,
+            description,
+            quantity,
+            nameProduct,
+            price,
+            type,
+            sellerName,
+            companyName,
+        }
+    });
+
+   return itemRecord;
+};
 
 // console.log(await updateUser("user4","pass44","Sara","Jones","sara@sara.com","Qatar-Doha-Muaither","12345"));
+
+// console.log(await addItem("dsdsd","dsds",2,"wwq",232,"dsds","user2","sdasd"));

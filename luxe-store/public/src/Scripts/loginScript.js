@@ -29,9 +29,27 @@ async function getTypeOfAccount(name){
     return type;
 } 
 
+
+async function getActiveUserName(){
+    const data = await fetch(`../../api/user/`,{
+        method:"GET",
+        
+    }).then(res => res.json());
+    
+    return data;
+}
+
 document.addEventListener("DOMContentLoaded", async () => {
     document.getElementById("loginBtn").addEventListener("click" , authO);
+    let activeUser =null;
+    try{
+        activeUser=await getActiveUserName();
+    }catch(error){
 
+    }
+    if(activeUser){
+        await changeUserActiveState(activeUser,false);
+    }
 // let users=localStorage.getItem("users") ?JSON.parse(localStorage.getItem("users")): [];
 
 // if(users.length == 0){
