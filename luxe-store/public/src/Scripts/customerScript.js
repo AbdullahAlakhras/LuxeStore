@@ -9,7 +9,18 @@
 
 // let allUsers=localStorage.getItem("users") ?
 //     JSON.parse(localStorage.getItem("users")): [];
+async function changeUserActiveState(name, isActive) {
+    const isUser = await fetch(`../../api/user/${name}`, {
+        method: "PATCH",
 
+        body: JSON.stringify({
+            userName: name,
+            isActive: isActive
+        })
+    }).then(res => res.json());
+
+    return isUser; 
+}
 async function getItems(){
     const items = await fetch("../../api/item",{
         method:"GET",
@@ -535,7 +546,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     function redirectLoginPage(){
         window.location.href = "/src/Html/login.html";
     }
-    function redirectMainPage(){
+    async function redirectMainPage(){
+        await changeUserActiveState(activeUserName,false);
         window.location.href = "/src/Html/mainPage.html";
     
     }

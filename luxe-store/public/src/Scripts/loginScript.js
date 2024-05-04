@@ -24,9 +24,7 @@ async function changeUserActiveState(name, isActive) {
 async function getTypeOfAccount(name){
     const type = await fetch(`../../api/user/${name}/`,{
         method:"GET",
-        body: JSON.stringify({
-            dataType: "typeOfAccount",
-        })
+        
     }).then(res => res.json());
     return type;
 } 
