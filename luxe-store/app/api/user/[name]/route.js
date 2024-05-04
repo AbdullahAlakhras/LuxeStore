@@ -22,3 +22,10 @@ export async function POST(request, { params }){
     const saleHistory=await repo.createSaleHistory(userName,nameProduct,parseFloat(price),Number(quantity));
     return Response.json(saleHistory);
 };
+
+export async function DELETE(request, { params }){
+    const userName=params.name
+   
+    const userRecord=await repo.removeUser(userName);
+    return Response.json(userRecord);
+};

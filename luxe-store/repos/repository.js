@@ -27,6 +27,15 @@ export async function changeUserActive(userName,isActive){
    return userRecord;
 };
 
+export async function removeUser(userName){
+    const userRecord = await prisma.user.delete({
+        where: {
+            userName,
+        },
+    });
+
+   return userRecord;
+};
 export async function getActiveUserName(){
     const userName = await prisma.user.findFirst({
         where: {
@@ -242,7 +251,21 @@ export async function getTypeOfAccount(userName){
     }
 };
 
-
+export async function getPassword(userName){
+    const passwordObject = await prisma.user.findUnique({
+        where:{
+            userName
+        },
+        select:{
+            password:true
+        }
+    });
+    if(passwordObject)
+        return passwordObject.password;
+    else{
+        return null;
+    }
+};
 
 export async function modifyUser(userName,data){
     const modifiedUser = await prisma.user.update({
@@ -485,5 +508,22 @@ export async function getCartItemSumQuantity(){
     return sumResult._sum;
 };
 
+export async function updateUser(userName,password,firstName,lastName,email,shipping,bankAccount){
+    const updatedUser = await prisma.user.update({
+        where:{
+            userName,
+        },
+        data:{
+           password,
+           firstName,
+           lastName,
+           email,
+           shipping,
+           bankAccount,
+        }
+    });
+    return updatedUser;
+};
 
-// console.log(await getSaleHistoryPerUser("user1"));
+
+// console.log(await updateUser("user4","pass44","Sara","Jones","sara@sara.com","Qatar-Doha-Muaither","12345"));

@@ -55,4 +55,4 @@ Table CartItem {
 
 Ref: Item.sellerName > Seller.userName [delete: Cascade]
 
-Ref: SaleHistory.userName > User.userName
+Ref: SaleHistory.userName > User.userName [delete: Cascade]

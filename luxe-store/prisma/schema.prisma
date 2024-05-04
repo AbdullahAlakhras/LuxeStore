@@ -52,7 +52,7 @@ model User {
 model SaleHistory {
   id          Int    @id @default(autoincrement())
   userName    String
-  user        User   @relation(fields: [userName], references: [userName])
+  user        User   @relation(fields: [userName], references: [userName], onDelete: Cascade)
   nameProduct String
   price       Float
   quantity    Int
