@@ -88,7 +88,19 @@ async function removeItem(nameProduct){
     return data;
 }
 
+async function getProducts(userName){
+    const data = await fetch(`../../api/products/`,{
+        method:"GET", 
+       
+        
+    }).then(res => res.json());
+    
+    return data;
+} 
+
 document.addEventListener("DOMContentLoaded", async () => {
+    
+
     await clearModfiy();
     // let items=localStorage.getItem("items") ?
     // JSON.parse(localStorage.getItem("items")): [];
@@ -222,13 +234,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         
     };
 
-    let productNames = []
-            for (const item of sellerItems){
-                if(item.nameProduct != ""){
-                    productNames.push(item.nameProduct);
-                }
-                
-            }
+    let productNames = await getProducts();
 
             console.log(productNames) 
             const resultBox = document.querySelector(".resultBox");
