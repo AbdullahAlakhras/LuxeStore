@@ -162,6 +162,16 @@ async function removeItemFromCart(nameProduct){
     
     return data;
 }
+
+async function getProducts(userName){
+    const data = await fetch(`../../api/products/`,{
+        method:"GET", 
+       
+        
+    }).then(res => res.json());
+    
+    return data;
+} 
 document.addEventListener("DOMContentLoaded", async () => {
      await removeAllCartItems();
      function toggleCart(){
@@ -597,13 +607,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         document.body.classList.toggle("dark-theme")
     })
 
-    let productNames = []
-            for (const item of items){
-                if(item.nameProduct != ""){
-                    productNames.push(item.nameProduct);
-                }
-                
-            }
+    let productNames = await getProducts();
 
             // console.log(productNames) 
             const resultBox = document.querySelector(".resultBox");
