@@ -319,7 +319,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                     paraPrice.textContent=`Price: ${item.price}$`;
                     paraPrice.classList.add("item-price");
                     const paraSeller =document.createElement("p");
-                    paraSeller.textContent=`Seller: ${item.sellerName.companyName}`;
+                    paraSeller.textContent=`Seller: ${item.companyName}`;
                     paraSeller.classList.add("item-price");
                     itemDescDiv.appendChild(paraPrice);
                     itemDescDiv.appendChild(paraSeller);
@@ -595,7 +595,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             // console.log(productType);
             return (productType.length==0 || productType.includes(i.type.toLowerCase()))
                 && (priceRange === 'all' || i.price <= parseInt(priceRange))
-                && (brand.length==0 ||brand.includes(i.seller.companyName.toLowerCase()));
+                && (brand.length==0 ||brand.includes(i.companyName.toLowerCase()));
         });
         document.querySelector("#main").replaceChildren();
         initialze(filteredItems);

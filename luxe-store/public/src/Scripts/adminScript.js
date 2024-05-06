@@ -1,4 +1,5 @@
 
+
 async function getItems(){
     const items = await fetch("../../api/item",{
         method:"GET",
@@ -49,10 +50,14 @@ document.addEventListener("DOMContentLoaded", async () => {
     // };
     let items =await getItems();
     let activeUser= await getActiveUserName();
+    document.querySelector("#menu-button").addEventListener("click",toggleMenu);
     document.querySelector("#main-link").setAttribute("href","/src/Html/admin.html");
-            console.log(); 
-            const main =document.querySelector("#main");
-            items.forEach(item => {
+    document.querySelector("#filter-button").addEventListener("click",filterAction);
+           
+    const main =document.querySelector("#main");
+    initialize(items);
+    function initialize(items){
+         items.forEach(item => {
                 const itemDiv=document.createElement("div");
                     itemDiv.classList.add("item");
                 
@@ -137,6 +142,8 @@ document.addEventListener("DOMContentLoaded", async () => {
         
 
 
+    }
+           
 
 
 
@@ -167,5 +174,21 @@ document.addEventListener("DOMContentLoaded", async () => {
     modeButton.addEventListener("click", ()=>{
         document.body.classList.toggle("dark-theme")
     })
+
+    function filterAction(){
+        let filteredItems = items.filter(i => {
+            let productType = Array.from(document.querySelectorAll(".products-checkboxes-class")).filter((j) => j.checked==true).map(checkbox => checkbox.value);
+            let priceRange = document.querySelector(`input[name="prices-radio-buttons"]:checked`).value;
+            let brand = Array.from(document.querySelectorAll(".brands-checkboxes-class")).filter((j) => j.checked==true).map(checkbox => checkbox.value);
+            // console.log(productType);
+            return (productType.length==0 || productType.includes(i.type.toLowerCase()))
+                && (priceRange === 'all' || i.price <= parseInt(priceRange))
+                && (brand.length==0 ||brand.includes(i.companyName.toLowerCase()));
+        });
+        // console.log(filteredItems);
+        document.querySelector("#main").replaceChildren();
+        initialize(filteredItems);
+
+    };
 });
     

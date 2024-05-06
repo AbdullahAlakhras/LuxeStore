@@ -18,27 +18,27 @@
     <header id="header">
         <div id="top-header">
             <div id="menu-logo-div">
-                <button id="menu-button"><img src="../Images/icons8-menu-30.png" alt="menue-icon" onclick="toggleMenu()"></button>
+                <button id="menu-button"><img src="../Images/icons8-menu-30.png" alt="menue-icon" ></button>
                 <a href="./mainPage.html" id="main-link"> <svg width="200" height="40" xmlns="http://www.w3.org/2000/svg">
                    <text x="19" y="30" font-family="Allerta Stencil" font-size="30" fill="RGB(255, 215, 0)">Luxe Store</text>
                 </svg></a>
             </div>
             <div id="menu">
                 <div id="products-div" class="menu-divs">
-                    <form id="products-form" action="">
+                    <div id="products-form" >
                         <h3>Products</h3>
-                        <input class="products-checkboxes" id="phone-ch" type="checkbox" name="product-checkboxes">
+                        <input class="products-checkboxes products-checkboxes-class" value="Phones" id="phone-ch" type="checkbox" name="product-checkboxes">
                         <label for="phone-ch" class="products-labels">Phones</label><br>
-                        <input class="products-checkboxes" id="headphone-ch" type="checkbox" name="product-checkboxes">
+                        <input class="products-checkboxes products-checkboxes-class" value="Headphones" id="headphone-ch" type="checkbox" name="product-checkboxes">
                         <label for="headphone-ch" class="products-labels">Headphones</label><br>
-                        <input class="products-checkboxes" id="phone-covers-ch" type="checkbox" name="product-checkboxes">
+                        <input class="products-checkboxes products-checkboxes-class" value="Phone Covers" id="phone-covers-ch" type="checkbox" name="product-checkboxes">
                         <label for="phone-covers-ch" class="products-labels">Phone Covers</label><br>
-                        <input class="products-checkboxes" id="other-ch" type="checkbox" name="product-checkboxes">
+                        <input class="products-checkboxes products-checkboxes-class" value="Others" id="other-ch" type="checkbox" name="product-checkboxes">
                         <label for="other-ch" class="products-labels">Others</label><br>
-                    </form>
+                    </div>
                 </div>
                 <div id="prices-div" class="menu-divs">
-                    <form action="">
+                    <div>
                         <h3>Prices</h3>
                         <input type="radio" id="all-radio" class="prices-rd" name="prices-radio-buttons" checked>
                         <Label for="all-radio" class="prices-labels">All-Prices</Label><br>
@@ -54,20 +54,20 @@
                         <Label for="8000-10000-radio" class="prices-labels">8000-10000 &dollar;</Label><br>
                         <input type="radio" id="more-radio" class="prices-rd" name="prices-radio-buttons">
                         <Label for="more-radio" class="prices-labels">more ...</Label><br>
-                    </form>
+                    </div>
                 </div>
                 <div id="brands-div" class="menu-divs">
-                    <form action="">
+                    <div >
                         <h3>Brands</h3>
-                        <input class="brands-checkboxes" type="checkbox" id="apple-ch" name="brand-checkboxes">
+                        <input class="brands-checkboxes brands-checkboxes-class" value="Apple" type="checkbox" id="apple-ch" name="brand-checkboxes">
                         <label for="apple-ch" class="brands-labels">Apple</label><br>
-                        <input class="brands-checkboxes" type="checkbox" id="samsung-ch" name="brand-checkboxes">
+                        <input class="brands-checkboxes brands-checkboxes-class" value="Samsung" type="checkbox" id="samsung-ch" name="brand-checkboxes">
                         <label for="samsung-ch" class="brands-labels">Samsung</label><br>
-                        <input class="brands-checkboxes" type="checkbox" id="sony-ch" name="brand-checkboxes">
+                        <input class="brands-checkboxes brands-checkboxes-class" value="Sony" type="checkbox" id="sony-ch" name="brand-checkboxes">
                         <label for="sony-ch" class="brands-labels">Sony</label><br>
-                        <input class="brands-checkboxes" type="checkbox" id="others-ch" name="brand-checkboxes">
+                        <input class="brands-checkboxes brands-checkboxes-class" value="Others" type="checkbox" id="others-ch" name="brand-checkboxes">
                         <label for="others-ch" class="brands-labels">Others</label><br>
-                    </form>
+                    </div>
                 </div>
                 <div id="menu-button-div" >
                     <button id="filter-button" type="submit">Filter</button>
