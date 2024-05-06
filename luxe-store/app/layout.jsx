@@ -1,4 +1,4 @@
-import "./mainPageStyle.css";
+
 import React from 'react';
 
 
