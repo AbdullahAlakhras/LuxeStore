@@ -1,8 +1,9 @@
 import { PrismaClient } from "@prisma/client";
 import * as json from "../repos/jsonRepo.js";
 import fs from "fs/promises";
-const prisma = new PrismaClient();
+// const prisma = new PrismaClient();
 const userSeed = async ()=>{
+  const prisma = new PrismaClient();
   const users=await json.readUsers();
   users.forEach(async(user) =>  {
       await prisma.user.create({
@@ -18,11 +19,13 @@ const userSeed = async ()=>{
               balance: user.balance
           }
       })
+    
   });
   
- 
+  await prisma.$disconnect();
 }
 const sellerSeed =async ()=> {
+  const prisma = new PrismaClient();
   const sellers=await json.readSeller();
   sellers.forEach(async(seller) =>  {
       await prisma.seller.create({
@@ -34,10 +37,11 @@ const sellerSeed =async ()=> {
               
           }
       })
+    await prisma.$disconnect();
   });
 }
 const itemsSeed =async ()=> {
-  
+  const prisma = new PrismaClient();
    const items=await json.readItems();
   // console.log(items[10]);
   items.forEach(async(item) =>  {
@@ -54,34 +58,43 @@ const itemsSeed =async ()=> {
               companyName: item.seller.companyName,              
           }
       })
+    
   });
+  await prisma.$disconnect();
 }
 
 const saleHistorySeed= async () => {
+  const prisma = new PrismaClient();
   const slaHistories=await json.readsaleHistory();
   slaHistories.map(async(sale) =>  {
       await prisma.saleHistory.create({
           data:{
               userName: sale.userName,
-              itemId: sale.items[0].id,
               nameProduct: sale.items[0].name,
               price:sale.items[0].price,
               quantity: sale.items[0].quantity
           }
       })
   });
+  await prisma.$disconnect();
 }
 async function seedData(){
   try {
-    // await sellerSeed();
-    // await userSeed();
-    // await itemsSeed();
-    await saleHistorySeed();
+   
+  // await sellerSeed();
+
+  // await userSeed();
+  
+  // await itemsSeed();
+  
+  await saleHistorySeed();
   } catch (e) {
     console.error(e);
     await prisma.$disconnect();
     process.exit(1);
   }
 }
+
+async function sleep(ms) {return new Promise(resolve => setTimeout(resolve, ms));}
 await seedData()
 
