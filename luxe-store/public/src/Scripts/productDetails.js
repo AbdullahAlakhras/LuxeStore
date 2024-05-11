@@ -6,7 +6,7 @@ async function getItems() {
   console.log(response);
   items = response;
 }
-
+// we fixed the api fetching and items get loaded correctly, please fix add to cart!!
 document.addEventListener("DOMContentLoaded", async () => {
   await getItems();
   //   const items = JSON.parse(localStorage.getItem("items"));
