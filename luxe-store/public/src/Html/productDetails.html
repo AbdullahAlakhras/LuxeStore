@@ -1,63 +1,324 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Product Details</title>
     <!-- <link rel="stylesheet" href="/src/Styles/productDetails.css">  -->
     <script src="/src/Scripts/productDetails.js"></script>
-    <link rel="icon" type="image/x-icon" href="/src/Images/online-shopping.png">
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/src/Images/online-shopping.png"
+    />
 
-    <link rel="stylesheet" href="/src/Styles/productDetails.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link rel="stylesheet" href="/src/Styles/productDetails.css"> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css?family=Fjalla+One|Montserrat:300,400,700,800|Open+Sans:300");
 
-</head>
-<body>
+    body {
+      background-image: linear-gradient(
+        to right bottom,
+        #f9f9f9,
+        #c1c1c1,
+        #9d9d9d,
+        #535353,
+        #0b0b0b
+      );
+      height: 100%;
+      margin: 0;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
 
-    <header>
-        <h1>Product Details</h1>
-    </header>
-    <main> <!-- commented elements not found in the products' json files, need to add them? or are we ditching them? - faisal-->
-        <div id="product-detail-container">
-            <img id="product-image" src="" alt="Product Image">
-            <h2 id="product-name"></h2>
-            <p id="product-price"></p>
-            <!--<p id="product-rating">Product Rating: ★★★★☆</p>-->
-            <p id="product-manufacturer"></p>
-            <p id="product-seller"></p>
-            <p id="product-description"></p>
-            <!--<label for="product-quantity">Quantity:</label>-->
-            <!--<input type="number" id="product-quantity" name="quantity" min="1" value="1">-->
-            <button type="button" id="add-to-cart-btn">Add to Cart</button>
+    main {
+      max-width: 720px;
+      margin: 5% auto;
+    }
+
+    .card {
+      box-shadow: 0 6px 6px rgba(#000, 0.3);
+      transition: 200ms;
+      background: #fff;
+
+      .card__title {
+        display: flex;
+        align-items: center;
+        padding: 30px 40px;
+
+        h3 {
+          flex: 0 1 200px;
+          text-align: right;
+          margin: 0;
+          color: #252525;
+          font-family: sans-serif;
+          font-weight: 600;
+          font-size: 20px;
+          text-transform: uppercase;
+        }
+
+        .icon {
+          flex: 1 0 10px;
+          background: #000000;
+          color: #fff;
+          padding: 10px 10px;
+          transition: 200ms;
+
+          > a {
+            color: #fff;
+          }
+
+          &:hover {
+            background: #252525;
+          }
+        }
+      }
+
+      .card__body {
+        padding: 0 40px;
+        display: flex;
+        flex-flow: row no-wrap;
+        margin-bottom: 25px;
+
+        > .half {
+          box-sizing: border-box;
+          padding: 0 15px;
+          flex: 1 0 50%;
+        }
+
+        .featured_text {
+          h1 {
+            margin: 0;
+            padding: 0;
+            font-weight: 800;
+            font-family: "Montserrat", sans-serif;
+            font-size: 64px;
+            line-height: 50px;
+            color: #181e28;
+          }
+
+          p {
+            margin: 0;
+            padding: 0;
+
+            &.sub {
+              font-family: "Montserrat", sans-serif;
+              font-size: 26px;
+              text-transform: uppercase;
+              color: #686e77;
+              font-weight: 300;
+              margin-bottom: 5px;
+            }
+
+            &.price {
+              font-family: "Fjalla One", sans-serif;
+              color: #252525;
+              font-size: 26px;
+            }
+          }
+        }
+
+        .image {
+          padding-top: 15px;
+          width: 100%;
+
+          img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+          }
+        }
+
+        .description {
+          margin-bottom: 25px;
+
+          p {
+            margin: 0;
+            font-family: "Open Sans", sans-serif;
+            font-weight: 300;
+            line-height: 27px;
+            font-size: 16px;
+            color: #555;
+          }
+        }
+
+        span.stock {
+          font-family: "Montserrat", sans-serif;
+          font-weight: 600;
+          color: #959595;
+        }
+
+        .reviews {
+          .stars {
+            display: inline-block;
+            list-style: none;
+            padding: 0;
+
+            > li {
+              display: inline-block;
+
+              .fa {
+                color: #f7c01b;
+              }
+            }
+          }
+
+          > span {
+            font-family: "Open Sans", sans-serif;
+            font-size: 14px;
+            margin-left: 5px;
+            color: #555;
+          }
+        }
+      }
+
+      .card__footer {
+        padding: 30px 40px;
+        display: flex;
+        flex-flow: row no-wrap;
+        align-items: center;
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          display: block;
+          top: 0;
+          left: 40px;
+          width: calc(100% - 40px);
+          height: 3px;
+          background: #000000;
+          background: linear-gradient(
+            to right,
+            #363636 0%,
+            #5e5e5e 20%,
+            #ddd 20%,
+            #ddd 100%
+          );
+        }
+
+        .recommend {
+          flex: 1 0 10px;
+
+          p {
+            margin: 0;
+            font-family: "Montserrat", sans-serif;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 14px;
+            color: #555;
+          }
+
+          h3 {
+            margin: 0;
+            font-size: 20px;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: #000e26;
+          }
+        }
+
+        .action {
+          button {
+            cursor: pointer;
+            border: 1px solid #d8d8d8;
+            padding: 14px 30px;
+            border-radius: 200px;
+            color: #fff;
+            background: #000000;
+            font-family: "Open Sans", sans-serif;
+            font-size: 16px;
+            transition: 200ms;
+
+            &:hover {
+              background: #fff;
+              color: #000000;
+            }
+          }
+        }
+      }
+    }
+  </style>
+  <body>
+    <!-- <main> -->
+    <!-- commented elements not found in the products' json files, need to add them? or are we ditching them? - faisal-->
+    <!-- <div id="product-detail-container">
+        <img id="product-image" src="" alt="Product Image" />
+        <h2 id="product-name"></h2>
+        <p id="product-price"></p> -->
+    <!--<p id="product-rating">Product Rating: ★★★★☆</p>-->
+    <!-- <p id="product-manufacturer"></p>
+        <p id="product-seller"></p>
+        <p id="product-description"></p> -->
+    <!--<label for="product-quantity">Quantity:</label>-->
+    <!--<input type="number" id="product-quantity" name="quantity" min="1" value="1">-->
+    <!-- <button type="button" id="add-to-cart-btn">Add to Cart</button> -->
+    <!-- </div> -->
+    <!-- </main>  -->
+
+    <main>
+      <div class="card">
+        <div class="card__title">
+          <div class="icon">
+            <a href="#"><i class="fa fa-arrow-left"></i></a>
+          </div>
+          <h3>New products</h3>
         </div>
+        <div class="card__body">
+          <div class="half">
+            <div class="featured_text">
+              <h1>Nurton</h1>
+              <p class="sub">Office Chair</p>
+              <p class="price">$210.00</p>
+            </div>
+            <div class="image">
+              <img
+                src="https://images-na.ssl-images-amazon.com/images/I/613A7vcgJ4L._SL1500_.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="half">
+            <div class="description">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero
+                voluptatem nam pariatur voluptate perferendis, asperiores
+                aspernatur! Porro similique consequatur, nobis soluta minima,
+                quasi laboriosam hic cupiditate perferendis esse numquam magni.
+              </p>
+            </div>
+            <span class="stock"><i class="fa fa-pen"></i> In stock</span>
+            <div class="reviews">
+              <ul class="stars">
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star-o"></i></li>
+              </ul>
+              <span>(64 reviews)</span>
+            </div>
+          </div>
+        </div>
+        <div class="card__footer">
+          <div class="recommend">
+            <p>Available In</p>
+            <h3>Luxe Store</h3>
+          </div>
+          <div class="action">
+            <button type="button">Add to cart</button>
+          </div>
+        </div>
+      </div>
     </main>
-
-    <footer>
-        <div class="footerContainer">
-         <div class="socialIcons">
-             <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
-             <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
-             <a href="https://twitter.com/?lang=en"><i class="fa-brands fa-twitter"></i></a>
-             <a href="https://www.google.com/"><i class="fa-brands fa-google-plus"></i></a>
-             <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
-         </div>
-             <div class="ftNav">
-                 <ul>
-                     <li><a href="">Home</a></li>
-                     <li><a href="">News</a></li>
-                     <li><a href="">About</a></li>
-                     <li><a href="">Contact Us</a></li>
-                     <li><a href="">University</a></li>
-                 </ul>
-             </div>
- 
-         <div class="ftBtm">
-             <p>CopyRight &copy; 2024; Designed By <span class="designers">Qu Students</span></p>
-         </div>
- 
-        </div>
-        
-     </footer>
-
-</body>
+  </body>
 </html>
